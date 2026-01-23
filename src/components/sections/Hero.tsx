@@ -1,8 +1,31 @@
+"use client";
+
 import Container from "@/components/ui/Container";
+import FaultyTerminal from "@/components/ui/FaultyTerminal";
 
 export default function Hero() {
   return (
-    <section className="flex min-h-screen items-center pt-16">
+    <section className="relative flex min-h-screen items-center pt-16">
+      {/* Background - offset for navbar */}
+      <div className="absolute inset-0 top-16 -z-10">
+        <FaultyTerminal
+          scale={1.5}
+          gridMul={[2, 1]}
+          digitSize={1.5}
+          scanlineIntensity={0.3}
+          glitchAmount={1}
+          flickerAmount={0.5}
+          curvature={0}
+          tint="#22c55e"
+          brightness={1}
+          mouseReact={true}
+          mouseStrength={0.5}
+          dpr={1}
+        />
+        {/* Gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+      </div>
+
       <Container>
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-text sm:text-6xl">
@@ -20,7 +43,7 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="rounded-lg border border-border px-6 py-3 font-medium text-text transition-colors hover:border-accent hover:text-accent"
+              className="rounded-lg border border-border bg-card px-6 py-3 font-medium text-text transition-colors hover:border-accent hover:text-accent"
             >
               Contact Me
             </a>
