@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Container from "@/components/ui/Container";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -24,7 +25,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:gap-8">
+          <div className="hidden md:flex md:items-center md:gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -34,16 +35,20 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-muted hover:text-text"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile: Theme Toggle + Menu Button */}
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <button
+              className="text-muted hover:text-text"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
