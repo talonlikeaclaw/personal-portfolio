@@ -23,7 +23,7 @@ export default function Hero() {
       <div className="absolute inset-0 top-16 -z-10">
         <FaultyTerminal
           scale={1}
-          gridMul={isMobile ? [1, 3] : [2, 1]}
+          gridMul={isMobile ? [1.5, 3] : [3, 1.5]}
           digitSize={1.2}
           timeScale={0.2}
           scanlineIntensity={0.1}
