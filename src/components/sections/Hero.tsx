@@ -1,0 +1,32 @@
+import Container from "@/components/ui/Container";
+
+export default function Hero() {
+  return (
+    <section className="flex min-h-screen items-center pt-16">
+      <Container>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-text sm:text-6xl">
+            Talon Dunbar
+          </h1>
+          <p className="mt-4 text-xl text-muted sm:text-2xl">
+            Computer Science Student | Full-Stack Developer
+          </p>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
+            <a
+              href="#projects"
+              className="rounded-lg bg-accent px-6 py-3 font-medium text-white transition-colors hover:bg-accent/90"
+            >
+              View Projects
+            </a>
+            <a
+              href="#contact"
+              className="rounded-lg border border-border px-6 py-3 font-medium text-text transition-colors hover:border-accent hover:text-accent"
+            >
+              Contact Me
+            </a>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
