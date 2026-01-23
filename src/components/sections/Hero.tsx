@@ -1,29 +1,45 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Container from "@/components/ui/Container";
 import FaultyTerminal from "@/components/ui/FaultyTerminal";
 
 export default function Hero() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
-    <section className="relative flex min-h-screen items-center pt-16">
+    <section className="relative flex min-h-screen items-center pt-12">
       {/* Background - offset for navbar */}
-      <div className="absolute inset-0 top-20 -z-10">
+      <div className="absolute inset-0 top-16 -z-10">
         <FaultyTerminal
-          scale={0.8}
-          gridMul={[10, 5]}
-          digitSize={0.5}
+          scale={1}
+          gridMul={isMobile ? [1, 3] : [2, 1]}
+          digitSize={1.2}
+          timeScale={0.2}
           scanlineIntensity={0.1}
-          glitchAmount={1}
-          flickerAmount={0.5}
-          curvature={0.2}
-          tint="#22c55e"
-          brightness={0.5}
+          glitchAmount={0.4}
+          flickerAmount={0.3}
+          noiseAmp={1}
+          curvature={0.1}
+          tint="#338953"
           mouseReact={true}
           mouseStrength={0.5}
+          pageLoadAnimation={true}
+          brightness={0.6}
           dpr={1}
         />
         {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
       </div>
 
       <Container>
@@ -37,7 +53,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
               href="#projects"
-              className="rounded-lg bg-accent px-6 py-3 font-medium text-white transition-colors hover:bg-accent/90"
+              className="rounded-lg bg-accent px-6 py-3 font-medium text-black transition-colors hover:bg-accent/90"
             >
               View Projects
             </a>
