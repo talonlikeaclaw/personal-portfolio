@@ -7,23 +7,23 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center pt-16">
       {/* Background - offset for navbar */}
-      <div className="absolute inset-0 top-16 -z-10">
+      <div className="absolute inset-0 top-20 -z-10">
         <FaultyTerminal
-          scale={1.5}
-          gridMul={[2, 1]}
-          digitSize={1.5}
-          scanlineIntensity={0.3}
+          scale={0.8}
+          gridMul={[10, 5]}
+          digitSize={0.5}
+          scanlineIntensity={0.1}
           glitchAmount={1}
           flickerAmount={0.5}
-          curvature={0}
+          curvature={0.2}
           tint="#22c55e"
-          brightness={1}
+          brightness={0.5}
           mouseReact={true}
           mouseStrength={0.5}
           dpr={1}
         />
         {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background" />
       </div>
 
       <Container>
@@ -31,7 +31,7 @@ export default function Hero() {
           <h1 className="text-4xl font-bold tracking-tight text-text sm:text-6xl">
             Talon Dunbar
           </h1>
-          <p className="mt-4 text-xl text-muted sm:text-2xl">
+          <p className="mt-4 text-xl text-text sm:text-2xl">
             Computer Science Student | Full-Stack Developer
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
