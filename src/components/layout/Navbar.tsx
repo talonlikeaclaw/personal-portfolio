@@ -18,8 +18,8 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-sm">
       <Container>
-        <div className="flex h-16 items-center justify-between">
-          <a href="#" className="font-mono text-2xl font-bold text-text hover:text-accent transition-colors">
+        <div className="flex h-20 items-center justify-between">
+          <a href="#" className="font-mono text-3xl font-bold text-text hover:text-accent transition-colors">
             TD
           </a>
 
@@ -29,7 +29,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-mono text-base text-muted hover:text-text transition-colors"
+                className="font-mono text-lg text-muted hover:text-text transition-colors"
               >
                 {link.label}
               </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="block py-2 font-mono text-base text-muted hover:text-text transition-colors"
+                className="block py-2 font-mono text-lg text-muted hover:text-text transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

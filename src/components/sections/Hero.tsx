@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center pt-12">
       {/* Background - offset for navbar */}
-      <div className="absolute inset-0 top-16 -z-10">
+      <div className="absolute inset-0 top-20 -z-10">
         <FaultyTerminal
           scale={1}
           gridMul={isMobile ? [1.5, 3] : [3, 1.5]}
@@ -47,8 +47,10 @@ export default function Hero() {
           <h1 className="font-mono text-4xl font-bold tracking-tight text-text sm:text-6xl">
             Talon Dunbar
           </h1>
-          <p className="mt-4 font-mono text-xl text-text sm:text-2xl">
-            Computer Science Student | Full-Stack Developer
+          <p className="mt-4 font-mono text-base text-text sm:text-2xl">
+            <span className="sm:inline block">Computer Science Student</span>
+            <span className="hidden sm:inline"> | </span>
+            <span className="sm:inline block">Full-Stack Developer</span>
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
