@@ -19,6 +19,26 @@ export default function About() {
             working on projects that challenge me to learn and grow as a developer.
           </p>
         </div>
+
+        {/* GitHub Contribution Graph */}
+        <div className="mt-12">
+          <h3 className="mb-6 text-center font-mono text-lg text-muted">GitHub Activity</h3>
+          <div className="flex justify-center">
+            <a
+              href="https://github.com/talonlikeaclaw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="overflow-hidden rounded-lg border border-border bg-card p-4 transition-all hover:border-accent/50"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://ghchart.rshah.org/22c55e/talonlikeaclaw"
+                alt="GitHub Contribution Chart"
+                className="w-full max-w-4xl invert hue-rotate-180"
+              />
+            </a>
+          </div>
+        </div>
       </Container>
     </section>
   );
