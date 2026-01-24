@@ -44,22 +44,22 @@ export default function Hero() {
 
       <Container>
         <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-text sm:text-6xl">
+          <h1 className="font-mono text-4xl font-bold tracking-tight text-text sm:text-6xl">
             Talon Dunbar
           </h1>
-          <p className="mt-4 text-xl text-text sm:text-2xl">
+          <p className="mt-4 font-mono text-xl text-text sm:text-2xl">
             Computer Science Student | Full-Stack Developer
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
               href="#projects"
-              className="rounded-lg bg-accent px-6 py-3 font-medium text-black transition-colors hover:bg-accent/90"
+              className="rounded-lg bg-accent px-6 py-3 font-mono font-medium text-black transition-colors hover:bg-accent/90"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="rounded-lg border border-border bg-card px-6 py-3 font-medium text-text transition-colors hover:border-accent hover:text-accent"
+              className="rounded-lg border border-border bg-card px-6 py-3 font-mono font-medium text-text transition-colors hover:border-accent hover:text-accent"
             >
               Contact Me
             </a>

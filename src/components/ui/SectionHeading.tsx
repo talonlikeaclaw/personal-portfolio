@@ -6,9 +6,9 @@ interface SectionHeadingProps {
 export default function SectionHeading({ title, subtitle }: SectionHeadingProps) {
   return (
     <div className="mb-12 text-center">
-      <h2 className="text-3xl font-bold text-text sm:text-4xl">{title}</h2>
+      <h2 className="font-mono text-3xl font-bold text-text sm:text-4xl">{title}</h2>
       {subtitle && (
-        <p className="mt-4 text-muted">{subtitle}</p>
+        <p className="mt-4 font-mono text-muted">{subtitle}</p>
       )}
     </div>
   );
