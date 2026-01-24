@@ -33,17 +33,17 @@ export default function Contact() {
           title="Get In Touch"
           subtitle="Currently seeking internship opportunities. Let's connect!"
         />
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="mx-auto grid max-w-2xl grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-6">
           {contactLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               target={link.href.startsWith("mailto") ? undefined : "_blank"}
               rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-              className="flex items-center gap-3 rounded-lg border border-border bg-card px-6 py-4 transition-all hover:border-accent/50 hover:bg-card/80"
+              className="flex items-center justify-center gap-3 rounded-lg border border-border bg-card px-6 py-4 transition-all hover:border-accent/50 hover:bg-card/80"
             >
               <link.icon className="h-5 w-5 text-accent" />
-              <span className="text-text">{link.name}</span>
+              <span className="font-mono text-text">{link.name}</span>
             </a>
           ))}
         </div>

@@ -1,7 +1,18 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function About() {
+  const chartRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    if (chartRef.current) {
+      chartRef.current.scrollLeft = chartRef.current.scrollWidth;
+    }
+  }, []);
+
   return (
     <section id="about" className="py-20">
       <Container>
@@ -25,16 +36,17 @@ export default function About() {
           <h3 className="mb-6 text-center font-mono text-lg text-muted">GitHub Activity</h3>
           <div className="flex justify-center">
             <a
+              ref={chartRef}
               href="https://github.com/talonlikeaclaw"
               target="_blank"
               rel="noopener noreferrer"
-              className="overflow-hidden rounded-lg border border-border bg-card p-4 transition-all hover:border-accent/50"
+              className="block overflow-x-auto rounded-lg border border-border bg-card p-4 transition-all hover:border-accent/50"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://ghchart.rshah.org/22c55e/talonlikeaclaw"
                 alt="GitHub Contribution Chart"
-                className="w-full max-w-4xl invert hue-rotate-180"
+                className="min-w-[720px] invert hue-rotate-180"
               />
             </a>
           </div>
