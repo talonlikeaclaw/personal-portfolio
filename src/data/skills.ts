@@ -5,27 +5,27 @@ export interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
   {
-    name: "Front-End",
-    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind"],
+    name: "Languages",
+    skills: ["Go", "Python", "C#", "Java", "Kotlin", "TypeScript", "JavaScript", "Rust", "Lua", "Bash", "PL/pgSQL"],
   },
   {
-    name: "Back-End",
-    skills: ["Node.js", "Flask", "Django", "PostgreSQL", "MongoDB", "REST APIs", "AWS"],
+    name: "Infrastructure & DevOps",
+    skills: ["Linux", "Docker", "Docker Compose", "Proxmox", "AWS", "CI/CD", "Nginx", "Cloudflare", "Reverse Proxy", "Load Balancing", "Rate Limiting", "CDN", "DNS", "SSL/TLS", "SSH", "SFTP", "Self-Hosting"],
   },
   {
-    name: "Programming",
-    skills: ["OOP", "Python", "C#", "Java", "Kotlin", "Jetpack Compose", "TDD"],
+    name: "Web Development",
+    skills: ["React", "Next.js", "Express.js", "Vite", "Flask", "REST APIs", "WebSockets", "OAuth2", "ROPC", "JWT", "Performance Optimization"],
   },
   {
-    name: "Tools",
-    skills: ["Git", "GitLab", "Jira", "CI/CD", "Docker", "Proxmox", "Bash"],
+    name: "Databases",
+    skills: ["PostgreSQL", "MongoDB", "Entity Framework Core", "Room", "Normalization", "LINQ"],
   },
   {
-    name: "Infrastructure",
-    skills: ["Raspberry Pi", "MQTT", "I2C", "UNIX/Linux"],
+    name: "Software Engineering",
+    skills: ["Git Workflows", "Code Reviews", "Design Patterns", "OOP", "MVC", "TDD", "Multithreading"],
   },
   {
-    name: "Exploring",
-    skills: ["Rust", "Golang", "Local LLMs"],
+    name: "Developer Tooling",
+    skills: ["Git", "GitLab", "Debugging", "Logging", "Neovim", "tmux", "VSCodium", "Bruno", "Local LLMs"],
   },
 ];
