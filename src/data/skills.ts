@@ -10,11 +10,11 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: "Infrastructure & DevOps",
-    skills: ["Linux", "Docker", "Docker Compose", "Proxmox", "AWS", "CI/CD", "Nginx", "Cloudflare", "Reverse Proxy", "Load Balancing", "Rate Limiting", "CDN", "DNS", "SSL/TLS", "SSH", "SFTP", "Self-Hosting"],
+    skills: ["Linux", "Docker", "CI/CD", "AWS", "Cloudflare", "Nginx", "Proxmox", "Self-Hosting"],
   },
   {
     name: "Web Development",
-    skills: ["React", "Next.js", "Express.js", "Vite", "Flask", "REST APIs", "WebSockets", "OAuth2", "ROPC", "JWT", "Performance Optimization"],
+    skills: ["React", "Next.js", "Express.js", "Flask", "REST APIs", "WebSockets", "OAuth2", "JWT"],
   },
   {
     name: "Databases",
@@ -22,10 +22,10 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: "Software Engineering",
-    skills: ["Git Workflows", "Code Reviews", "Design Patterns", "OOP", "MVC", "TDD", "Multithreading"],
+    skills: ["Design Patterns", "OOP", "MVC", "TDD", "Multithreading", "Concurrency", "Code Reviews", "Git Workflows"],
   },
   {
     name: "Developer Tooling",
-    skills: ["Git", "GitLab", "Debugging", "Logging", "Neovim", "tmux", "VSCodium", "Bruno", "Local LLMs"],
+    skills: ["Git", "GitLab", "Neovim", "tmux", "VSCodium", "Bruno", "Debugging", "Local LLMs"],
   },
 ];
