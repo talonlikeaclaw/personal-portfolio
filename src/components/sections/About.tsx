@@ -25,9 +25,11 @@ export default function About() {
             programming.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-muted">
-            When I&apos;m not coding, you&apos;ll find me tinkering with Linux systems,
-            exploring self-hosting solutions, or learning about new technologies. I enjoy
-            working on projects that challenge me to learn and grow as a developer.
+            Beyond code, I&apos;m a homelab enthusiast and open source advocate. I organize my
+            personal knowledge in Obsidian, stay curious about meteorology and astronomy,
+            and I solve Rubik&apos;s cubes. On the creative side, I experiment
+            with Blender renders and Ableton music productions. I also compete in Rocket League
+            at Grand Champion, collect vinyl, attend live concerts, enjoy cooking and coffee, and cheer for the Habs.
           </p>
         </div>
 
