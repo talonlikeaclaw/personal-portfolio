@@ -5,13 +5,16 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 const inter = Inter({
-  variable: "--font-inter",
   subsets: ["latin"],
+  display: "optional",
+  variable: "--font-inter",
 });
 
 const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains",
   subsets: ["latin"],
+  display: "optional",
+  variable: "--font-mono",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -26,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}>
+      <body className={`${inter.className} ${jetbrainsMono.variable} antialiased`}>
         <Navbar />
         <main>{children}</main>
         <Footer />
