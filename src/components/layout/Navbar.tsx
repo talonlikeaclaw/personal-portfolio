@@ -29,7 +29,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-mono text-lg text-muted hover:text-text transition-colors"
+                className="font-mono text-lg text-text hover:text-accent transition-colors"
               >
                 {link.label}
               </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="block py-2 font-mono text-lg text-muted hover:text-text transition-colors"
+                className="block py-2 font-mono text-lg text-text hover:text-accent transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
