@@ -50,8 +50,8 @@ src/
 ### Data Layer
 
 Content is stored as TypeScript arrays in `src/data/`:
-- `projects.ts`: Project entries with title, description, technologies, type (team/solo), status, URLs
-- `skills.ts`: Skill categories with name and skills array
+- `projects.ts`: Project entries with title, description, technologies, type (team/solo), status, featured flag, URLs. Featured projects display with a green left border accent.
+- `skills.ts`: Skill categories with name and skills array. Balance item counts visually — longer skill names need fewer items per category for consistent spacing.
 
 To add/edit projects or skills, modify these data files directly.
 
@@ -70,6 +70,16 @@ Uses Tailwind CSS v4 with custom theme colors:
 | Muted      | --muted        | #a1a1aa   |
 | Accent     | --accent       | #22c55e   |
 | Border     | --border       | #27272a   |
+
+### Design Principles
+
+This portfolio is optimized for a ~55-second hiring manager scan. Key decisions:
+- **Hero signals low risk**: role, focus area, availability, and soft skills (fast learner, team player, AI-literate) all visible above the fold
+- **Featured projects**: 4 projects marked `featured: true` render first with a green left border; remaining projects follow in the same card format without the accent
+- **Section headings are descriptive**, not generic (e.g. "What I've Built" not "Projects")
+- **About section is concise**: first paragraph establishes developer identity and strengths; second paragraph is kept short with personality-defining hobbies only
+- **Contact section creates urgency**: specific internship availability window (Spring 2026)
+- **Education includes languages**: English (Native) / French (Conversational) badge alongside R-Score
 
 ### Special Components
 
