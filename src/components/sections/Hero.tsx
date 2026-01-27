@@ -56,12 +56,18 @@ export default function Hero() {
             Linux, infrastructure, and systems programming.
           </p>
           <p className="mt-2 max-w-xl mx-auto text-xs text-muted sm:text-sm">
-            Seeking Spring 2026 internships. Fast learner, team player, AI-literate.
+            Fast learner, team player, curious, AI-literate. Seeking Spring 2026 internships.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
+              href="#about"
+              className="rounded-lg border border-accent px-6 py-3 font-mono font-medium text-accent transition-colors hover:bg-accent hover:text-black"
+            >
+              About Me
+            </a>
+            <a
               href="#projects"
-              className="rounded-lg bg-accent px-6 py-3 font-mono font-medium text-black transition-colors hover:bg-accent/90"
+              className="rounded-lg border border-border bg-card px-6 py-3 font-mono font-medium text-text transition-colors hover:border-accent hover:text-accent"
             >
               View Projects
             </a>

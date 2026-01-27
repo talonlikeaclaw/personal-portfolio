@@ -26,6 +26,11 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+section#about {
+  scroll-margin-top: 15rem;
 }
 
 ::selection {

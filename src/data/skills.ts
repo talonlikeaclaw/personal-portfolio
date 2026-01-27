@@ -26,6 +26,6 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: "Developer Tooling",
-    skills: ["Git", "GitLab", "Neovim", "tmux", "VSCodium", "Bruno", "Debugging", "Local LLMs"],
+    skills: ["Git", "GitLab", "Neovim", "tmux", "VSCodium", "Bruno", "Debugging"],
   },
 ];

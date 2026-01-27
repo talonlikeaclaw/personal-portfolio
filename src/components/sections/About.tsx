@@ -28,7 +28,7 @@ export default function About() {
           <p className="mt-4 text-lg leading-relaxed text-muted">
             Beyond code, I&apos;m a homelab enthusiast and open source advocate.
             I stay curious about meteorology and astronomy, and I&apos;m always
-            chasing better coffee. I also compete in Rocket League at Grand Champion.
+            chasing better coffee. I also compete in Rocket League at Grand Champion, and cheer for the Habs.
           </p>
         </div>
 
