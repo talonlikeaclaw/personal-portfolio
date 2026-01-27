@@ -26,11 +26,9 @@ export default function About() {
             AI to accelerate my workflow.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-muted">
-            Beyond code, I&apos;m a homelab enthusiast and open source advocate. I organize my
-            personal knowledge in Obsidian, stay curious about meteorology and astronomy,
-            and I solve Rubik&apos;s cubes. On the creative side, I experiment
-            with Blender renders and Ableton music production. I also compete in Rocket League
-            at Grand Champion, collect vinyl, attend live concerts, enjoy cooking and coffee, and cheer for the Habs.
+            Beyond code, I&apos;m a homelab enthusiast and open source advocate.
+            I stay curious about meteorology and astronomy, and I&apos;m always
+            chasing better coffee. I also compete in Rocket League at Grand Champion.
           </p>
         </div>
 
