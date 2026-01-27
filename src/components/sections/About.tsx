@@ -16,19 +16,20 @@ export default function About() {
   return (
     <section id="about" className="py-20">
       <Container>
-        <SectionHeading title="About Me" />
+        <SectionHeading title="About Me" subtitle="From homelabs to full-stack. I build things to understand them." />
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-lg leading-relaxed text-muted">
-            I&apos;m a third-year Computer Science student at Dawson College in Montreal,
-            passionate about building software that solves real problems. My interests
-            span full-stack web development, with a growing focus on Golang and systems
-            programming.
+            I&apos;m a third-year Computer Science student at Dawson College in
+            Montreal. I work across the full stack but I&apos;m most at home with Linux,
+            infrastructure, and systems programming. I pick up new tools and stacks
+            quickly, whether that&apos;s a new framework, a CI/CD pipeline, or leveraging
+            AI to accelerate my workflow.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-muted">
             Beyond code, I&apos;m a homelab enthusiast and open source advocate. I organize my
             personal knowledge in Obsidian, stay curious about meteorology and astronomy,
             and I solve Rubik&apos;s cubes. On the creative side, I experiment
-            with Blender renders and Ableton music productions. I also compete in Rocket League
+            with Blender renders and Ableton music production. I also compete in Rocket League
             at Grand Champion, collect vinyl, attend live concerts, enjoy cooking and coffee, and cheer for the Habs.
           </p>
         </div>

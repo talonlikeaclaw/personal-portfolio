@@ -8,8 +8,8 @@ export default function Projects() {
     <section id="projects" className="py-20">
       <Container>
         <SectionHeading
-          title="Projects"
-          subtitle="A selection of projects I've worked on"
+          title="What I've Built"
+          subtitle="Team and solo projects spanning web apps, CLI tools, and infrastructure"
         />
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project) => (

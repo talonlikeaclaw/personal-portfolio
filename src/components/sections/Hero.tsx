@@ -48,9 +48,12 @@ export default function Hero() {
             Talon Dunbar
           </h1>
           <p className="mt-4 font-mono text-base text-text sm:text-2xl">
-            <span className="sm:inline block">Computer Science Student</span>
-            <span className="hidden sm:inline"> | </span>
+            <span className="sm:inline block">Systems-Oriented</span>
+            <span className="hidden sm:inline"> </span>
             <span className="sm:inline block">Full-Stack Developer</span>
+          </p>
+          <p className="mt-3 max-w-xl mx-auto text-sm text-muted sm:text-base">
+            Linux, infrastructure, and systems programming.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
