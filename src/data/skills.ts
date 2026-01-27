@@ -13,16 +13,16 @@ export const skillCategories: SkillCategory[] = [
     skills: ["Linux", "Docker", "CI/CD", "AWS", "Cloudflare", "Nginx", "Proxmox", "Self-Hosting"],
   },
   {
-    name: "Web Development",
-    skills: ["React", "Next.js", "Express.js", "Flask", "REST APIs", "WebSockets", "OAuth2", "JWT"],
-  },
-  {
     name: "Databases",
-    skills: ["PostgreSQL", "MongoDB", "Entity Framework Core", "Room", "Normalization", "LINQ"],
+    skills: ["PostgreSQL", "MongoDB", "SQLite", "Room", "EF Core", "JDBC", "Normalization", "LINQ"],
   },
   {
     name: "Software Engineering",
-    skills: ["Git Workflows","Code Reviews", "Design Patterns", "OOP", "MVC", "TDD", "Multithreading", "Concurrency"],
+    skills: ["Git Workflows","Code Reviews", "Design Patterns", "OOP", "MVC", "TDD"],
+  },
+  {
+    name: "Web Development",
+    skills: ["React", "Next.js", "Express.js", "Flask", "REST APIs", "WebSockets", "OAuth2", "JWT"],
   },
   {
     name: "Developer Tooling",

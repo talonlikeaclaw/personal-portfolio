@@ -4,6 +4,7 @@ export interface Project {
   technologies: string[];
   type: "team" | "solo";
   status?: "in-progress" | "completed";
+  featured?: boolean;
   liveUrl?: string;
   githubUrl?: string;
 }
@@ -11,42 +12,45 @@ export interface Project {
 export const projects: Project[] = [
   // Team projects first (more impressive for internships)
   {
-    title: "Canadian Immigration Viz",
-    description: "Interactive data visualization platform exploring Canadian immigration trends and statistics. Features dynamic charts and filtering capabilities.",
-    technologies: ["React", "Node.js", "MongoDB", "Chart.js"],
-    type: "team",
-    status: "completed",
-    liveUrl: "https://five20-project-safari-chiru-dunbar.onrender.com/",
-    githubUrl: "https://github.com/talonlikeaclaw/canadian-immigration-visualization",
-  },
-  {
     title: "TrimTracker",
     description: "A salon booking and management system with appointment scheduling, client management, and service tracking. Containerized for easy deployment.",
-    technologies: ["Flask", "PostgreSQL", "Docker", "Bootstrap"],
+    technologies: ["Flask", "PostgreSQL", "Docker", "Jinja"],
     type: "team",
     status: "completed",
+    featured: true,
     githubUrl: "https://github.com/talonlikeaclaw/trim-tracker",
   },
   {
     title: "Dawscorp Task Manager",
     description: "A Jira-like task management system built for team collaboration. Features include project boards, task assignment, progress tracking, and team management.",
-    technologies: ["Java", "PostgreSQL", "JDBC"],
+    technologies: ["Java", "PostgreSQL", "PL/pgSQL", "JDBC", "JUnit"],
     type: "team",
     status: "completed",
+    featured: true,
     githubUrl: "https://github.com/talonlikeaclaw/dawscorp-task-manager",
+  },
+  {
+    title: "Canadian Immigration Viz",
+    description: "Interactive data visualization platform exploring Canadian immigration and language trends and statistics. Features dynamic charts and filtering capabilities.",
+    technologies: ["React", "Vite", "Express.js", "Mocha", "Chai"],
+    type: "team",
+    status: "completed",
+    featured: true,
+    liveUrl: "https://five20-project-safari-chiru-dunbar.onrender.com/",
+    githubUrl: "https://github.com/talonlikeaclaw/canadian-immigration-visualization",
   },
   {
     title: "Dawson Dial",
     description: "Event planning platform for Dawson College enabling scheduling of classes, office hours, and conferences. Built for professors and students to manage academic events and resources.",
-    technologies: ["C#", "Avalonia", "Entity Framework"],
+    technologies: ["C#", "Avalonia", "EF Core", "LINQ", "MSTest", "Moq"],
     type: "team",
     status: "completed",
     githubUrl: "https://github.com/talonlikeaclaw/dawson-dial",
   },
   {
     title: "Virtual Used Car Dealership",
-    description: "Console-based dealership management system with vehicle browsing, advanced filtering/sorting, shopping cart, and transaction tracking. Supports both PostgreSQL and CSV persistence.",
-    technologies: ["Java", "PostgreSQL", "Maven", "Strategy Pattern"],
+    description: "Console-based dealership management simulation system with vehicle browsing, advanced filtering/sorting, shopping cart, and transaction tracking. Supports both PostgreSQL and CSV persistence.",
+    technologies: ["Java", "PostgreSQL", "Maven", "JUnit", "Strategy Pattern"],
     type: "team",
     status: "completed",
     githubUrl: "https://github.com/talonlikeaclaw/virtual-used-car-dealership",
@@ -58,6 +62,7 @@ export const projects: Project[] = [
     technologies: ["Go", "Bubble Tea", "Proxmox API"],
     type: "solo",
     status: "in-progress",
+    featured: true,
     githubUrl: "https://github.com/talonlikeaclaw/godash",
   },
   {
@@ -78,7 +83,7 @@ export const projects: Project[] = [
   },
   {
     title: "Tiny Task Manager",
-    description: "A minimalist command-line task manager written in Rust. Features include task creation, completion tracking, and persistent storage.",
+    description: "A minimalist command-line task manager written in Rust. Features include task creation, completion tracking, and persistent JSON storage.",
     technologies: ["Rust", "CLI", "Serde"],
     type: "solo",
     status: "completed",
@@ -86,8 +91,8 @@ export const projects: Project[] = [
   },
   {
     title: "Dotfiles",
-    description: "Personal configuration files for Linux and macOS. Includes configs for Fish, Ghostty, Helix, Starship, Tmux, Zellij, and other developer tools.",
-    technologies: ["Shell", "Fish", "Lua", "TOML"],
+    description: "Personal configuration files for Linux and macOS. Includes configs for Zsh, Kitty, Tmux, and other developer tools.",
+    technologies: ["Zsh", "JSON", "Lua", "TOML"],
     type: "solo",
     status: "completed",
     githubUrl: "https://github.com/talonlikeaclaw/dotfiles",

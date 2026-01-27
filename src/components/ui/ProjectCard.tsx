@@ -7,7 +7,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="group flex h-full flex-col rounded-lg border border-border bg-card p-6 transition-all hover:border-accent/50">
+    <div className={`group flex h-full flex-col rounded-lg border bg-card p-6 transition-all hover:border-accent/50 ${project.featured ? "border-l-2 border-l-accent border-border" : "border-border"}`}>
       <div className="mb-3 flex items-start justify-between">
         <h3 className="font-mono text-xl font-semibold text-text group-hover:text-accent transition-colors">
           {project.title}

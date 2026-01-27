@@ -11,7 +11,7 @@ export default function Skills() {
           title="Technical Toolkit"
           subtitle="Languages, frameworks, and infrastructure I use daily"
         />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2">
           {skillCategories.map((category) => (
             <SkillCategory key={category.name} category={category} />
           ))}

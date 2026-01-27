@@ -4,6 +4,9 @@ import ProjectCard from "@/components/ui/ProjectCard";
 import { projects } from "@/data/projects";
 
 export default function Projects() {
+  const featured = projects.filter((p) => p.featured);
+  const other = projects.filter((p) => !p.featured);
+
   return (
     <section id="projects" className="py-20">
       <Container>
@@ -12,7 +15,12 @@ export default function Projects() {
           subtitle="Team and solo projects spanning web apps, CLI tools, and infrastructure"
         />
         <div className="grid gap-6 md:grid-cols-2">
-          {projects.map((project) => (
+          {featured.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
+          {other.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
