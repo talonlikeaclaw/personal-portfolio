@@ -9,7 +9,7 @@ export default function Skills() {
       <Container>
         <SectionHeading
           title="Technical Toolkit"
-          subtitle="Languages, frameworks, and infrastructure I use daily"
+          subtitle="Languages and frameworks I use"
         />
         <div className="grid gap-6 sm:grid-cols-2">
           {skillCategories.map((category) => (

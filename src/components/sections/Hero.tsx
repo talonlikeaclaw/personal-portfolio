@@ -53,7 +53,7 @@ export default function Hero() {
             <span className="sm:inline block">Full-Stack Developer</span>
           </p>
           <p className="mt-3 max-w-xl mx-auto text-sm text-muted sm:text-base">
-            Fast learner, detail-oriented, curious, collaborative, AI-literate.
+            Fast learner, detail-oriented, curious, collaborative.
           </p>
           <p className="mt-2 max-w-xl mx-auto text-sm text-muted sm:text-sm">
             Linux, infrastructure, and systems programming.

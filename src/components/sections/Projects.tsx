@@ -12,7 +12,7 @@ export default function Projects() {
       <Container>
         <SectionHeading
           title="What I've Built"
-          subtitle="Team and solo projects spanning web apps, CLI tools, and infrastructure"
+          subtitle="Team and solo projects I've worked on"
         />
         <div className="grid gap-6 md:grid-cols-2">
           {featured.map((project) => (
