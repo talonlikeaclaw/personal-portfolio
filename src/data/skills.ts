@@ -6,7 +6,7 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   {
     name: "Languages",
-    skills: ["Go", "Python", "C#", "Java", "Kotlin", "TypeScript", "JavaScript", "Rust", "Lua", "Bash", "PL/pgSQL"],
+    skills: ["Python", "C#", "Java", "Kotlin", "TypeScript", "JavaScript", "Go", "Rust", "Lua", "Bash", "PL/pgSQL"],
   },
   {
     name: "Infrastructure & DevOps",
@@ -18,7 +18,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: "Software Engineering",
-    skills: ["Git Workflows","Code Reviews", "Design Patterns", "OOP", "MVC", "TDD"],
+    skills: ["Git Workflows","Code Reviews", "Design Patterns", "OOP", "MVC", "TDD", "Multithreading", "Async"],
   },
   {
     name: "Web Development",
@@ -26,6 +26,6 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: "Developer Tooling",
-    skills: ["Git", "GitLab", "Neovim", "tmux", "VSCodium", "Bruno", "Debugging"],
+    skills: ["Git", "GitLab", "Neovim", "Tmux", "VSCodium", "Bruno", "SSH", "Obsidian", "Debugging"],
   },
 ];

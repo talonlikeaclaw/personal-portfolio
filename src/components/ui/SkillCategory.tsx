@@ -12,7 +12,7 @@ export default function SkillCategory({ category }: SkillCategoryProps) {
         {category.skills.map((skill) => (
           <span
             key={skill}
-            className="rounded-full bg-background px-4 py-1.5 font-mono text-sm text-text transition-colors hover:text-accent"
+            className="rounded-full bg-background px-4 py-1.5 font-mono text-sm sm:text-base text-text transition-colors hover:text-accent"
           >
             {skill}
           </span>

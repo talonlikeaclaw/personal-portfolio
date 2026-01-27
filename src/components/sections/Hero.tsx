@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center pt-12">
       {/* Background - offset for navbar */}
-      <div className="absolute inset-0 top-20 -z-10">
+      <div className="absolute inset-0 -top-20 -z-10">
         <FaultyTerminal
           scale={1}
           gridMul={isMobile ? [1.5, 3] : [3, 1.5]}
@@ -64,13 +64,13 @@ export default function Hero() {
             </a>
             <a
               href="#projects"
-              className="rounded-lg border border-border bg-background/60 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent"
+              className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="rounded-lg border border-border bg-background/60 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent"
+              className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent"
             >
               Contact Me
             </a>
