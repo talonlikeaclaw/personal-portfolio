@@ -16,26 +16,36 @@ export default function About() {
   return (
     <section id="about" className="py-20">
       <Container>
-        <SectionHeading title="About Me" subtitle="I build things to understand them." />
+        <SectionHeading
+          title="About Me"
+          subtitle="I build things to understand them."
+        />
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-lg leading-relaxed text-muted">
             I&apos;m a third-year Computer Science student at Dawson College in
             Montreal. I build full-stack applications with React, Flask, Java,
             and C#, and I have a strong interest in infrastructure and DevOps. I
-            run a homelab with Proxmox, self-host services, and enjoy working with
-            Linux and Docker. I pick up new tools quickly and care about getting
-            the details right, whether I&apos;m learning a framework on my own,
-            collaborating with a team, or using AI to accelerate my workflow.
+            run a homelab with Proxmox, self-host services, and enjoy working
+            with Linux and Docker as an open source advocate.
+          </p>
+          <p className="text-lg leading-relaxed text-muted">
+            I learn quickly and care about the details—whether I&apos;m picking
+            up a new framework, collaborating on a team project, or leveraging
+            AI to speed up my workflow.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-muted">
-            I&apos;m also an open source advocate who stays curious about
-            meteorology and astronomy, and is always chasing better coffee.
+            Outside of tech, I stay curious about science, particularly
+            meteorology and astronomy. I compete in Rocket League, explore
+            photography and 3D rendering in Blender, experiment with music
+            production in Ableton, and am always chasing better coffee.
           </p>
         </div>
 
         {/* GitHub Contribution Graph */}
         <div className="mt-12">
-          <h3 className="mb-6 text-center font-mono text-lg text-muted">GitHub Activity</h3>
+          <h3 className="mb-6 text-center font-mono text-lg text-muted">
+            GitHub Activity
+          </h3>
           <div className="flex justify-center">
             <a
               ref={chartRef}
