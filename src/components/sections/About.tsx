@@ -22,14 +22,14 @@ export default function About() {
         />
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-lg leading-relaxed text-muted">
-            I&apos;m a third-year Computer Science student at Dawson College in
-            Montreal. I build full-stack applications with React, Flask, Java,
+            I&apos;m a third-year Computer Science student at Dawson College in 
+            Montr&eacute;al. I build full-stack applications with React, Flask, Java,
             and C#, and I have a strong interest in infrastructure and DevOps. I
             run a homelab with Proxmox, self-host services, and enjoy working
             with Linux and Docker as an open source advocate.
           </p>
-          <p className="text-lg leading-relaxed text-muted">
-            I learn quickly and care about the details—whether I&apos;m picking
+          <p className="mt-4 text-lg leading-relaxed text-muted">
+            I learn quickly and care about the details, whether I&apos;m picking
             up a new framework, collaborating on a team project, or leveraging
             AI to speed up my workflow.
           </p>

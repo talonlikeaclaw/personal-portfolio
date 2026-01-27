@@ -58,19 +58,19 @@ export default function Hero() {
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
               href="#about"
-              className="rounded-lg border border-accent px-6 py-3 font-mono font-medium text-accent transition-colors hover:bg-accent hover:text-black"
+              className="rounded-lg border border-accent bg-accent/10 backdrop-blur-sm px-6 py-3 font-mono font-medium text-accent transition-all hover:bg-accent hover:text-black"
             >
               About Me
             </a>
             <a
               href="#projects"
-              className="rounded-lg border border-border bg-card px-6 py-3 font-mono font-medium text-text transition-colors hover:border-accent hover:text-accent"
+              className="rounded-lg border border-border bg-background/60 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="rounded-lg border border-border bg-card px-6 py-3 font-mono font-medium text-text transition-colors hover:border-accent hover:text-accent"
+              className="rounded-lg border border-border bg-background/60 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent"
             >
               Contact Me
             </a>
