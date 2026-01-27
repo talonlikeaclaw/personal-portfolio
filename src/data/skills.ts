@@ -22,7 +22,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: "Software Engineering",
-    skills: ["Design Patterns", "OOP", "MVC", "TDD", "Multithreading", "Concurrency", "Code Reviews", "Git Workflows"],
+    skills: ["Git Workflows","Code Reviews", "Design Patterns", "OOP", "MVC", "TDD", "Multithreading", "Concurrency"],
   },
   {
     name: "Developer Tooling",

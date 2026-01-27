@@ -8,8 +8,8 @@ export default function Skills() {
     <section id="skills" className="py-20">
       <Container>
         <SectionHeading
-          title="Skills"
-          subtitle="Technologies and tools I work with"
+          title="Technical Toolkit"
+          subtitle="Languages, frameworks, and infrastructure I use daily"
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skillCategories.map((category) => (
