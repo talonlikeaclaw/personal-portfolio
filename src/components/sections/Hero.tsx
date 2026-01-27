@@ -53,10 +53,10 @@ export default function Hero() {
             <span className="sm:inline block">Full-Stack Developer</span>
           </p>
           <p className="mt-3 max-w-xl mx-auto text-sm text-muted sm:text-base">
-            Linux, infrastructure, and systems programming.
+            Fast learner, detail-oriented, curious, collaborative, AI-literate.
           </p>
           <p className="mt-2 max-w-xl mx-auto text-sm text-muted sm:text-sm">
-            Fast learner, detail-oriented, curious, team player, AI-literate.
+            Linux, infrastructure, and systems programming.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
