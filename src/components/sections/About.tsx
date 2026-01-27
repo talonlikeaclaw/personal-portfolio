@@ -23,9 +23,9 @@ export default function About() {
             Montreal. I build full-stack applications with React, Flask, Java,
             and C#, and I have a strong interest in infrastructure and DevOps. I
             run a homelab with Proxmox, self-host services, and enjoy working with
-            Linux and Docker. I pick up new tools and stacks quickly, whether
-            that&apos;s a new framework, a CI/CD pipeline, or leveraging AI to
-            accelerate my workflow.
+            Linux and Docker. I pick up new tools quickly and care about getting
+            the details right, whether I&apos;m learning a framework on my own,
+            collaborating with a team, or using AI to accelerate my workflow.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-muted">
             I&apos;m also an open source advocate who stays curious about

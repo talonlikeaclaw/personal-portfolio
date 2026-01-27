@@ -33,14 +33,14 @@ export default function Contact() {
           title="Let's Work Together"
           subtitle="Available for Spring 2026 internships."
         />
-        <div className="mx-auto grid max-w-2xl grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-6">
+        <div className="mx-auto grid max-w-2xl grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:justify-center sm:gap-6">
           {contactLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               target={link.href.startsWith("mailto") ? undefined : "_blank"}
               rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-              className="flex items-center justify-center gap-3 rounded-lg border border-border bg-card px-6 py-4 transition-all hover:border-accent/50 hover:bg-card/80"
+              className="flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-4 py-3 transition-all hover:border-accent/50 hover:bg-card/80 sm:gap-3 sm:px-6 sm:py-4"
             >
               <link.icon className="h-5 w-5 text-accent" />
               <span className="font-mono text-text">{link.name}</span>

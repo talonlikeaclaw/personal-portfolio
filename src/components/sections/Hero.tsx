@@ -44,7 +44,7 @@ export default function Hero() {
 
       <Container>
         <div className="text-center">
-          <h1 className="font-mono text-4xl font-bold tracking-tight text-text sm:text-6xl">
+          <h1 className="font-mono text-3xl font-bold tracking-tight text-text sm:text-6xl">
             Talon Dunbar
           </h1>
           <p className="mt-4 font-mono text-base text-text sm:text-2xl">
