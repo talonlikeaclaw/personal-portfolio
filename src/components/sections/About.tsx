@@ -16,7 +16,7 @@ export default function About() {
   return (
     <section id="about" className="py-20">
       <Container>
-        <SectionHeading title="About Me" subtitle="From homelabs to full-stack. I build things to understand them." />
+        <SectionHeading title="About Me" subtitle="From homelab to full-stack. I build things to understand them." />
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-lg leading-relaxed text-muted">
             I&apos;m a third-year Computer Science student at Dawson College in

@@ -22,7 +22,10 @@ export default function Education() {
                     R Score: 34.35
                   </span>
                   <span className="rounded-full bg-accent/20 px-3 py-1 text-sm text-accent">
-                    English (Native) / French (Conversational)
+                    English: Native
+                  </span>
+                  <span className="rounded-full bg-accent/20 px-3 py-1 text-sm text-accent">
+                    French: Conversational
                   </span>
                 </div>
               </div>

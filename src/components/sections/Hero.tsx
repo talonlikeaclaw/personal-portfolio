@@ -55,8 +55,8 @@ export default function Hero() {
           <p className="mt-3 max-w-xl mx-auto text-sm text-muted sm:text-base">
             Linux, infrastructure, and systems programming.
           </p>
-          <p className="mt-2 max-w-xl mx-auto text-xs text-muted sm:text-sm">
-            Fast learner, team player, curious, AI-literate. Seeking Spring 2026 internships.
+          <p className="mt-2 max-w-xl mx-auto text-sm text-muted sm:text-sm">
+            Fast learner, detail-oriented, curious, team player, AI-literate.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
