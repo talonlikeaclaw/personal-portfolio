@@ -39,7 +39,7 @@ export default function About() {
         />
         <div className="mx-auto max-w-3xl">
           <p className="text-center text-lg leading-relaxed text-muted">
-            Third-year <strong>Computer Science</strong> student at{" "}
+            Third-year <strong>Computer Science student</strong> at{" "}
             <strong>Dawson College</strong> in Montr&eacute;al, Queb&eacute;c.
           </p>
 
@@ -152,7 +152,7 @@ export default function About() {
                 <li className="flex items-center gap-3">
                   <Coffee size={18} className="shrink-0 text-accent" />
                   <span>
-                    Always chases better <strong>coffee.</strong>.
+                    Always chases better <strong>coffee</strong>.
                   </span>
                 </li>
 
