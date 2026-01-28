@@ -50,7 +50,7 @@ export const projects: Project[] = [
   {
     title: "Virtual Used Car Dealership",
     description: "Console-based dealership management simulation system with vehicle browsing, advanced filtering/sorting, shopping cart, and transaction tracking. Supports both PostgreSQL and CSV persistence.",
-    technologies: ["Java", "PostgreSQL", "Maven", "JUnit", "Strategy Pattern"],
+    technologies: ["Java", "PostgreSQL", "Maven", "JUnit"],
     type: "team",
     status: "completed",
     githubUrl: "https://github.com/talonlikeaclaw/virtual-used-car-dealership",
