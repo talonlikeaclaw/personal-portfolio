@@ -8,7 +8,8 @@ export default function Education() {
       <Container>
         <SectionHeading title="Education" subtitle="Formal training behind the skills" />
         <div className="mx-auto max-w-2xl">
-          <div className="rounded-lg border border-border bg-card p-6">
+          <div className="relative overflow-hidden rounded-lg border border-border bg-card p-6">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
             <div className="flex items-start gap-4">
               <div className="rounded-lg bg-accent/10 p-3">
                 <GraduationCap className="h-6 w-6 text-accent" />

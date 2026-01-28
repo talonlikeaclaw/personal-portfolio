@@ -39,11 +39,11 @@ export default function Hero() {
           dpr={1}
         />
         {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
       </div>
 
       <Container>
-        <div className="text-center">
+        <div className="pointer-events-none text-center">
           <h1 className="font-mono text-3xl font-bold tracking-tight text-text sm:text-6xl">
             Talon Dunbar
           </h1>
@@ -55,7 +55,7 @@ export default function Hero() {
           <p className="mt-3 max-w-xl mx-auto text-sm text-muted sm:text-base">
             Fast learner, detail-oriented, curious, collaborative.
           </p>
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
+          <div className="pointer-events-auto mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
               href="#about"
               className="rounded-lg border border-accent bg-accent/10 backdrop-blur-sm px-6 py-3 font-mono font-medium text-accent transition-all hover:bg-accent hover:text-black"

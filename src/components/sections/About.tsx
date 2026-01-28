@@ -3,6 +3,22 @@
 import { useEffect, useRef } from "react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import {
+  BookOpen,
+  Code,
+  Server,
+  Monitor,
+  Terminal,
+  Heart,
+  Zap,
+  GitBranch,
+  Users,
+  Bot,
+  CloudSun,
+  Box,
+  Music,
+  Coffee,
+} from "lucide-react";
 
 export default function About() {
   const chartRef = useRef<HTMLAnchorElement>(null);
@@ -20,28 +36,87 @@ export default function About() {
           title="About Me"
           subtitle="I build things to understand them."
         />
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-lg leading-relaxed text-muted">
-            I&apos;m a third-year Computer Science student at Dawson College in
-            Montr&eacute;al, Queb&eacute;c. I build full-stack applications with
-            React, Flask, Java, and C#.
+        <div className="mx-auto max-w-3xl">
+          <p className="text-center text-lg leading-relaxed text-muted">
+            Third-year Computer Science student at Dawson College in
+            Montr&eacute;al, Queb&eacute;c.
           </p>
-          <p className="mt-6 text-lg leading-relaxed text-muted">
-            I have a strong interest in infrastructure and DevOps. I run a
-            homelab with Proxmox, self-host services, and enjoy working with
-            Linux and Docker as an open source advocate.
-          </p>
-          <p className="mt-6 text-lg leading-relaxed text-muted">
-            I learn quickly and care about the details, whether I&apos;m picking
-            up a new framework, collaborating on a team project, or leveraging
-            AI to speed up my workflow.
-          </p>
-          <p className="mt-6 text-lg leading-relaxed text-muted">
-            Outside of tech, I stay curious about science, particularly
-            meteorology and astronomy. I explore photography and 3D rendering in
-            Blender, experiment with music production in Ableton, and am always
-            chasing better coffee.
-          </p>
+          <div className="mt-8 mx-auto max-w-lg space-y-6">
+            <div className="relative overflow-hidden rounded-lg border border-border bg-card/50 backdrop-blur-sm p-6">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
+              <h3 className="mb-4 text-center font-mono text-base font-semibold text-accent">~/dev</h3>
+              <ul className="space-y-3 text-base leading-relaxed text-muted">
+                <li className="flex items-center gap-3">
+                  <Code size={18} className="shrink-0 text-accent" />
+                  <span>I build full-stack apps with React, Flask, Java, and C#.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Server size={18} className="shrink-0 text-accent" />
+                  <span>Strong interest in infrastructure and DevOps.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Monitor size={18} className="shrink-0 text-accent" />
+                  <span>I self-host services with Proxmox.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Terminal size={18} className="shrink-0 text-accent" />
+                  <span>Linux and Docker power user.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Heart size={18} className="shrink-0 text-accent" />
+                  <span>Open source advocate.</span>
+                </li>
+              </ul>
+            </div>
+            <div className="relative overflow-hidden rounded-lg border border-border bg-card/50 backdrop-blur-sm p-6">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
+              <h3 className="mb-4 text-center font-mono text-base font-semibold text-accent">~/approach</h3>
+              <ul className="space-y-3 text-base leading-relaxed text-muted">
+                <li className="flex items-center gap-3">
+                  <Users size={18} className="shrink-0 text-accent" />
+                  <span>Collaborative on team projects using Agile workflows.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <GitBranch size={18} className="shrink-0 text-accent" />
+                  <span>Track issues and collaborate via GitLab/GitHub.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Zap size={18} className="shrink-0 text-accent" />
+                  <span>I learn quickly and care about the details.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <BookOpen size={18} className="shrink-0 text-accent" />
+                  <span>Read documentation to understand tools deeply.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Bot size={18} className="shrink-0 text-accent" />
+                  <span>Draft with AI, architect manually.</span>
+                </li>
+              </ul>
+            </div>
+            <div className="relative overflow-hidden rounded-lg border border-border bg-card/50 backdrop-blur-sm p-6">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
+              <h3 className="mb-4 text-center font-mono text-base font-semibold text-accent">~/interests</h3>
+              <ul className="space-y-3 text-base leading-relaxed text-muted">
+                <li className="flex items-center gap-3">
+                  <CloudSun size={18} className="shrink-0 text-accent" />
+                  <span>Curious about meteorology and astronomy.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Box size={18} className="shrink-0 text-accent" />
+                  <span>I explore 3D rendering in Blender.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Music size={18} className="shrink-0 text-accent" />
+                  <span>I experiment with music production in Ableton.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Coffee size={18} className="shrink-0 text-accent" />
+                  <span>Always chasing better coffee.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         {/* GitHub Contribution Graph */}
