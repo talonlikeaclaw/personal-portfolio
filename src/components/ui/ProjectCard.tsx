@@ -19,7 +19,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               In Progress
             </span>
           )}
-          <span className="rounded-full bg-background px-2 py-0.5 font-mono text-s text-muted capitalize">
+          <span className="rounded-full bg-background px-2 py-0.5 font-mono text-s text-accent capitalize">
             {project.type}
           </span>
         </div>
