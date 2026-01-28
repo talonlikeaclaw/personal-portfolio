@@ -14,10 +14,14 @@ import {
   GitBranch,
   Users,
   Bot,
-  CloudSun,
   Box,
   Music,
   Coffee,
+  SquareTerminal,
+  Gamepad2,
+  Camera,
+  BrainCircuit,
+  Earth,
 } from "lucide-react";
 
 export default function About() {
@@ -48,7 +52,7 @@ export default function About() {
               <ul className="space-y-3 text-base leading-relaxed text-muted">
                 <li className="flex items-center gap-3">
                   <Code size={18} className="shrink-0 text-accent" />
-                  <span>I build full-stack apps with React, Flask, Java, and C#.</span>
+                  <span>Build full-stack apps with React, Flask, Java, and C#.</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Server size={18} className="shrink-0 text-accent" />
@@ -56,11 +60,15 @@ export default function About() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Monitor size={18} className="shrink-0 text-accent" />
-                  <span>I self-host services with Proxmox.</span>
+                  <span>Self-host services with Proxmox and Docker.</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Terminal size={18} className="shrink-0 text-accent" />
-                  <span>Linux and Docker power user.</span>
+                  <span>Linux power user & admin.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <SquareTerminal size={18} className="shrink-0 text-accent" />
+                  <span>CLI/TUI enthusiast and power user.</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Heart size={18} className="shrink-0 text-accent" />
@@ -78,15 +86,19 @@ export default function About() {
                 </li>
                 <li className="flex items-center gap-3">
                   <GitBranch size={18} className="shrink-0 text-accent" />
-                  <span>Track issues and collaborate via GitLab/GitHub.</span>
+                  <span>Track issues and collaborate via Git workflows.</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Zap size={18} className="shrink-0 text-accent" />
-                  <span>I learn quickly and care about the details.</span>
+                  <span>Learn quickly and care about the details.</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <BookOpen size={18} className="shrink-0 text-accent" />
                   <span>Read documentation to understand tools deeply.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <BrainCircuit size={18} className="shrink-0 text-accent" />
+                  <span>Knowledge management in Obsidian.</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Bot size={18} className="shrink-0 text-accent" />
@@ -99,20 +111,28 @@ export default function About() {
               <h3 className="mb-4 text-center font-mono text-base font-semibold text-accent">~/interests</h3>
               <ul className="space-y-3 text-base leading-relaxed text-muted">
                 <li className="flex items-center gap-3">
-                  <CloudSun size={18} className="shrink-0 text-accent" />
+                  <Coffee size={18} className="shrink-0 text-accent" />
+                  <span>Always chasing better coffee.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Earth size={18} className="shrink-0 text-accent" />
                   <span>Curious about meteorology and astronomy.</span>
                 </li>
                 <li className="flex items-center gap-3">
+                  <Camera size={18} className="shrink-0 text-accent" />
+                  <span>Photograph light hitting landscapes and architecture.</span>
+                </li>
+                <li className="flex items-center gap-3">
                   <Box size={18} className="shrink-0 text-accent" />
-                  <span>I explore 3D rendering in Blender.</span>
+                  <span>Explore 3D rendering in Blender.</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Music size={18} className="shrink-0 text-accent" />
-                  <span>I experiment with music production in Ableton.</span>
+                  <span>Experiment with music production in Ableton.</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Coffee size={18} className="shrink-0 text-accent" />
-                  <span>Always chasing better coffee.</span>
+                  <Gamepad2 size={18} className="shrink-0 text-accent" />
+                  <span>Grand Champion in Rocket Leaaue.</span>
                 </li>
               </ul>
             </div>
