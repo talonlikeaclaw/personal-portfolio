@@ -17,10 +17,7 @@ import {
   Box,
   Music,
   Coffee,
-  SquareTerminal,
   Gamepad2,
-  Camera,
-  BrainCircuit,
   Earth,
 } from "lucide-react";
 
@@ -42,97 +39,150 @@ export default function About() {
         />
         <div className="mx-auto max-w-3xl">
           <p className="text-center text-lg leading-relaxed text-muted">
-            Third-year Computer Science student at Dawson College in
-            Montr&eacute;al, Queb&eacute;c.
+            Third-year <strong>Computer Science</strong> student at{" "}
+            <strong>Dawson College</strong> in Montr&eacute;al, Queb&eacute;c.
           </p>
+
           <div className="mt-8 mx-auto max-w-lg space-y-6">
+            {/* ~/dev */}
             <div className="relative overflow-hidden rounded-lg border border-border bg-card/50 backdrop-blur-sm p-6">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
-              <h3 className="mb-4 text-center font-mono text-base font-semibold text-accent">~/dev</h3>
+              <h3 className="mb-4 text-center font-mono text-base font-semibold text-accent">
+                ~/dev
+              </h3>
+
               <ul className="space-y-3 text-base leading-relaxed text-muted">
                 <li className="flex items-center gap-3">
                   <Code size={18} className="shrink-0 text-accent" />
-                  <span>Build full-stack apps with React, Flask, Java, and C#.</span>
+                  <span>
+                    Builds full-stack apps with <strong>React</strong>,{" "}
+                    <strong>Flask</strong>, <strong>Java</strong>, and{" "}
+                    <strong>C#</strong>.
+                  </span>
                 </li>
+
                 <li className="flex items-center gap-3">
                   <Server size={18} className="shrink-0 text-accent" />
-                  <span>Strong interest in infrastructure and DevOps.</span>
+                  <span>
+                    Has a strong interest in <strong>infrastructure</strong> and{" "}
+                    <strong>DevOps</strong>.
+                  </span>
                 </li>
+
                 <li className="flex items-center gap-3">
                   <Monitor size={18} className="shrink-0 text-accent" />
-                  <span>Self-host services with Proxmox and Docker.</span>
+                  <span>
+                    Self-hosts services with <strong>Proxmox</strong> and{" "}
+                    <strong>Docker</strong>.
+                  </span>
                 </li>
+
                 <li className="flex items-center gap-3">
                   <Terminal size={18} className="shrink-0 text-accent" />
-                  <span>Linux power user & admin.</span>
+                  <span>
+                    Is a <strong>Linux</strong> power user and administrator.
+                  </span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <SquareTerminal size={18} className="shrink-0 text-accent" />
-                  <span>CLI/TUI enthusiast.</span>
-                </li>
+
                 <li className="flex items-center gap-3">
                   <Heart size={18} className="shrink-0 text-accent" />
-                  <span>Open source advocate.</span>
+                  <span>
+                    Is an <strong>open-source</strong> advocate.
+                  </span>
                 </li>
               </ul>
             </div>
+
+            {/* ~/approach */}
             <div className="relative overflow-hidden rounded-lg border border-border bg-card/50 backdrop-blur-sm p-6">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
-              <h3 className="mb-4 text-center font-mono text-base font-semibold text-accent">~/approach</h3>
+              <h3 className="mb-4 text-center font-mono text-base font-semibold text-accent">
+                ~/approach
+              </h3>
+
               <ul className="space-y-3 text-base leading-relaxed text-muted">
                 <li className="flex items-center gap-3">
                   <Users size={18} className="shrink-0 text-accent" />
-                  <span>Collaborative on team projects using Agile workflows.</span>
+                  <span>
+                    Collaborates on team projects using <strong>Agile</strong>{" "}
+                    workflows.
+                  </span>
                 </li>
+
                 <li className="flex items-center gap-3">
                   <GitBranch size={18} className="shrink-0 text-accent" />
-                  <span>Track issues and collaborate via Git workflows.</span>
+                  <span>
+                    Tracks issues and collaborates via <strong>Git</strong>{" "}
+                    workflows.
+                  </span>
                 </li>
+
                 <li className="flex items-center gap-3">
                   <Zap size={18} className="shrink-0 text-accent" />
-                  <span>Learn quickly and care about the details.</span>
+                  <span>
+                    Learns quickly and cares about <strong>details</strong>.
+                  </span>
                 </li>
+
                 <li className="flex items-center gap-3">
                   <BookOpen size={18} className="shrink-0 text-accent" />
-                  <span>Read documentation to understand tools deeply.</span>
+                  <span>
+                    Reads <strong>documentation</strong> to understand tools
+                    deeply.
+                  </span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <BrainCircuit size={18} className="shrink-0 text-accent" />
-                  <span>Manage knowledge with Obsidian notes.</span>
-                </li>
+
                 <li className="flex items-center gap-3">
                   <Bot size={18} className="shrink-0 text-accent" />
-                  <span>Draft with AI, architect manually.</span>
+                  <span>
+                    Drafts with <strong>AI</strong> and architects manually.
+                  </span>
                 </li>
               </ul>
             </div>
+
+            {/* ~/interests */}
             <div className="relative overflow-hidden rounded-lg border border-border bg-card/50 backdrop-blur-sm p-6">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
-              <h3 className="mb-4 text-center font-mono text-base font-semibold text-accent">~/interests</h3>
+              <h3 className="mb-4 text-center font-mono text-base font-semibold text-accent">
+                ~/interests
+              </h3>
+
               <ul className="space-y-3 text-base leading-relaxed text-muted">
                 <li className="flex items-center gap-3">
                   <Coffee size={18} className="shrink-0 text-accent" />
-                  <span>Always chasing better coffee.</span>
+                  <span>Always chases better coffee.</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <Earth size={18} className="shrink-0 text-accent" />
-                  <span>Curious about meteorology and astronomy.</span>
-                </li>
+
                 <li className="flex items-center gap-3">
                   <Box size={18} className="shrink-0 text-accent" />
-                  <span>Explore 3D rendering in Blender.</span>
+                  <span>
+                    Explores 3D rendering in <strong>Blender</strong>.
+                  </span>
                 </li>
+
                 <li className="flex items-center gap-3">
                   <Music size={18} className="shrink-0 text-accent" />
-                  <span>Experiment with music production in Ableton.</span>
+                  <span>
+                    Experiments with music production in{" "}
+                    <strong>Ableton</strong>.
+                  </span>
                 </li>
+
                 <li className="flex items-center gap-3">
-                  <Camera size={18} className="shrink-0 text-accent" />
-                  <span>Photograph light hitting landscapes and architecture.</span>
+                  <Earth size={18} className="shrink-0 text-accent" />
+                  <span>
+                    Is curious about <strong>meteorology</strong> and{" "}
+                    <strong>astronomy</strong>.
+                  </span>
                 </li>
+
                 <li className="flex items-center gap-3">
                   <Gamepad2 size={18} className="shrink-0 text-accent" />
-                  <span>Grand Champion in Rocket League.</span>
+                  <span>
+                    Competes as a Grand Champion in Rocket
+                    League.
+                  </span>
                 </li>
               </ul>
             </div>

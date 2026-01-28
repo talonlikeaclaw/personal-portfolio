@@ -19,7 +19,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               In Progress
             </span>
           )}
-          <span className="rounded-full bg-background px-2 py-0.5 font-mono text-xs text-muted capitalize">
+          <span className="rounded-full bg-background px-2 py-0.5 font-mono text-s text-muted capitalize">
             {project.type}
           </span>
         </div>
@@ -31,7 +31,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         {project.technologies.map((tech) => (
           <span
             key={tech}
-            className="rounded bg-background px-2 py-1 font-mono text-xs text-text"
+            className="rounded bg-background px-2 py-1 font-mono text-sm text-text"
           >
             {tech}
           </span>

@@ -8,7 +8,7 @@ export default function SkillCategory({ category }: SkillCategoryProps) {
   return (
     <div className="relative overflow-hidden rounded-lg border border-border bg-card p-6">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
-      <h3 className="mb-4 font-mono text-lg font-semibold text-accent">{category.name}</h3>
+      <h3 className="mb-4 font-mono text-xl font-semibold text-accent">{category.name}</h3>
       <div className="flex flex-wrap gap-3">
         {category.skills.map((skill) => (
           <span
