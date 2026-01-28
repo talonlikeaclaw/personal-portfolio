@@ -151,7 +151,9 @@ export default function About() {
               <ul className="space-y-3 text-base leading-relaxed text-muted">
                 <li className="flex items-center gap-3">
                   <Coffee size={18} className="shrink-0 text-accent" />
-                  <span>Always chases better coffee.</span>
+                  <span>
+                    Always chases better <strong>coffee.</strong>.
+                  </span>
                 </li>
 
                 <li className="flex items-center gap-3">
@@ -180,7 +182,7 @@ export default function About() {
                 <li className="flex items-center gap-3">
                   <Gamepad2 size={18} className="shrink-0 text-accent" />
                   <span>
-                    Competes as a Grand Champion in Rocket
+                    Competes as a <strong>Grand Champion</strong> in Rocket
                     League.
                   </span>
                 </li>
