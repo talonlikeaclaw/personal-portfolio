@@ -68,7 +68,7 @@ export default function About() {
                 </li>
                 <li className="flex items-center gap-3">
                   <SquareTerminal size={18} className="shrink-0 text-accent" />
-                  <span>CLI/TUI enthusiast and power user.</span>
+                  <span>CLI/TUI enthusiast.</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Heart size={18} className="shrink-0 text-accent" />
@@ -98,7 +98,7 @@ export default function About() {
                 </li>
                 <li className="flex items-center gap-3">
                   <BrainCircuit size={18} className="shrink-0 text-accent" />
-                  <span>Knowledge management in Obsidian.</span>
+                  <span>Manage knowledge with Obsidian notes.</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Bot size={18} className="shrink-0 text-accent" />
@@ -119,16 +119,16 @@ export default function About() {
                   <span>Curious about meteorology and astronomy.</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Camera size={18} className="shrink-0 text-accent" />
-                  <span>Photograph light hitting landscapes and architecture.</span>
-                </li>
-                <li className="flex items-center gap-3">
                   <Box size={18} className="shrink-0 text-accent" />
                   <span>Explore 3D rendering in Blender.</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Music size={18} className="shrink-0 text-accent" />
                   <span>Experiment with music production in Ableton.</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Camera size={18} className="shrink-0 text-accent" />
+                  <span>Photograph light hitting landscapes and architecture.</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Gamepad2 size={18} className="shrink-0 text-accent" />
