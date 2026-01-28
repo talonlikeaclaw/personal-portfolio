@@ -132,7 +132,7 @@ export default function About() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Gamepad2 size={18} className="shrink-0 text-accent" />
-                  <span>Grand Champion in Rocket Leaaue.</span>
+                  <span>Grand Champion in Rocket League.</span>
                 </li>
               </ul>
             </div>
