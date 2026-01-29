@@ -28,11 +28,13 @@ export const metadata: Metadata = {
     siteName: "Talon Dunbar",
     locale: "en_US",
     type: "website",
+    images: ["/headshot.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Talon Dunbar | Infrastructure Enthusiast",
     description: "Computer Science Student specializing in infrastructure, DevOps, and modern web technologies.",
+    images: ["/headshot.jpg"],
   },
   robots: {
     index: true,
