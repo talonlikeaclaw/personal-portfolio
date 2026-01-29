@@ -40,7 +40,7 @@ export default function Contact() {
               href={link.href}
               target={link.href.startsWith("mailto") ? undefined : "_blank"}
               rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-              className="flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-4 py-3 transition-all hover:border-accent/50 hover:bg-card/80 sm:gap-3 sm:px-6 sm:py-4"
+              className="flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-4 py-3 transition-all hover:border-accent/50 hover:bg-card/80 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 sm:gap-3 sm:px-6 sm:py-4"
             >
               <link.icon className="h-5 w-5 text-accent" />
               <span className="font-mono text-text">{link.name}</span>

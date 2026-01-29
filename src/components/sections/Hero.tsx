@@ -1,22 +1,28 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import FaultyTerminal from "@/components/ui/FaultyTerminal";
 
 export default function Hero() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth < 768 : false
+  );
 
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
+
+  const gridMul = useMemo<[number, number]>(
+    () => (isMobile ? [1.5, 3] : [3, 1.5]),
+    [isMobile]
+  );
 
   return (
     <section className="relative flex min-h-screen items-center pt-12">
@@ -24,7 +30,7 @@ export default function Hero() {
       <div className="absolute inset-0 -top-20 -z-10">
         <FaultyTerminal
           scale={1}
-          gridMul={isMobile ? [1.5, 3] : [3, 1.5]}
+          gridMul={gridMul}
           digitSize={1.2}
           timeScale={0.2}
           scanlineIntensity={0.1}
@@ -50,6 +56,7 @@ export default function Hero() {
               alt="Talon Dunbar"
               width={160}
               height={160}
+              sizes="(max-width: 640px) 128px, 160px"
               className="h-full w-full object-cover"
               priority
             />
@@ -68,19 +75,19 @@ export default function Hero() {
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
               href="#about"
-              className="rounded-lg border border-accent bg-accent/10 backdrop-blur-sm px-6 py-3 font-mono font-medium text-accent transition-all hover:bg-accent hover:text-black"
+              className="rounded-lg border border-accent bg-accent/10 backdrop-blur-sm px-6 py-3 font-mono font-medium text-accent transition-all hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               About Me
             </a>
             <a
               href="#projects"
-              className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent"
+              className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent"
+              className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               Contact Me
             </a>

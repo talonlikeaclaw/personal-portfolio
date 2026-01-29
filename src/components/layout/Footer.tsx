@@ -25,7 +25,7 @@ export default function Footer() {
                   href={attr.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-text hover:text-accent transition-colors"
+                  className="text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                 >
                   {attr.name}
                 </a>

@@ -17,6 +17,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             src={`/projects/${project.image}`}
             alt={`${project.title} screenshot`}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover object-top"
           />
         </div>
@@ -58,7 +59,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors"
+            className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
           >
             <Github size={16} />
             <span>Code</span>
@@ -69,7 +70,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors"
+            className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
           >
             <ExternalLink size={16} />
             <span>Live Demo</span>

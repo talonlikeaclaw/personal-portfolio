@@ -19,7 +19,7 @@ export default function Navbar() {
     <nav className="fixed top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-sm">
       <Container>
         <div className="flex h-20 items-center justify-between">
-          <a href="#" className="font-mono text-3xl font-bold text-text hover:text-accent transition-colors">
+          <a href="#" className="font-mono text-3xl font-bold text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2">
             talonlikeaclaw
           </a>
 
@@ -29,7 +29,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-mono text-lg text-text hover:text-accent transition-colors"
+                className="font-mono text-lg text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
               >
                 {link.label}
               </a>
@@ -38,7 +38,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-muted hover:text-text"
+            className="md:hidden text-muted hover:text-text focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -53,7 +53,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="block py-2 font-mono text-lg text-text hover:text-accent transition-colors"
+                className="block py-2 font-mono text-lg text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

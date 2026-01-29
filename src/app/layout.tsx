@@ -6,13 +6,13 @@ import Footer from "@/components/layout/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
-  display: "optional",
+  display: "swap",
   variable: "--font-inter",
 });
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  display: "optional",
+  display: "swap",
   variable: "--font-mono",
   preload: true,
 });
@@ -20,6 +20,27 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Talon Dunbar | Full-Stack Developer",
   description: "Computer Science Student and Full-Stack Developer based in Montreal. Specializing in React, Next.js, Go, and modern web technologies.",
+  metadataBase: new URL("https://portfolio.talonlikeaclaw.com"),
+  openGraph: {
+    title: "Talon Dunbar | Infrastructure Enthusiast",
+    description: "Computer Science Student specializing in infrastructure, DevOps, and modern web technologies.",
+    url: "https://portfolio.talonlikeaclaw.com",
+    siteName: "Talon Dunbar",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Talon Dunbar | Infrastructure Enthusiast",
+    description: "Computer Science Student specializing in infrastructure, DevOps, and modern web technologies.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  other: {
+    "theme-color": "#0a0a0f",
+  },
 };
 
 export default function RootLayout({
