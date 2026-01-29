@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import FaultyTerminal from "@/components/ui/FaultyTerminal";
 
@@ -44,6 +45,16 @@ export default function Hero() {
 
       <Container>
         <div className="pointer-events-none text-center">
+          <div className="mx-auto mb-8 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border-2 border-accent/1 sm:h-40 sm:w-40">
+            <Image
+              src="/headshot.jpg"
+              alt="Talon Dunbar"
+              width={160}
+              height={160}
+              className="h-full w-full object-cover"
+              priority
+            />
+          </div>
           <h1 className="font-mono text-3xl font-bold tracking-tight text-text sm:text-6xl">
             Talon Dunbar
           </h1>

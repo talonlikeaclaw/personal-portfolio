@@ -5,6 +5,7 @@ export interface Project {
   type: "team" | "solo";
   status?: "in-progress" | "completed";
   featured?: boolean;
+  image?: string; // Path to image in /public/projects/ (e.g., "trim-tracker.png")
   liveUrl?: string;
   githubUrl?: string;
 }
@@ -18,6 +19,7 @@ export const projects: Project[] = [
     type: "team",
     status: "completed",
     featured: true,
+    image: "/trimtracker.jpg",
     githubUrl: "https://github.com/talonlikeaclaw/trim-tracker",
   },
   {
