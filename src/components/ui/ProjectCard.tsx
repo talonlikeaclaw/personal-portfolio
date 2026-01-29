@@ -12,7 +12,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
 
       {project.image && (
-        <div className="relative h-70 w-full overflow-hidden">
+        <div className="relative h-60 w-full overflow-hidden">
           <Image
             src={`/projects/${project.image}`}
             alt={`${project.title} screenshot`}

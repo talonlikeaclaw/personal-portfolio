@@ -49,6 +49,7 @@ export const projects: Project[] = [
     technologies: ["C#", "Avalonia", "EF Core", "LINQ", "MSTest", "Moq"],
     type: "team",
     status: "completed",
+    image: "/dawsondial.jpg",
     githubUrl: "https://github.com/talonlikeaclaw/dawson-dial",
   },
   {
@@ -57,6 +58,7 @@ export const projects: Project[] = [
     technologies: ["Java", "PostgreSQL", "Maven", "JUnit"],
     type: "team",
     status: "completed",
+    image: "/dealership.jpg",
     githubUrl: "https://github.com/talonlikeaclaw/virtual-used-car-dealership",
   },
   // Solo projects - more technical/interesting ones first
@@ -76,6 +78,7 @@ export const projects: Project[] = [
     technologies: ["Java", "ANSI", "CLI"],
     type: "solo",
     status: "completed",
+    image: "/picnicgo.jpg",
     githubUrl: "https://github.com/talonlikeaclaw/picnic-go",
   },
   {
@@ -84,6 +87,7 @@ export const projects: Project[] = [
     technologies: ["Python", "I2C", "Raspberry Pi", "ADS7830"],
     type: "solo",
     status: "completed",
+    image: "/thermostat.jpg",
     githubUrl: "https://github.com/talonlikeaclaw/thermostat-driver",
   },
   {
@@ -92,6 +96,7 @@ export const projects: Project[] = [
     technologies: ["Rust", "CLI", "Serde"],
     type: "solo",
     status: "completed",
+    image: "/tinytask.jpg",
     githubUrl: "https://github.com/talonlikeaclaw/tiny-task-manager",
   },
   {
@@ -100,6 +105,7 @@ export const projects: Project[] = [
     technologies: ["Zsh", "JSON", "Lua", "TOML"],
     type: "solo",
     status: "completed",
+    image: "/dotfiles.jpg",
     githubUrl: "https://github.com/talonlikeaclaw/dotfiles",
   },
 ];

@@ -57,9 +57,9 @@ export default function Hero() {
           <h1 className="font-mono text-3xl font-bold tracking-tight text-text sm:text-6xl">
             Talon Dunbar
           </h1>
-          <p className="mt-4 font-mono text-base text-text sm:text-2xl">
+          <p className="mt-4 font-mono text-lg text-accent font-semibold sm:text-2xl">
             <span className="sm:inline block">Full-Stack Developer</span>
-            <span className="hidden sm:inline"> | </span>
+            <span className="hidden sm:inline text-text"> | </span>
             <span className="sm:inline block">Infrastructure Enthusiast</span>
           </p>
           <p className="mt-3 max-w-xl mx-auto text-sm text-muted sm:text-base">
