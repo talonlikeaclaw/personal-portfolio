@@ -33,8 +33,7 @@ export default function Hero() {
           noiseAmp={1}
           curvature={0.1}
           tint="#338953"
-          mouseReact={true}
-          mouseStrength={0.5}
+          mouseReact={false}
           pageLoadAnimation={true}
           brightness={0.6}
           dpr={1}
@@ -44,7 +43,7 @@ export default function Hero() {
       </div>
 
       <Container>
-        <div className="pointer-events-none text-center">
+        <div className="text-center">
           <div className="mx-auto mb-8 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border-2 border-accent/1 sm:h-40 sm:w-40">
             <Image
               src="/headshot.jpg"
@@ -66,7 +65,7 @@ export default function Hero() {
           <p className="mt-3 max-w-xl mx-auto text-sm text-muted sm:text-base">
             Fast learner, detail-oriented, curious, collaborative.
           </p>
-          <div className="pointer-events-auto mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
               href="#about"
               className="rounded-lg border border-accent bg-accent/10 backdrop-blur-sm px-6 py-3 font-mono font-medium text-accent transition-all hover:bg-accent hover:text-black"
