@@ -12,13 +12,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
 
       {project.image && (
-        <div className="relative h-60 w-full overflow-hidden">
+        <div className="relative w-full overflow-hidden sm:h-60">
           <Image
             src={`/projects/${project.image}`}
             alt={`${project.title} screenshot`}
-            fill
+            width={800}
+            height={600}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover object-top"
+            className="w-full h-auto sm:absolute sm:inset-0 sm:h-full sm:object-cover sm:object-top"
           />
         </div>
       )}

@@ -50,13 +50,13 @@ export default function Hero() {
 
       <Container>
         <div className="text-center">
-          <div className="mx-auto mb-8 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border-2 border-accent/1 sm:h-40 sm:w-40">
+          <div className="mx-auto mb-8 flex h-40 w-40 items-center justify-center overflow-hidden rounded-full border-2 border-accent/1 sm:h-48 sm:w-48">
             <Image
               src="/headshot.jpg"
               alt="Talon Dunbar"
-              width={160}
-              height={160}
-              sizes="(max-width: 640px) 128px, 160px"
+              width={192}
+              height={192}
+              sizes="(max-width: 640px) 160px, 192px"
               className="h-full w-full object-cover"
               priority
             />
