@@ -24,7 +24,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
       <div className="flex flex-col flex-grow p-6">
       <div className="mb-3 flex items-start justify-between">
-        <h3 className="mr-4 font-mono text-xl font-semibold text-text group-hover:text-accent transition-colors">
+        <h3 className="mr-4 font-mono text-xl font-semibold text-accent">
           {project.title}
         </h3>
         <div className="flex items-center gap-2">

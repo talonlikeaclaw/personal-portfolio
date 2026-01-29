@@ -4,7 +4,7 @@
   --background: #0a0a0f;
   --card: #18181b;
   --text: #e4e4e7;
-  --muted: #a1a1aa;
+  --muted: #e4e4e7;
   --accent: #22c55e;
   --border: #27272a;
 }
@@ -32,4 +32,10 @@ html {
 ::selection {
   background-color: var(--accent);
   color: white;
+}
+
+strong,
+b {
+  color: var(--accent);
+  font-weight: 600;
 }
