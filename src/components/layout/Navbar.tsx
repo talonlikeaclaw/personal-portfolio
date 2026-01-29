@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Container from "@/components/ui/Container";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Mail } from "lucide-react";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -36,14 +36,23 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-muted hover:text-text focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Buttons */}
+          <div className="flex items-center gap-3 md:hidden">
+            <a
+              href="#contact"
+              className="flex items-center justify-center rounded-lg border border-accent bg-accent/10 p-2 text-accent transition-all hover:bg-accent hover:text-black"
+              aria-label="Contact me"
+            >
+              <Mail size={20} />
+            </a>
+            <button
+              className="text-muted hover:text-text focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
