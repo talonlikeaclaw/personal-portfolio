@@ -29,6 +29,7 @@ export const projects: Project[] = [
     type: "team",
     status: "completed",
     featured: true,
+    image: "/dawscorp.jpg",
     githubUrl: "https://github.com/talonlikeaclaw/dawscorp-task-manager",
   },
   {
@@ -38,6 +39,7 @@ export const projects: Project[] = [
     type: "team",
     status: "completed",
     featured: true,
+    image: "/immigrationviz.jpg",
     liveUrl: "https://five20-project-safari-chiru-dunbar.onrender.com/",
     githubUrl: "https://github.com/talonlikeaclaw/canadian-immigration-visualization",
   },
@@ -65,6 +67,7 @@ export const projects: Project[] = [
     type: "solo",
     status: "in-progress",
     featured: true,
+    image: "/godash.jpg",
     githubUrl: "https://github.com/talonlikeaclaw/godash",
   },
   {
