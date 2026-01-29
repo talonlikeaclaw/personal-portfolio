@@ -20,7 +20,7 @@ export default function Navbar() {
       <Container>
         <div className="flex h-20 items-center justify-between">
           <a href="#" className="font-mono text-3xl font-bold text-text hover:text-accent transition-colors">
-            TD
+            talonlikeaclaw
           </a>
 
           {/* Desktop Navigation */}
