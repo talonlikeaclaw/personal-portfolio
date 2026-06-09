@@ -41,7 +41,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
 
-      <p className="mb-4 flex-grow text-muted leading-relaxed">{project.description}</p>
+      <p className="mb-2 flex-grow text-muted leading-relaxed">{project.description}</p>
+
+      {project.note && (
+        <p className="mb-4 font-mono text-xs text-accent/80">{project.note}</p>
+      )}
 
       <div className="mb-4 flex flex-wrap gap-2">
         {project.technologies.map((tech) => (

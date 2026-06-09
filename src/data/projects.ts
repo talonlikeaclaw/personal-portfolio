@@ -6,6 +6,7 @@ export interface Project {
   status?: "in-progress" | "completed";
   featured?: boolean;
   image?: string; // Path to image in /public/projects/ (e.g., "trim-tracker.png")
+  note?: string;
   liveUrl?: string;
   githubUrl?: string;
 }
@@ -20,6 +21,7 @@ export const projects: Project[] = [
     status: "completed",
     featured: true,
     image: "/trimtracker.jpg",
+    note: "Built for a server-side programming course.",
     githubUrl: "https://github.com/talonlikeaclaw/trim-tracker",
   },
   {
@@ -30,6 +32,7 @@ export const projects: Project[] = [
     status: "completed",
     featured: true,
     image: "/dawsasset.jpg",
+    note: "Live production deployment at Dawson College.",
     githubUrl: "https://github.com/talonlikeaclaw/dawsasset",
   },
   {
@@ -40,6 +43,7 @@ export const projects: Project[] = [
     status: "completed",
     featured: true,
     image: "/immigrationviz.jpg",
+    note: "Data sourced from Statistics Canada census records.",
     liveUrl: "https://five20-project-safari-chiru-dunbar.onrender.com/",
     githubUrl: "https://github.com/talonlikeaclaw/canadian-immigration-visualization",
   },
@@ -79,6 +83,7 @@ export const projects: Project[] = [
     status: "in-progress",
     featured: true,
     image: "/godash.jpg",
+    note: "Core monitoring features complete. Active development.",
     githubUrl: "https://github.com/talonlikeaclaw/godash",
   },
   {

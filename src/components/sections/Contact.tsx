@@ -20,7 +20,7 @@ const contactLinks = [
   },
   {
     name: "Email",
-    href: "mailto:talon.dunbar@dawsoncollege.qc.ca",
+    href: "mailto:talonlikeaclaw@proton.me",
     icon: Mail,
   },
 ];
@@ -31,7 +31,7 @@ export default function Contact() {
       <Container>
         <SectionHeading
           title="Let's Work Together"
-          subtitle="Available for full-time positions."
+          subtitle="Open to full-time DevOps, infrastructure, and full-stack roles."
         />
         <div className="mx-auto grid max-w-2xl grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:justify-center sm:gap-6">
           {contactLinks.map((link) => (

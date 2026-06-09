@@ -65,9 +65,7 @@ export default function Hero() {
             Talon Dunbar
           </h1>
           <p className="mt-4 font-mono text-lg text-accent font-semibold sm:text-2xl">
-            <span className="sm:inline block">Full-Stack Developer</span>
-            <span className="hidden sm:inline text-text"> | </span>
-            <span className="sm:inline block">Infrastructure Enthusiast</span>
+            <span className="sm:inline block">DevOps & Full-Stack Developer</span>
           </p>
           <p className="mt-3 max-w-xl mx-auto text-sm text-muted sm:text-base">
             Fast learner, detail-oriented, curious, collaborative.

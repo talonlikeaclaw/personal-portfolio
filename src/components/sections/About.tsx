@@ -135,7 +135,7 @@ export default function About() {
                 <li className="flex items-center gap-3">
                   <Bot size={18} className="shrink-0 text-accent" />
                   <span>
-                    Drafts with <strong>AI</strong> and architects manually.
+                    Uses <strong>AI tooling</strong> deliberately as part of an engineering workflow.
                   </span>
                 </li>
               </ul>
