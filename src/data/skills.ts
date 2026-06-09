@@ -10,7 +10,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: "Infrastructure & DevOps",
-    skills: ["Linux", "Docker", "CI/CD", "AWS", "Cloudflare", "Nginx", "Proxmox", "Self-Hosting"],
+    skills: ["Linux", "Docker", "CI/CD", "Ansible", "OpenTofu", "Grafana", "TrueNAS", "Proxmox", "AWS", "Cloudflare", "Nginx"],
   },
   {
     name: "Databases",
@@ -22,10 +22,10 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: "Web Development",
-    skills: ["React", "Next.js", "Express.js", "Flask", "REST APIs", "WebSockets", "OAuth2", "JWT"],
+    skills: ["React", "Next.js", "Express.js", "Flask", "Tailwind CSS", "REST APIs", "WebSockets", "OAuth2", "JWT"],
   },
   {
     name: "Developer Tooling",
-    skills: ["Git", "GitLab", "Neovim", "Tmux", "VSCodium", "Bruno", "SSH", "Obsidian", "Debugging"],
+    skills: ["Git", "GitLab", "Neovim", "Tmux", "VSCodium", "Bruno", "SSH", "Obsidian", "Debugging", "AI Agents"],
   },
 ];
