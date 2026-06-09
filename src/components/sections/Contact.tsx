@@ -31,7 +31,7 @@ export default function Contact() {
       <Container>
         <SectionHeading
           title="Let's Work Together"
-          subtitle="Available for Spring 2026 internships."
+          subtitle="Available for full-time positions."
         />
         <div className="mx-auto grid max-w-2xl grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:justify-center sm:gap-6">
           {contactLinks.map((link) => (

@@ -39,7 +39,7 @@ export default function About() {
         />
         <div className="mx-auto max-w-3xl">
           <p className="text-center text-lg leading-relaxed text-muted">
-            Third-year <strong>Computer Science student</strong> at{" "}
+            <strong>Computer Science graduate</strong> from{" "}
             <strong>Dawson College</strong> in Montr&eacute;al, Queb&eacute;c.
           </p>
 
