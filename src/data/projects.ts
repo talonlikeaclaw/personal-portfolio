@@ -23,14 +23,14 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/talonlikeaclaw/trim-tracker",
   },
   {
-    title: "Dawscorp Task Manager",
-    description: "A Jira-like task management system built for team collaboration. Features include project boards, task assignment, progress tracking, and team management.",
-    technologies: ["Java", "PostgreSQL", "PL/pgSQL", "JDBC", "JUnit"],
+    title: "DawsAsset",
+    description: "Odoo 17-based asset and inventory platform for Dawson College. Replaced spreadsheet tracking across four departments with barcode scanning, equipment loans, and a student self-service kiosk.",
+    technologies: ["Python", "Odoo", "PostgreSQL", "Docker"],
     type: "team",
     status: "completed",
     featured: true,
-    image: "/dawscorp.jpg",
-    githubUrl: "https://github.com/talonlikeaclaw/dawscorp-task-manager",
+    image: "/dawsasset.jpg",
+    githubUrl: "https://github.com/talonlikeaclaw/dawsasset",
   },
   {
     title: "Canadian Immigration Viz",
@@ -60,6 +60,15 @@ export const projects: Project[] = [
     status: "completed",
     image: "/dealership.jpg",
     githubUrl: "https://github.com/talonlikeaclaw/virtual-used-car-dealership",
+  },
+  {
+    title: "Dawscorp Task Manager",
+    description: "A Jira-like task management system built for team collaboration. Features include project boards, task assignment, progress tracking, and team management.",
+    technologies: ["Java", "PostgreSQL", "PL/pgSQL", "JDBC", "JUnit"],
+    type: "team",
+    status: "completed",
+    image: "/dawscorp.jpg",
+    githubUrl: "https://github.com/talonlikeaclaw/dawscorp-task-manager",
   },
   // Solo projects - more technical/interesting ones first
   {
