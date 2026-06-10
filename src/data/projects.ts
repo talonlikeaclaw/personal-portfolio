@@ -19,7 +19,6 @@ export const projects: Project[] = [
     technologies: ["Flask", "PostgreSQL", "Docker", "Jinja"],
     type: "team",
     status: "completed",
-    featured: true,
     image: "/trimtracker.jpg",
     note: "Built for a server-side programming course.",
     githubUrl: "https://github.com/talonlikeaclaw/trim-tracker",
@@ -75,6 +74,16 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/talonlikeaclaw/dawscorp-task-manager",
   },
   // Solo projects - more technical/interesting ones first
+  {
+    title: "Self-Hosted Homelab",
+    description: "17+ self-hosted services on local physical hardware, managed as code with Ansible and OpenTofu. TrueNAS provides storage with a 3-2-1 backup strategy including offsite VPS sync.",
+    technologies: ["Proxmox", "TrueNAS", "Docker", "Ansible", "OpenTofu"],
+    type: "solo",
+    status: "in-progress",
+    featured: true,
+    image: "/homelab.jpg",
+    note: "17+ services in production. No public repo.",
+  },
   {
     title: "Godash",
     description: "A terminal user interface (TUI) dashboard for monitoring Proxmox virtual environments. Provides real-time stats and management capabilities.",
