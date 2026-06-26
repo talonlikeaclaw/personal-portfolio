@@ -5,27 +5,17 @@ export interface Project {
   type: "team" | "solo";
   status?: "in-progress" | "completed";
   featured?: boolean;
-  image?: string; // Path to image in /public/projects/ (e.g., "trim-tracker.png")
+  image?: string;
   note?: string;
   liveUrl?: string;
   githubUrl?: string;
 }
 
 export const projects: Project[] = [
-  // Team projects first (more impressive for internships)
-  {
-    title: "TrimTracker",
-    description: "A salon booking and management system with appointment scheduling, client management, and service tracking. Containerized for easy deployment.",
-    technologies: ["Flask", "PostgreSQL", "Docker", "Jinja"],
-    type: "team",
-    status: "completed",
-    image: "/trimtracker.jpg",
-    note: "Built for a server-side programming course.",
-    githubUrl: "https://github.com/talonlikeaclaw/trim-tracker",
-  },
   {
     title: "DawsAsset",
-    description: "Odoo 17-based asset and inventory platform for Dawson College. Replaced spreadsheet tracking across four departments with barcode scanning, equipment loans, and a student self-service kiosk.",
+    description:
+      "Odoo 17-based asset and inventory platform for Dawson College. Replaced spreadsheet tracking across four departments with barcode scanning, equipment loans, and a student self-service kiosk.",
     technologies: ["Python", "Odoo", "PostgreSQL", "Docker"],
     type: "team",
     status: "completed",
@@ -35,20 +25,54 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/talonlikeaclaw/dawsasset",
   },
   {
-    title: "Canadian Immigration Viz",
-    description: "Interactive data visualization platform exploring Canadian immigration and language trends and statistics. Features dynamic charts and filtering capabilities.",
-    technologies: ["React", "Vite", "Express.js", "Mocha", "Chai"],
+    title: "The Coral Reef",
+    description:
+      "Full-stack social platform built around Tight Squeeze, a nautical card game inspired by Exploding Kittens. Features real-time multiplayer via Socket.IO, social auth , profile customization, friends system, leaderboard, and admin panel.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "Socket.IO",
+      "Better Auth",
+      "Docker",
+      "GitLab CI",
+    ],
     type: "team",
     status: "completed",
     featured: true,
+    image: "/coralreef.jpg",
+    note: "620 capstone project. Live at thecoralreef.club.",
+    liveUrl: "https://thecoralreef.club/",
+    githubUrl: "https://github.com/talonlikeaclaw/the-coral-reef",
+  },
+  {
+    title: "Canadian Immigration Viz",
+    description:
+      "Interactive data visualization platform exploring Canadian immigration and language trends and statistics. Features dynamic charts and filtering capabilities.",
+    technologies: ["React", "Vite", "Express.js", "Mocha", "Chai"],
+    type: "team",
+    status: "completed",
     image: "/immigrationviz.jpg",
     note: "Data sourced from Statistics Canada census records.",
     liveUrl: "https://five20-project-safari-chiru-dunbar.onrender.com/",
-    githubUrl: "https://github.com/talonlikeaclaw/canadian-immigration-visualization",
+    githubUrl:
+      "https://github.com/talonlikeaclaw/canadian-immigration-visualization",
+  },
+  {
+    title: "TrimTracker",
+    description:
+      "A salon booking and management system with appointment scheduling, client management, and service tracking. Containerized for easy deployment.",
+    technologies: ["Flask", "PostgreSQL", "Docker", "Jinja"],
+    type: "team",
+    status: "completed",
+    image: "/trimtracker.jpg",
+    note: "Built for a server-side programming course.",
+    githubUrl: "https://github.com/talonlikeaclaw/trim-tracker",
   },
   {
     title: "Dawson Dial",
-    description: "Event planning platform for Dawson College enabling scheduling of classes, office hours, and conferences. Built for professors and students to manage academic events and resources.",
+    description:
+      "Event planning platform for Dawson College enabling scheduling of classes, office hours, and conferences. Built for professors and students to manage academic events and resources.",
     technologies: ["C#", "Avalonia", "EF Core", "LINQ", "MSTest", "Moq"],
     type: "team",
     status: "completed",
@@ -57,7 +81,8 @@ export const projects: Project[] = [
   },
   {
     title: "Virtual Used Car Dealership",
-    description: "Console-based dealership management simulation system with vehicle browsing, advanced filtering/sorting, shopping cart, and transaction tracking. Supports both PostgreSQL and CSV persistence.",
+    description:
+      "Console-based dealership management simulation system with vehicle browsing, advanced filtering/sorting, shopping cart, and transaction tracking. Supports both PostgreSQL and CSV persistence.",
     technologies: ["Java", "PostgreSQL", "Maven", "JUnit"],
     type: "team",
     status: "completed",
@@ -66,17 +91,18 @@ export const projects: Project[] = [
   },
   {
     title: "Dawscorp Task Manager",
-    description: "A Jira-like task management system built for team collaboration. Features include project boards, task assignment, progress tracking, and team management.",
+    description:
+      "A Jira-like task management system built for team collaboration. Features include project boards, task assignment, progress tracking, and team management.",
     technologies: ["Java", "PostgreSQL", "PL/pgSQL", "JDBC", "JUnit"],
     type: "team",
     status: "completed",
     image: "/dawscorp.jpg",
     githubUrl: "https://github.com/talonlikeaclaw/dawscorp-task-manager",
   },
-  // Solo projects - more technical/interesting ones first
   {
     title: "Self-Hosted Homelab",
-    description: "17+ self-hosted services on local physical hardware, managed as code with Ansible and OpenTofu. TrueNAS provides storage with a 3-2-1 backup strategy including offsite VPS sync.",
+    description:
+      "17+ self-hosted services on local physical hardware, managed as code with Ansible and OpenTofu. TrueNAS provides storage with a 3-2-1 backup strategy including offsite VPS sync.",
     technologies: ["Proxmox", "TrueNAS", "Docker", "Ansible", "OpenTofu"],
     type: "solo",
     status: "in-progress",
@@ -86,7 +112,8 @@ export const projects: Project[] = [
   },
   {
     title: "Godash",
-    description: "A terminal user interface (TUI) dashboard for monitoring Proxmox virtual environments. Provides real-time stats and management capabilities.",
+    description:
+      "A terminal user interface (TUI) dashboard for monitoring Proxmox virtual environments. Provides real-time stats and management capabilities.",
     technologies: ["Go", "Bubble Tea", "Proxmox API"],
     type: "solo",
     status: "in-progress",
@@ -97,7 +124,8 @@ export const projects: Project[] = [
   },
   {
     title: "PicnicGo",
-    description: "Terminal-based deck-building card game inspired by Sushi Go. Features local multiplayer for 3-5 players, colorful ANSI graphics, and strategic card drafting mechanics.",
+    description:
+      "Terminal-based deck-building card game inspired by Sushi Go. Features local multiplayer for 3-5 players, colorful ANSI graphics, and strategic card drafting mechanics.",
     technologies: ["Java", "ANSI", "CLI"],
     type: "solo",
     status: "completed",
@@ -106,7 +134,8 @@ export const projects: Project[] = [
   },
   {
     title: "Thermostat Driver",
-    description: "Python driver for the ADS7830 ADC to read thermistor and potentiometer values via I2C on Raspberry Pi. Calculates temperature from voltage readings using resistive divider math.",
+    description:
+      "Python driver for the ADS7830 ADC to read thermistor and potentiometer values via I2C on Raspberry Pi. Calculates temperature from voltage readings using resistive divider math.",
     technologies: ["Python", "I2C", "Raspberry Pi", "ADS7830"],
     type: "solo",
     status: "completed",
@@ -114,17 +143,9 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/talonlikeaclaw/thermostat-driver",
   },
   {
-    title: "Tiny Task Manager",
-    description: "A minimalist command-line task manager written in Rust. Features include task creation, completion tracking, and persistent JSON storage.",
-    technologies: ["Rust", "CLI", "Serde"],
-    type: "solo",
-    status: "completed",
-    image: "/tinytask.jpg",
-    githubUrl: "https://github.com/talonlikeaclaw/tiny-task-manager",
-  },
-  {
     title: "Dotfiles",
-    description: "Personal configuration files for Linux and macOS. Includes configs for Zsh, Kitty, Tmux, and other developer tools.",
+    description:
+      "Personal configuration files for Linux and macOS. Includes configs for Zsh, Kitty, Tmux, and other developer tools.",
     technologies: ["Zsh", "JSON", "Lua", "TOML"],
     type: "solo",
     status: "completed",
