@@ -23,10 +23,11 @@ export default function Achievements() {
                   DawsHacks 2026 - 1st Place
                 </h3>
                 <p className="mt-2 text-muted">
-                  Reachout AI: SMS and voice-based AI assistant bridging the
-                  digital divide for 2.7 billion people without smartphones or
-                  reliable internet. Built with Twilio, Google Gemini API, and
-                  OpenWeatherMap for feature phones and rural communities.
+                  <strong>Reachout AI</strong>: SMS and voice-based AI assistant
+                  bridging the digital divide for 2.7 billion people without
+                  smartphones or reliable internet. Built with Twilio, Google
+                  Gemini API, and OpenWeatherMap for feature phones and rural
+                  communities.
                 </p>
                 <div className="mt-4 flex flex-wrap items-center gap-2">
                   <span className="rounded-full bg-accent/20 px-3 py-1 text-sm text-accent">
