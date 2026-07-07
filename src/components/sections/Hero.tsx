@@ -1,11 +1,13 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import FaultyTerminal from "@/components/ui/FaultyTerminal";
 
 export default function Hero() {
+  const t = useTranslations("hero");
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" ? window.innerWidth < 768 : false
   );
@@ -53,7 +55,7 @@ export default function Hero() {
           <div className="mx-auto mb-8 flex h-40 w-40 items-center justify-center overflow-hidden rounded-full border-2 border-accent/1 sm:h-48 sm:w-48">
             <Image
               src="/headshot.jpg"
-              alt="Talon Dunbar"
+              alt={t("photoAlt")}
               width={192}
               height={192}
               sizes="(max-width: 640px) 160px, 192px"
@@ -62,32 +64,32 @@ export default function Hero() {
             />
           </div>
           <h1 className="font-mono text-3xl font-bold tracking-tight text-text sm:text-6xl">
-            Talon Dunbar
+            {t("name")}
           </h1>
           <p className="mt-4 font-mono text-lg text-accent font-semibold sm:text-2xl">
-            <span className="sm:inline block">DevOps & Full-Stack Developer</span>
+            <span className="sm:inline block">{t("role")}</span>
           </p>
           <p className="mt-3 max-w-xl mx-auto text-sm text-muted sm:text-base">
-            Fast learner, detail-oriented, curious, collaborative.
+            {t("tagline")}
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
               href="#about"
               className="rounded-lg border border-accent bg-accent/10 backdrop-blur-sm px-6 py-3 font-mono font-medium text-accent transition-all hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              About Me
+              {t("ctaAbout")}
             </a>
             <a
               href="#projects"
               className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              View Projects
+              {t("ctaProjects")}
             </a>
             <a
               href="#contact"
               className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              Contact Me
+              {t("ctaContact")}
             </a>
           </div>
         </div>

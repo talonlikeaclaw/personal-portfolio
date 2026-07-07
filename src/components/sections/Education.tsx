@@ -1,14 +1,17 @@
+import { useTranslations } from "next-intl";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { GraduationCap } from "lucide-react";
 
 export default function Education() {
+  const t = useTranslations("education");
+
   return (
     <section id="education" className="py-20">
       <Container>
         <SectionHeading
-          title="Education"
-          subtitle="Formal training behind the skills."
+          title={t("title")}
+          subtitle={t("subtitle")}
         />
         <div className="mx-auto max-w-2xl">
           <div className="relative overflow-hidden rounded-lg border border-border bg-card p-6">
@@ -19,21 +22,21 @@ export default function Education() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-text">
-                  Dawson College
+                  {t("school")}
                 </h3>
-                <p className="text-muted">DEC in Computer Science Technology</p>
+                <p className="text-muted">{t("degree")}</p>
                 <p className="mt-1 text-sm text-muted">
-                  2023 - 2026 | Montreal, QC
+                  {t("period")}
                 </p>
                 <div className="mt-4 flex flex-wrap items-center gap-2">
                   <span className="rounded-full bg-accent/20 px-3 py-1 text-sm text-accent">
-                    R Score: 34.81
+                    {t("rScore")}
                   </span>
                   <span className="rounded-full bg-accent/20 px-3 py-1 text-sm text-accent">
-                    English: Native
+                    {t("english")}
                   </span>
                   <span className="rounded-full bg-accent/20 px-3 py-1 text-sm text-accent">
-                    French: Conversational
+                    {t("french")}
                   </span>
                 </div>
               </div>

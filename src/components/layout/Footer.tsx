@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Container from "@/components/ui/Container";
 
 const attributions = [
@@ -11,14 +12,15 @@ const attributions = [
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const t = useTranslations("footer");
 
   return (
     <footer className="border-t border-border py-8">
       <Container>
         <div className="text-center font-mono text-sm text-muted">
-          <p>&copy; {currentYear} Talon Dunbar. All rights reserved.</p>
+          <p>{t("rights", { year: currentYear })}</p>
           <p className="mt-4">
-            Built with{" "}
+            {t("builtWith")}{" "}
             {attributions.map((attr, index) => (
               <span key={attr.name}>
                 <a

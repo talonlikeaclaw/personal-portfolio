@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 import type { Project } from "@/data/projects";
+import type { Locale } from "@/i18n/routing";
 import { ExternalLink, Github } from "lucide-react";
 
 interface ProjectCardProps {
@@ -7,6 +9,9 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const locale = useLocale() as Locale;
+  const t = useTranslations("ui");
+
   return (
     <div className="group relative overflow-hidden flex h-full flex-col rounded-lg border border-border bg-card transition-all hover:border-accent/50">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
@@ -15,7 +20,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="relative w-full overflow-hidden sm:h-60">
           <Image
             src={`/projects/${project.image}`}
-            alt={`${project.title} screenshot`}
+            alt={t("screenshotAlt", { title: project.title[locale] })}
             width={800}
             height={600}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -27,24 +32,24 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="flex flex-col flex-grow p-6">
       <div className="mb-3 flex items-start justify-between">
         <h3 className="mr-4 font-mono text-xl font-semibold text-accent">
-          {project.title}
+          {project.title[locale]}
         </h3>
         <div className="flex items-center gap-2">
           {project.status === "in-progress" && (
             <span className="rounded-full bg-accent/20 px-2 py-0.5 font-mono text-xs text-accent">
-              In Progress
+              {t("inProgress")}
             </span>
           )}
-          <span className="rounded-full bg-background px-2 py-0.5 font-mono text-s text-accent capitalize">
-            {project.type}
+          <span className="rounded-full bg-background px-2 py-0.5 font-mono text-s text-accent">
+            {project.type === "team" ? t("typeTeam") : t("typeSolo")}
           </span>
         </div>
       </div>
 
-      <p className="mb-2 flex-grow text-muted leading-relaxed">{project.description}</p>
+      <p className="mb-2 flex-grow text-muted leading-relaxed">{project.description[locale]}</p>
 
       {project.note && (
-        <p className="mb-4 font-mono text-xs text-accent/80">{project.note}</p>
+        <p className="mb-4 font-mono text-xs text-accent/80">{project.note[locale]}</p>
       )}
 
       <div className="mb-4 flex flex-wrap gap-2">
@@ -67,7 +72,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
           >
             <Github size={16} />
-            <span>Code</span>
+            <span>{t("code")}</span>
           </a>
         )}
         {project.liveUrl && (
@@ -78,7 +83,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
           >
             <ExternalLink size={16} />
-            <span>Live Demo</span>
+            <span>{t("liveDemo")}</span>
           </a>
         )}
       </div>

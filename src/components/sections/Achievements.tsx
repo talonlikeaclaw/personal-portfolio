@@ -1,15 +1,19 @@
+import { useTranslations } from "next-intl";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { Trophy, Award, Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
 
 export default function Achievements() {
+  const t = useTranslations("achievements");
+  const tUi = useTranslations("ui");
+
   return (
     <section id="achievements" className="py-20">
       <Container>
         <SectionHeading
-          title="Achievements"
-          subtitle="Recognition for impactful work."
+          title={t("title")}
+          subtitle={t("subtitle")}
         />
         <div className="mx-auto max-w-2xl space-y-6">
           <div className="relative overflow-hidden rounded-lg border border-border bg-card p-6">
@@ -20,14 +24,12 @@ export default function Achievements() {
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-semibold text-text">
-                  DawsHacks 2026 - 1st Place
+                  {t("dawshacksTitle")}
                 </h3>
                 <p className="mt-2 text-muted">
-                  <strong>Reachout AI</strong>: SMS and voice-based AI assistant
-                  bridging the digital divide for 2.7 billion people without
-                  smartphones or reliable internet. Built with Twilio, Google
-                  Gemini API, and OpenWeatherMap for feature phones and rural
-                  communities.
+                  {t.rich("dawshacksDesc", {
+                    strong: (chunks) => <strong>{chunks}</strong>,
+                  })}
                 </p>
                 <div className="mt-4 flex flex-wrap items-center gap-2">
                   <span className="rounded-full bg-accent/20 px-3 py-1 text-sm text-accent">
@@ -51,7 +53,7 @@ export default function Achievements() {
                     className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                   >
                     <Github size={16} />
-                    <span>Code</span>
+                    <span>{tUi("code")}</span>
                   </a>
                   <a
                     href="https://devpost.com/software/reachout-ai"
@@ -60,7 +62,7 @@ export default function Achievements() {
                     className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                   >
                     <ExternalLink size={16} />
-                    <span>DevPost</span>
+                    <span>{t("devpost")}</span>
                   </a>
                 </div>
               </div>
@@ -74,14 +76,14 @@ export default function Achievements() {
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-semibold text-text">
-                  CS 2026 Leadership Award
+                  {t("leadershipTitle")}
                 </h3>
               </div>
             </div>
             <div className="relative mt-4 aspect-[3229/2480] w-full overflow-hidden rounded-md border border-border">
               <Image
                 src="/leadership-award.jpg"
-                alt="CS 2026 Leadership Award"
+                alt={t("leadershipTitle")}
                 fill
                 className="object-cover"
               />

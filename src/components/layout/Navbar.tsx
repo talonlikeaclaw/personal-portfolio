@@ -1,25 +1,28 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import Container from "@/components/ui/Container";
+import LanguageToggle from "@/components/layout/LanguageToggle";
 import { Menu, X, Mail } from "lucide-react";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#education", label: "Education" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about", key: "about" },
+  { href: "#projects", key: "projects" },
+  { href: "#skills", key: "skills" },
+  { href: "#education", key: "education" },
+  { href: "#contact", key: "contact" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations("nav");
 
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-sm">
       <Container>
         <div className="flex h-20 items-center justify-between">
-          <a href="#" className="font-mono text-3xl font-bold text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2">
+          <a href="#" className="font-mono text-xl font-bold text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 sm:text-3xl">
             talonlikeaclaw
           </a>
 
@@ -31,24 +34,26 @@ export default function Navbar() {
                 href={link.href}
                 className="font-mono text-lg text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
               >
-                {link.label}
+                {t(link.key)}
               </a>
             ))}
+            <LanguageToggle />
           </div>
 
           {/* Mobile Buttons */}
           <div className="flex items-center gap-3 md:hidden">
+            <LanguageToggle />
             <a
               href="#contact"
               className="flex items-center justify-center rounded-lg border border-accent bg-accent/10 p-2 text-accent transition-all hover:bg-accent hover:text-black"
-              aria-label="Contact me"
+              aria-label={t("contactMeAria")}
             >
-              <Mail size={20} />
+              <Mail size={18} />
             </a>
             <button
               className="text-muted hover:text-text focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
               onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
+              aria-label={t("toggleMenuAria")}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -65,7 +70,7 @@ export default function Navbar() {
                 className="block py-2 font-mono text-lg text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                 onClick={() => setIsOpen(false)}
               >
-                {link.label}
+                {t(link.key)}
               </a>
             ))}
           </div>

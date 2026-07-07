@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "title": "Talon Dunbar | DevOps & Full-Stack Developer",
+    "description": "DevOps and full-stack developer based in Montreal. Specializing in infrastructure, React, Next.js, Go, and modern web technologies.",
+    "openGraph": {
+      "title": "Talon Dunbar | DevOps & Full-Stack Developer",
+      "description": "DevOps and full-stack developer specializing in infrastructure, automation, and modern web technologies."
+    },
+    "twitter": {
+      "title": "Talon Dunbar | DevOps & Full-Stack Developer",
+      "description": "DevOps and full-stack developer specializing in infrastructure, automation, and modern web technologies."
+    }
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact",
+    "contactMeAria": "Contact me",
+    "toggleMenuAria": "Toggle menu",
+    "toggleLanguageAria": "Switch language"
+  },
+  "hero": {
+    "name": "Talon Dunbar",
+    "role": "DevOps & Full-Stack Developer",
+    "tagline": "Fast learner, detail-oriented, curious, collaborative.",
+    "ctaAbout": "About Me",
+    "ctaProjects": "View Projects",
+    "ctaContact": "Contact Me",
+    "photoAlt": "Talon Dunbar"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "I build things to understand them.",
+    "intro": "<strong>Computer Science graduate</strong> from <strong>Dawson College</strong> in Montréal, Québec.",
+    "dev0": "Builds full-stack apps with <strong>React</strong>, <strong>Flask</strong>, <strong>Java</strong>, and <strong>C#</strong>.",
+    "dev1": "Has a strong interest in <strong>infrastructure</strong> and <strong>DevOps</strong>.",
+    "dev2": "Self-hosts services with <strong>Proxmox</strong> and <strong>Docker</strong>.",
+    "dev3": "Is a <strong>Linux</strong> power user and administrator.",
+    "dev4": "Is an <strong>open-source</strong> advocate.",
+    "approach0": "Collaborates on team projects using <strong>Agile</strong> workflows.",
+    "approach1": "Tracks issues and collaborates via <strong>Git</strong> workflows.",
+    "approach2": "Learns quickly and cares about <strong>details</strong>.",
+    "approach3": "Reads <strong>documentation</strong> to understand tools deeply.",
+    "approach4": "Uses <strong>AI tooling</strong> deliberately as part of an engineering workflow.",
+    "interests0": "Always chases better <strong>coffee</strong>.",
+    "interests1": "Explores 3D rendering in <strong>Blender</strong>.",
+    "interests2": "Experiments with music production in <strong>Ableton</strong>.",
+    "interests3": "Is curious about <strong>meteorology</strong> and <strong>astronomy</strong>.",
+    "interests4": "Competes as a <strong>Grand Champion</strong> in Rocket League.",
+    "githubActivity": "GitHub Activity",
+    "chartAlt": "GitHub Contribution Chart"
+  },
+  "skills": {
+    "title": "Technical Toolkit",
+    "subtitle": "Languages, frameworks, and tools I use."
+  },
+  "projects": {
+    "title": "What I''ve Built",
+    "subtitle": "Team and solo projects I''ve worked on.",
+    "showLess": "Show less",
+    "showMore": "Show {count} more projects"
+  },
+  "education": {
+    "title": "Education",
+    "subtitle": "Formal training behind the skills.",
+    "school": "Dawson College",
+    "degree": "DEC in Computer Science Technology",
+    "period": "2023 - 2026 | Montreal, QC",
+    "rScore": "R Score: 34.81",
+    "english": "English: Native",
+    "french": "French: Conversational"
+  },
+  "achievements": {
+    "title": "Achievements",
+    "subtitle": "Recognition for impactful work.",
+    "dawshacksTitle": "DawsHacks 2026 - 1st Place",
+    "dawshacksDesc": "<strong>Reachout AI</strong>: SMS and voice-based AI assistant bridging the digital divide for 2.7 billion people without smartphones or reliable internet. Built with Twilio, Google Gemini API, and OpenWeatherMap for feature phones and rural communities.",
+    "code": "Code",
+    "devpost": "DevPost",
+    "leadershipTitle": "CS 2026 Leadership Award"
+  },
+  "contact": {
+    "title": "Let''s Work Together",
+    "subtitle": "Open to full-time DevOps, infrastructure, and full-stack roles.",
+    "links": {
+      "github": "GitHub",
+      "gitlab": "GitLab",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
+  },
+  "footer": {
+    "rights": "© {year} Talon Dunbar. All rights reserved.",
+    "builtWith": "Built with"
+  },
+  "ui": {
+    "inProgress": "In Progress",
+    "code": "Code",
+    "liveDemo": "Live Demo",
+    "screenshotAlt": "{title} screenshot",
+    "typeTeam": "Team",
+    "typeSolo": "Solo"
+  }
+}

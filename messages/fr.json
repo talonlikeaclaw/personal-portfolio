@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "title": "Talon Dunbar | Développeur DevOps et Full-Stack",
+    "description": "Développeur DevOps et full-stack basé à Montréal. Spécialisé en infrastructure, React, Next.js, Go et technologies web modernes.",
+    "openGraph": {
+      "title": "Talon Dunbar | Développeur DevOps et Full-Stack",
+      "description": "Développeur DevOps et full-stack spécialisé en infrastructure, automatisation et technologies web modernes."
+    },
+    "twitter": {
+      "title": "Talon Dunbar | Développeur DevOps et Full-Stack",
+      "description": "Développeur DevOps et full-stack spécialisé en infrastructure, automatisation et technologies web modernes."
+    }
+  },
+  "nav": {
+    "about": "À propos",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "education": "Formation",
+    "contact": "Contact",
+    "contactMeAria": "Me contacter",
+    "toggleMenuAria": "Ouvrir le menu",
+    "toggleLanguageAria": "Changer de langue"
+  },
+  "hero": {
+    "name": "Talon Dunbar",
+    "role": "Développeur DevOps & Full-Stack",
+    "tagline": "Apprentissage rapide, orienté détail, curieux, collaboratif.",
+    "ctaAbout": "À propos de moi",
+    "ctaProjects": "Voir les projets",
+    "ctaContact": "Me contacter",
+    "photoAlt": "Talon Dunbar"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "subtitle": "Je construis pour comprendre.",
+    "intro": "<strong>Diplômé en informatique</strong> du <strong>Cégep Dawson</strong> à Montréal, Québec.",
+    "dev0": "Construit des applications full-stack avec <strong>React</strong>, <strong>Flask</strong>, <strong>Java</strong> et <strong>C#</strong>.",
+    "dev1": "Porte un fort intérêt à l''<strong>infrastructure</strong> et au <strong>DevOps</strong>.",
+    "dev2": "Auto-héberge des services avec <strong>Proxmox</strong> et <strong>Docker</strong>.",
+    "dev3": "Utilisateur avancé et administrateur <strong>Linux</strong>.",
+    "dev4": "Défenseur du <strong>logiciel libre</strong>.",
+    "approach0": "Collabore sur des projets d''équipe selon les méthodes <strong>Agiles</strong>.",
+    "approach1": "Suit les problèmes et collabore via les flux de travail <strong>Git</strong>.",
+    "approach2": "Apprend vite et soigne les <strong>détails</strong>.",
+    "approach3": "Lit la <strong>documentation</strong> pour bien comprendre les outils.",
+    "approach4": "Utilise les <strong>outils d''IA</strong> avec discernement dans un flux de travail d''ingénierie.",
+    "interests0": "Recherche toujours un meilleur <strong>café</strong>.",
+    "interests1": "Explore le rendu 3D dans <strong>Blender</strong>.",
+    "interests2": "Expérimente la production musicale dans <strong>Ableton</strong>.",
+    "interests3": "Curieux de <strong>météorologie</strong> et d''<strong>astronomie</strong>.",
+    "interests4": "Competiteur <strong>Grand Champion</strong> sur Rocket League.",
+    "githubActivity": "Activité GitHub",
+    "chartAlt": "Graphique de contributions GitHub"
+  },
+  "skills": {
+    "title": "Boîte à outils technique",
+    "subtitle": "Langages, frameworks et outils que j''utilise."
+  },
+  "projects": {
+    "title": "Ce que j''ai réalisé",
+    "subtitle": "Projets d''équipe et personnels sur lesquels j''ai travaillé.",
+    "showLess": "Voir moins",
+    "showMore": "Voir {count} projets de plus"
+  },
+  "education": {
+    "title": "Formation",
+    "subtitle": "Le parcours scolaire derrière les compétences.",
+    "school": "Cégep Dawson",
+    "degree": "DEC en Technologie de l''informatique",
+    "period": "2023 - 2026 | Montréal, QC",
+    "rScore": "Cote R : 34,81",
+    "english": "Anglais : Langue maternelle",
+    "french": "Français : Intermédiaire"
+  },
+  "achievements": {
+    "title": "Réalisations",
+    "subtitle": "Reconnaissance pour un travail marquant.",
+    "dawshacksTitle": "DawsHacks 2026 - 1ère place",
+    "dawshacksDesc": "<strong>Reachout AI</strong> : assistant IA par SMS et voix qui réduit la fracture numérique pour 2,7 milliards de personnes sans smartphone ni connexion internet fiable. Construit avec Twilio, l''API Google Gemini et OpenWeatherMap pour téléphones basiques et communautés rurales.",
+    "code": "Code",
+    "devpost": "DevPost",
+    "leadershipTitle": "Prix de leadership 2026 en informatique"
+  },
+  "contact": {
+    "title": "Travaillons ensemble",
+    "subtitle": "Ouvert aux postes full-time en DevOps, infrastructure et développement full-stack.",
+    "links": {
+      "github": "GitHub",
+      "gitlab": "GitLab",
+      "linkedin": "LinkedIn",
+      "email": "Courriel"
+    }
+  },
+  "footer": {
+    "rights": "© {year} Talon Dunbar. Tous droits réservés.",
+    "builtWith": "Conçu avec"
+  },
+  "ui": {
+    "inProgress": "En cours",
+    "code": "Code",
+    "liveDemo": "Démo en ligne",
+    "screenshotAlt": "Capture d''écran de {title}",
+    "typeTeam": "Équipe",
+    "typeSolo": "Solo"
+  }
+}

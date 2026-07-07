@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import {
@@ -21,8 +22,13 @@ import {
   Earth,
 } from "lucide-react";
 
+type RichChunk = (chunks: React.ReactNode) => React.ReactNode;
+
 export default function About() {
   const chartRef = useRef<HTMLAnchorElement>(null);
+  const t = useTranslations("about");
+
+  const strong: RichChunk = (chunks) => <strong>{chunks}</strong>;
 
   useEffect(() => {
     if (chartRef.current) {
@@ -34,13 +40,12 @@ export default function About() {
     <section id="about" className="py-20">
       <Container>
         <SectionHeading
-          title="About Me"
-          subtitle="I build things to understand them."
+          title={t("title")}
+          subtitle={t("subtitle")}
         />
         <div className="mx-auto max-w-3xl">
           <p className="text-center text-lg leading-relaxed text-muted">
-            <strong>Computer Science graduate</strong> from{" "}
-            <strong>Dawson College</strong> in Montr&eacute;al, Queb&eacute;c.
+            {t.rich("intro", { strong })}
           </p>
 
           <div className="mt-8 mx-auto max-w-lg space-y-6">
@@ -54,41 +59,27 @@ export default function About() {
               <ul className="space-y-3 text-base leading-relaxed text-muted">
                 <li className="flex items-center gap-3">
                   <Code size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Builds full-stack apps with <strong>React</strong>,{" "}
-                    <strong>Flask</strong>, <strong>Java</strong>, and{" "}
-                    <strong>C#</strong>.
-                  </span>
+                  <span>{t.rich("dev0", { strong })}</span>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <Server size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Has a strong interest in <strong>infrastructure</strong> and{" "}
-                    <strong>DevOps</strong>.
-                  </span>
+                  <span>{t.rich("dev1", { strong })}</span>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <Monitor size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Self-hosts services with <strong>Proxmox</strong> and{" "}
-                    <strong>Docker</strong>.
-                  </span>
+                  <span>{t.rich("dev2", { strong })}</span>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <Terminal size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Is a <strong>Linux</strong> power user and administrator.
-                  </span>
+                  <span>{t.rich("dev3", { strong })}</span>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <Heart size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Is an <strong>open-source</strong> advocate.
-                  </span>
+                  <span>{t.rich("dev4", { strong })}</span>
                 </li>
               </ul>
             </div>
@@ -103,40 +94,27 @@ export default function About() {
               <ul className="space-y-3 text-base leading-relaxed text-muted">
                 <li className="flex items-center gap-3">
                   <Users size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Collaborates on team projects using <strong>Agile</strong>{" "}
-                    workflows.
-                  </span>
+                  <span>{t.rich("approach0", { strong })}</span>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <GitBranch size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Tracks issues and collaborates via <strong>Git</strong>{" "}
-                    workflows.
-                  </span>
+                  <span>{t.rich("approach1", { strong })}</span>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <Zap size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Learns quickly and cares about <strong>details</strong>.
-                  </span>
+                  <span>{t.rich("approach2", { strong })}</span>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <BookOpen size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Reads <strong>documentation</strong> to understand tools
-                    deeply.
-                  </span>
+                  <span>{t.rich("approach3", { strong })}</span>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <Bot size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Uses <strong>AI tooling</strong> deliberately as part of an engineering workflow.
-                  </span>
+                  <span>{t.rich("approach4", { strong })}</span>
                 </li>
               </ul>
             </div>
@@ -151,40 +129,27 @@ export default function About() {
               <ul className="space-y-3 text-base leading-relaxed text-muted">
                 <li className="flex items-center gap-3">
                   <Coffee size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Always chases better <strong>coffee</strong>.
-                  </span>
+                  <span>{t.rich("interests0", { strong })}</span>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <Box size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Explores 3D rendering in <strong>Blender</strong>.
-                  </span>
+                  <span>{t.rich("interests1", { strong })}</span>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <Music size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Experiments with music production in{" "}
-                    <strong>Ableton</strong>.
-                  </span>
+                  <span>{t.rich("interests2", { strong })}</span>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <Earth size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Is curious about <strong>meteorology</strong> and{" "}
-                    <strong>astronomy</strong>.
-                  </span>
+                  <span>{t.rich("interests3", { strong })}</span>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <Gamepad2 size={18} className="shrink-0 text-accent" />
-                  <span>
-                    Competes as a <strong>Grand Champion</strong> in Rocket
-                    League.
-                  </span>
+                  <span>{t.rich("interests4", { strong })}</span>
                 </li>
               </ul>
             </div>
@@ -194,7 +159,7 @@ export default function About() {
         {/* GitHub Contribution Graph */}
         <div className="mt-12">
           <h3 className="mb-6 text-center font-mono text-lg text-muted">
-            GitHub Activity
+            {t("githubActivity")}
           </h3>
           <div className="flex justify-center">
             <a
@@ -207,7 +172,7 @@ export default function About() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://ghchart.rshah.org/22c55e/talonlikeaclaw"
-                alt="GitHub Contribution Chart"
+                alt={t("chartAlt")}
                 className="min-w-[720px] invert hue-rotate-180"
               />
             </a>

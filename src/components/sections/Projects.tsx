@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -9,6 +10,7 @@ import { projects } from "@/data/projects";
 
 export default function Projects() {
   const [showMore, setShowMore] = useState(false);
+  const t = useTranslations("projects");
   const featured = projects.filter((p) => p.featured);
   const other = projects.filter((p) => !p.featured);
 
@@ -16,12 +18,12 @@ export default function Projects() {
     <section id="projects" className="py-20">
       <Container>
         <SectionHeading
-          title="What I've Built"
-          subtitle="Team and solo projects I've worked on."
+          title={t("title")}
+          subtitle={t("subtitle")}
         />
         <div className="grid gap-6 md:grid-cols-2">
-          {featured.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+          {featured.map((project, index) => (
+            <ProjectCard key={index} project={project} />
           ))}
         </div>
 
@@ -33,12 +35,12 @@ export default function Projects() {
             >
               {showMore ? (
                 <>
-                  Show less
+                  {t("showLess")}
                   <ChevronUp size={16} />
                 </>
               ) : (
                 <>
-                  Show {other.length} more projects
+                  {t("showMore", { count: other.length })}
                   <ChevronDown size={16} />
                 </>
               )}
@@ -46,8 +48,8 @@ export default function Projects() {
 
             {showMore && (
               <div className="mt-6 grid gap-6 md:grid-cols-2">
-                {other.map((project) => (
-                  <ProjectCard key={project.title} project={project} />
+                {other.map((project, index) => (
+                  <ProjectCard key={index} project={project} />
                 ))}
               </div>
             )}
