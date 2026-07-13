@@ -8,6 +8,7 @@ import "../globals.css";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { siteUrl } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,15 +35,41 @@ export async function generateMetadata({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("metadata");
+  const canonicalUrl = `${siteUrl}/${locale}/`;
 
   return {
-    title: t("title"),
+    title: {
+      default: t("title"),
+      template: "%s | Talon Dunbar",
+    },
     description: t("description"),
-    metadataBase: new URL("https://portfolio.talonlikeaclaw.com"),
+    metadataBase: new URL(siteUrl),
+    applicationName: "Talon Dunbar Portfolio",
+    authors: [{ name: "Talon Dunbar", url: siteUrl }],
+    creator: "Talon Dunbar",
+    publisher: "Talon Dunbar",
+    keywords: [
+      "Talon Dunbar",
+      "DevOps developer",
+      "full-stack developer",
+      "Montreal developer",
+      "React developer",
+      "Next.js developer",
+      "infrastructure",
+      "automation",
+    ],
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: `${siteUrl}/en/`,
+        fr: `${siteUrl}/fr/`,
+        "x-default": `${siteUrl}/en/`,
+      },
+    },
     openGraph: {
       title: t("openGraph.title"),
       description: t("openGraph.description"),
-      url: "https://portfolio.talonlikeaclaw.com",
+      url: canonicalUrl,
       siteName: "Talon Dunbar",
       locale: locale === "fr" ? "fr_CA" : "en_US",
       type: "website",
@@ -57,6 +84,11 @@ export async function generateMetadata({
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
     },
     other: {
       "theme-color": "#0a0a0f",
