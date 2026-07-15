@@ -24,7 +24,7 @@ const contactLinks = [
   },
   {
     key: "email",
-    href: "mailto:talonlikeaclaw@proton.me",
+    href: "mailto:talon@talonlikeaclaw.com",
     icon: MailIcon,
     labelKey: "emailAddress",
   },

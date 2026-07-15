@@ -88,7 +88,8 @@
       "github": "GitHub",
       "gitlab": "GitLab",
       "linkedin": "LinkedIn",
-      "email": "Email"
+        "email": "Email",
+        "emailAddress": "talon@talonlikeaclaw.com"
     }
   },
   "footer": {
