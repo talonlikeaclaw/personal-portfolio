@@ -1,8 +1,11 @@
 import { useTranslations } from "next-intl";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { Trophy, Award, Github, ExternalLink } from "lucide-react";
+import { Award } from "lucide-react";
 import Image from "next/image";
+import TrophyIcon from "@/components/icons/TrophyIcon";
+import GithubIcon from "@/components/icons/GithubIcon";
+import ExternalLinkIcon from "@/components/icons/ExternalLinkIcon";
 
 export default function Achievements() {
   const t = useTranslations("achievements");
@@ -16,11 +19,11 @@ export default function Achievements() {
           subtitle={t("subtitle")}
         />
         <div className="mx-auto max-w-2xl space-y-6">
-          <div className="relative overflow-hidden rounded-lg border border-border bg-card p-6">
+          <div data-icon-trigger className="relative overflow-hidden rounded-lg border border-border bg-card p-6">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
             <div className="flex items-start gap-4">
               <div className="rounded-lg bg-accent/10 p-3">
-                <Trophy className="h-6 w-6 text-accent" />
+                <TrophyIcon size={24} className="text-accent" />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-semibold text-text">
@@ -52,7 +55,7 @@ export default function Achievements() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                   >
-                    <Github size={16} />
+                    <GithubIcon size={16} />
                     <span>{tUi("code")}</span>
                   </a>
                   <a
@@ -61,7 +64,7 @@ export default function Achievements() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                   >
-                    <ExternalLink size={16} />
+                    <ExternalLinkIcon size={16} />
                     <span>{t("devpost")}</span>
                   </a>
                 </div>

@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { GraduationCap } from "lucide-react";
+import BookIcon from "@/components/icons/BookIcon";
 
 export default function Education() {
   const t = useTranslations("education");
@@ -14,11 +14,11 @@ export default function Education() {
           subtitle={t("subtitle")}
         />
         <div className="mx-auto max-w-2xl">
-          <div className="relative overflow-hidden rounded-lg border border-border bg-card p-6">
+          <div data-icon-trigger className="relative overflow-hidden rounded-lg border border-border bg-card p-6">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
             <div className="flex items-start gap-4">
               <div className="rounded-lg bg-accent/10 p-3">
-                <GraduationCap className="h-6 w-6 text-accent" />
+                <BookIcon size={24} className="text-accent" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-text">

@@ -2,8 +2,8 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
-import { Globe } from "lucide-react";
 import { routing, type Locale } from "@/i18n/routing";
+import GlobeIcon from "@/components/icons/GlobeIcon";
 
 export default function LanguageToggle({
   className = "",
@@ -36,7 +36,7 @@ export default function LanguageToggle({
       aria-label={t("toggleLanguageAria")}
       className={`flex items-center gap-1.5 rounded-lg border border-border bg-card/50 p-2 font-mono text-sm text-muted transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${className}`}
     >
-      <Globe size={18} />
+      <GlobeIcon size={18} />
       <span>{otherLocale.toUpperCase()}</span>
     </button>
   );

@@ -2,7 +2,8 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import type { Project } from "@/data/projects";
 import type { Locale } from "@/i18n/routing";
-import { ExternalLink, Github } from "lucide-react";
+import GithubIcon from "@/components/icons/GithubIcon";
+import ExternalLinkIcon from "@/components/icons/ExternalLinkIcon";
 
 interface ProjectCardProps {
   project: Project;
@@ -71,7 +72,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             rel="noopener noreferrer"
             className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
           >
-            <Github size={16} />
+            <GithubIcon size={16} />
             <span>{t("code")}</span>
           </a>
         )}
@@ -82,7 +83,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             rel="noopener noreferrer"
             className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
           >
-            <ExternalLink size={16} />
+            <ExternalLinkIcon size={16} />
             <span>{t("liveDemo")}</span>
           </a>
         )}

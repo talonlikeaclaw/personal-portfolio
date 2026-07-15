@@ -8,6 +8,7 @@ import "../globals.css";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import AnimatedIconProvider from "@/components/icons/AnimatedIconProvider";
 import { siteUrl } from "@/lib/site";
 
 const inter = Inter({
@@ -116,9 +117,11 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale} className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body className={`${inter.className} antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+          <AnimatedIconProvider>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </AnimatedIconProvider>
         </NextIntlClientProvider>
       </body>
     </html>

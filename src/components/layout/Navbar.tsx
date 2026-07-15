@@ -4,14 +4,14 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import Container from "@/components/ui/Container";
 import LanguageToggle from "@/components/layout/LanguageToggle";
-import { Menu, X, Mail } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import MailIcon from "@/components/icons/MailIcon";
 
 const navLinks = [
   { href: "#about", key: "about" },
   { href: "#projects", key: "projects" },
   { href: "#skills", key: "skills" },
   { href: "#education", key: "education" },
-  { href: "#contact", key: "contact" },
 ];
 
 export default function Navbar() {
@@ -38,6 +38,13 @@ export default function Navbar() {
               </a>
             ))}
             <LanguageToggle />
+            <a
+              href="#contact"
+              className="flex items-center justify-center rounded-lg border border-accent bg-accent/10 p-2 text-accent transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              aria-label={t("contactMeAria")}
+            >
+              <MailIcon size={18} />
+            </a>
           </div>
 
           {/* Mobile Buttons */}
@@ -48,7 +55,7 @@ export default function Navbar() {
               className="flex items-center justify-center rounded-lg border border-accent bg-accent/10 p-2 text-accent transition-all hover:bg-accent hover:text-black"
               aria-label={t("contactMeAria")}
             >
-              <Mail size={18} />
+              <MailIcon size={18} />
             </a>
             <button
               className="text-muted hover:text-text focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
