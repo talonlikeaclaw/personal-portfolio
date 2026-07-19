@@ -11,6 +11,7 @@ export interface Project {
   note?: LocalizedText;
   liveUrl?: string;
   githubUrl?: string;
+  caseStudyPath?: string;
 }
 
 export const projects: Project[] = [
@@ -26,10 +27,11 @@ export const projects: Project[] = [
     featured: true,
     image: "/dawsasset.jpg",
     note: {
-      en: "Live production deployment at Dawson College.",
-      fr: "Déploiement en production au Cégep Dawson.",
+      en: "Deployed to production at Dawson College.",
+      fr: "Déployé en production au Cégep Dawson.",
     },
     githubUrl: "https://github.com/talonlikeaclaw/dawsasset",
+    caseStudyPath: "/projects/dawsasset/",
   },
   {
     title: { en: "The Coral Reef", fr: "The Coral Reef" },

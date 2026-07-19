@@ -9,6 +9,12 @@ const languages = {
   "x-default": `${siteUrl}/en/`,
 };
 
+const dawsassetLanguages = {
+  en: `${siteUrl}/en/projects/dawsasset/`,
+  fr: `${siteUrl}/fr/projects/dawsasset/`,
+  "x-default": `${siteUrl}/en/projects/dawsasset/`,
+};
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
@@ -22,6 +28,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
       alternates: { languages },
+    },
+    {
+      url: dawsassetLanguages.en,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: { languages: dawsassetLanguages },
+    },
+    {
+      url: dawsassetLanguages.fr,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: { languages: dawsassetLanguages },
     },
   ];
 }

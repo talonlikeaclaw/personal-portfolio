@@ -64,8 +64,17 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         ))}
       </div>
 
-      <div className="flex gap-4">
-        {project.githubUrl && (
+        <div className="mt-2 flex gap-4">
+          {project.caseStudyPath && (
+            <a
+              href={`/${locale}${project.caseStudyPath}`}
+              className="flex items-center gap-1 font-mono text-sm text-accent hover:text-text transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+            >
+              <ExternalLinkIcon size={16} />
+              <span>{t("caseStudy")}</span>
+            </a>
+          )}
+          {project.githubUrl && (
           <a
             href={project.githubUrl}
             target="_blank"
