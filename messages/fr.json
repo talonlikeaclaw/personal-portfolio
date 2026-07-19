@@ -102,6 +102,161 @@
     "liveDemo": "Démo en ligne",
     "screenshotAlt": "Capture d''écran de {title}",
     "typeTeam": "Équipe",
-    "typeSolo": "Solo"
+    "typeSolo": "Solo",
+    "caseStudy": "Lire l''étude de cas"
+  },
+  "dawsassetCaseStudy": {
+    "metadata": {
+      "title": "Étude de cas DawsAsset",
+      "description": "Une plateforme de gestion des actifs en production livrée à quatre départements du Cégep Dawson lors d''un stage de sept semaines en ingénierie logicielle.",
+      "openGraphTitle": "DawsAsset | Étude de cas de stage",
+      "openGraphDescription": "Comment Talon Dunbar a contribué à livrer une plateforme partagée de gestion des actifs pour le Cégep Dawson."
+    },
+    "backToProjects": "Retour aux projets",
+    "organization": "Cégep Dawson",
+    "title": "DawsAsset",
+    "subtitle": "Plateforme partagée de gestion des actifs livrée en production lors d''un stage de sept semaines en ingénierie logicielle au Cégep Dawson.",
+    "meta": {
+      "internship": "Stage",
+      "team": "Projet d''équipe",
+      "production": "Production",
+      "duration": "Sept semaines",
+      "platform": "Odoo 17"
+    },
+    "overview": {
+      "title": "Aperçu",
+      "body": "Lors d''un stage de sept semaines en ingénierie logicielle, en avril et mai 2026, notre équipe a livré une plateforme partagée de gestion des actifs pour le Cégep Dawson. Basé sur Odoo 17, DawsAsset a remplacé le suivi par tableurs des équipements sérialisés et des consommables dans quatre départements : l''informatique, la radio-oncologie, les technologies de génie mécanique et la technologie du génie civil."
+    },
+    "architecture": {
+      "title": "Vue d''ensemble du système",
+      "intro": "Une vue simplifiée de l''architecture applicative déployée et de l''infrastructure qui la soutient.",
+      "alt": "Diagramme simplifié de l''architecture de DawsAsset montrant l''application Odoo 17, la base de données, le stockage persistant, les sauvegardes et les intégrations dépendantes de l''institution.",
+      "caption": "Diagramme d''architecture simplifié. Les détails d''infrastructure sensibles sont volontairement omis.",
+      "openFullSize": "Ouvrir le diagramme d''architecture en grand format"
+    },
+    "gallery": {
+      "title": "Aperçu de la plateforme",
+      "intro": "Quelques vues de DawsAsset montrant la présentation des équipements sérialisés, des consommables et du kiosque étudiant dans la plateforme.",
+      "openImage": "Ouvrir {title} en grand format",
+      "closeImage": "Fermer la visionneuse d''images",
+      "equipmentList": {
+        "title": "Inventaire d''équipement",
+        "caption": "Une vue de liste pour les dossiers d''équipements sérialisés.",
+        "alt": "Liste Odoo de l''inventaire d''équipement montrant des appareils sérialisés."
+      },
+      "consumableList": {
+        "title": "Inventaire de consommables",
+        "caption": "Une vue de liste pour les dossiers de produits consommables et les quantités disponibles.",
+        "alt": "Liste Odoo de l''inventaire de consommables montrant les produits et les quantités disponibles."
+      },
+      "equipmentDetails": {
+        "title": "Dossier d''équipement",
+        "caption": "Un dossier d''équipement sérialisé avec les champs de disponibilité, d''emplacement et de code-barres.",
+        "alt": "Dossier détaillé d''un équipement sérialisé dans Odoo."
+      },
+      "consumableDetails": {
+        "title": "Dossier de consommable",
+        "caption": "Un dossier de produit consommable avec les détails d''inventaire et les champs de code-barres.",
+        "alt": "Dossier détaillé d''un produit consommable dans Odoo."
+      },
+      "studentKiosk": {
+        "title": "Borne étudiante",
+        "caption": "Une interface ciblée pour emprunter ou retourner de l''équipement avec un numéro étudiant et un code-barres d''équipement.",
+        "alt": "Borne DawsAsset pour emprunter ou retourner de l''équipement étudiant."
+      }
+    },
+    "technicalHighlights": {
+      "title": "Points techniques",
+      "intro": "Technologies et pratiques opérationnelles utilisées tout au long du projet.",
+      "infrastructure": {
+        "title": "Infrastructure",
+        "item1": "Déploiement Docker",
+        "item2": "Proxy inverse Nginx",
+        "item3": "PostgreSQL",
+        "item4": "Stockage persistant et planification des sauvegardes"
+      },
+      "development": {
+        "title": "Développement",
+        "item1": "Odoo 17",
+        "item2": "Python",
+        "item3": "Vues XML",
+        "item4": "Modules Odoo personnalisés"
+      },
+      "delivery": {
+        "title": "Livraison",
+        "item1": "Ingénierie des exigences",
+        "item2": "Déploiement en production",
+        "item3": "Documentation technique",
+        "item4": "Coordination interdépartementale"
+      }
+    },
+    "problem": {
+      "title": "Le problème",
+      "body": "Avant DawsAsset, plusieurs départements géraient leur inventaire de façon indépendante au moyen de tableurs et de processus manuels. Il était alors difficile de conserver une vue cohérente des actifs tout en respectant le flux de travail propre à chaque département. L''objectif était de remplacer ces systèmes déconnectés par une plateforme partagée capable de gérer les équipements sérialisés et les consommables sans imposer le même processus à tous les départements."
+    },
+    "requirements": {
+      "title": "Ingénierie des exigences",
+      "body": "Plutôt que de partir d''un cahier des charges fixe, nous avons collaboré directement avec quatre départements afin de comprendre leurs flux d''inventaire et de cerner les difficultés opérationnelles. Ces constats ont servi de base aux récits utilisateurs et aux exigences réalisables. Cela a impliqué la préparation d''entrevues avec les parties prenantes, l''analyse de jeux de données d''inventaire existants, la documentation des constats et la conciliation de flux de travail distincts dans une plateforme partagée."
+    },
+    "role": {
+      "title": "Mon rôle",
+      "intro": "DawsAsset était un projet d''équipe de Talon Dunbar, Diego Bouda et Massi Djaiz, supervisé par Victor Ponce. J''étais le principal interlocuteur auprès des parties prenantes tout en menant l''infrastructure, la planification du déploiement et la documentation technique du projet. J''ai aussi assuré une grande partie de la planification dans GitLab et aidé à traduire les besoins des départements en exigences réalisables.",
+      "item1": "J''ai mené la découverte et la communication avec les parties prenantes de quatre départements.",
+      "item2": "J''ai préparé les rencontres sur les exigences, analysé les données d''inventaire existantes et traduit les constats en récits utilisateurs.",
+      "item3": "J''ai maintenu la planification à l''aide des tickets GitLab, des étiquettes et du suivi des jalons.",
+      "item4": "J''ai conçu l''approche d''infrastructure et coordonné les déploiements de préproduction et de production.",
+      "item5": "J''ai planifié les sauvegardes, les essais, la documentation et la remise finale."
+    },
+    "delivery": {
+      "title": "Chronologie de livraison",
+      "intro": "Le stage de sept semaines a suivi un parcours de livraison hebdomadaire. Les activités de découverte, de mise en œuvre, de rétroaction et de déploiement se sont parfois chevauchées au fil du projet.",
+      "week": "Semaine {week}",
+      "step1Title": "Planification, recherche et architecture",
+      "step1Description": "Mise en place de la VM, environnement Docker, planification du projet, préparation des parties prenantes et proposition d''architecture.",
+      "step2Title": "Découverte des exigences",
+      "step2Description": "Rencontres avec les parties prenantes, analyse de l''inventaire, récits utilisateurs et exigences des départements.",
+      "step3Title": "Mise en œuvre de la plateforme de base",
+      "step3Description": "Modules Odoo initiaux, flux de travail de l''informatique et suivi de l''équipement.",
+      "step4Title": "Extension des fonctionnalités et rétroaction des parties prenantes",
+      "step4Description": "Flux de travail du génie mécanique et civil, démonstrations et itération des fonctionnalités.",
+      "step5Title": "Raffinement et préparation du déploiement",
+      "step5Description": "Améliorations de l''expérience utilisateur, raffinement des flux de travail, déploiement d''AQ et documentation.",
+      "step6Title": "Tests d''acceptation utilisateur",
+      "step6Description": "Tests avec les parties prenantes, corrections de bogues, validation du déploiement et derniers ajustements.",
+      "step7Title": "Présentation et transfert",
+      "step7Description": "La plateforme terminée a été présentée à la direction du collège, aux superviseurs du projet et aux représentants des départements, en démontrant sa valeur opérationnelle avant la livraison en production et le transfert du projet."
+    },
+    "engineering": {
+      "title": "Responsabilités opérationnelles",
+      "intro": "L''infrastructure, le déploiement, les essais, la documentation et le transfert opérationnel ont été traités comme des éléments essentiels du cycle de vie du projet.",
+      "projectCoordination": { "title": "Coordination du projet", "body": "J''ai maintenu les tickets GitLab, les étiquettes, les jalons, les échéanciers et la documentation du projet afin de garder l''équipe alignée." },
+      "infrastructure": { "title": "Infrastructure et déploiement", "body": "J''ai contribué à la mise en place de la VM et de l''environnement Docker, ainsi qu''à la préproduction, aux essais et à la livraison en production." },
+      "requirements": { "title": "Ingénierie des exigences", "body": "J''ai préparé les entrevues avec les parties prenantes, analysé les données d''inventaire et traduit les constats en exigences réalisables." },
+      "documentation": { "title": "Documentation", "body": "Documentation technique et opérationnelle produite pour que l''équipe destinataire puisse comprendre, déployer et maintenir le système livré." },
+      "stakeholders": { "title": "Coordination avec les parties prenantes", "body": "J''ai travaillé avec quatre départements afin de concilier des flux d''inventaire distincts dans une plateforme partagée." },
+      "handoff": { "title": "Transfert maintenable", "body": "Le système a été livré avec la documentation, la planification des sauvegardes et le contexte opérationnel nécessaires pour réduire la dépendance envers l''équipe de stage." }
+    },
+    "challenges": {
+      "title": "Défis",
+      "item1": "Recueillir et préciser les exigences auprès de quatre départements.",
+      "item2": "Concilier différents flux d''inventaire dans une plateforme partagée.",
+      "item3": "Passer de la découverte à la livraison dans un stage de sept semaines.",
+      "item4": "Terminer la documentation et la remise sans laisser le système dépendre de l''équipe de stage."
+    },
+    "impact": {
+      "title": "Impact",
+      "item1": "Une plateforme partagée de gestion des stocks livrée dans quatre départements du Cégep Dawson.",
+      "item2": "Équipements sérialisés et consommables pris en charge dans le même système.",
+      "item3": "Livraison, documentation et remise réalisées en sept semaines.",
+      "item4": "La plateforme demeure en production au Cégep Dawson après le transfert du projet.",
+      "item5": "La plateforme livrée et sa valeur opérationnelle ont été présentées à la direction du collège et aux parties prenantes des départements."
+    },
+    "takeaways": {
+      "title": "Leçons d''ingénierie",
+      "body": "Ce stage a renforcé l''idée qu''une livraison logicielle réussie va au-delà de la mise en œuvre. La communication avec les parties prenantes, la découverte des exigences, la planification du déploiement, les essais, les sauvegardes, la documentation et le transfert ont tous contribué à un système que les équipes pouvaient adopter et exploiter avec succès. Il m''a aussi montré à quel point une livraison concrète dépend de la capacité à composer avec des contraintes institutionnelles et une information incomplète."
+    },
+    "ctaTitle": "Vous intéressez-vous à mon approche de l''infrastructure, du déploiement et des logiciels en production?",
+    "viewOtherProjects": "Voir mes autres projets",
+    "contactCta": "Me joindre sur LinkedIn"
   }
 }

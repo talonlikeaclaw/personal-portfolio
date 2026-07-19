@@ -102,6 +102,161 @@
     "liveDemo": "Live Demo",
     "screenshotAlt": "{title} screenshot",
     "typeTeam": "Team",
-    "typeSolo": "Solo"
+    "typeSolo": "Solo",
+    "caseStudy": "Read case study"
+  },
+  "dawsassetCaseStudy": {
+    "metadata": {
+      "title": "DawsAsset Case Study",
+      "description": "A production asset-management platform delivered to four Dawson College departments during a seven-week software engineering internship.",
+      "openGraphTitle": "DawsAsset | Internship Case Study",
+      "openGraphDescription": "How Talon Dunbar helped deliver a shared asset-management platform for Dawson College."
+    },
+    "backToProjects": "Back to projects",
+    "organization": "Dawson College",
+    "title": "DawsAsset",
+    "subtitle": "Shared asset-management platform delivered to production during a seven-week software engineering internship at Dawson College.",
+    "meta": {
+      "internship": "Internship",
+      "team": "Team project",
+      "production": "Production",
+      "duration": "Seven weeks",
+      "platform": "Odoo 17"
+    },
+    "overview": {
+      "title": "Overview",
+      "body": "During a seven-week software engineering internship in April and May 2026, our team delivered a shared asset-management platform for Dawson College. Built on Odoo 17, DawsAsset replaced spreadsheet-based tracking for serialized equipment and consumable inventory across four departments: Computer Science, Radiation Oncology, Mechanical Engineering Technologies, and Civil Engineering Technology."
+    },
+    "architecture": {
+      "title": "System Overview",
+      "intro": "A simplified view of the deployed application architecture and supporting infrastructure.",
+      "alt": "Simplified DawsAsset architecture diagram showing the Odoo 17 application, database, persistent storage, backups, and institution-dependent integrations.",
+      "caption": "Simplified architecture diagram. Sensitive infrastructure details are intentionally omitted.",
+      "openFullSize": "Open full-size architecture diagram"
+    },
+    "gallery": {
+      "title": "Platform Gallery",
+      "intro": "Selected views from DawsAsset showing how serialized equipment, consumable inventory, and the student kiosk were presented in the platform.",
+      "openImage": "Open {title} full size",
+      "closeImage": "Close image viewer",
+      "equipmentList": {
+        "title": "Equipment inventory",
+        "caption": "A list view for serialized equipment records.",
+        "alt": "Odoo equipment inventory list showing serialized devices."
+      },
+      "consumableList": {
+        "title": "Consumable inventory",
+        "caption": "A list view for consumable product records and on-hand quantities.",
+        "alt": "Odoo consumable inventory list showing products and on-hand quantities."
+      },
+      "equipmentDetails": {
+        "title": "Equipment record",
+        "caption": "A serialized equipment record with availability, location, and barcode fields.",
+        "alt": "Serialized equipment detail record in Odoo."
+      },
+      "consumableDetails": {
+        "title": "Consumable record",
+        "caption": "A consumable product record with inventory details and barcode fields.",
+        "alt": "Consumable product detail record in Odoo."
+      },
+      "studentKiosk": {
+        "title": "Student kiosk",
+        "caption": "A focused interface for checking out or returning equipment with a student number and equipment barcode.",
+        "alt": "DawsAsset student equipment checkout and return kiosk."
+      }
+    },
+    "technicalHighlights": {
+      "title": "Technical Highlights",
+      "intro": "Technologies and operational practices used throughout the project.",
+      "infrastructure": {
+        "title": "Infrastructure",
+        "item1": "Docker deployment",
+        "item2": "Nginx reverse proxy",
+        "item3": "PostgreSQL",
+        "item4": "Persistent storage and backup planning"
+      },
+      "development": {
+        "title": "Development",
+        "item1": "Odoo 17",
+        "item2": "Python",
+        "item3": "XML views",
+        "item4": "Custom Odoo modules"
+      },
+      "delivery": {
+        "title": "Delivery",
+        "item1": "Requirements engineering",
+        "item2": "Production deployment",
+        "item3": "Technical documentation",
+        "item4": "Cross-department coordination"
+      }
+    },
+    "problem": {
+      "title": "The Problem",
+      "body": "Before DawsAsset, inventory was managed independently by multiple departments using spreadsheets and manual processes. This made it difficult to maintain a consistent view of assets while still supporting each department''s unique workflow. The goal was to replace those disconnected systems with a shared platform that could manage both serialized equipment and consumable inventory without forcing every department into the same process."
+    },
+    "requirements": {
+      "title": "Requirements Engineering",
+      "body": "Rather than working from a fixed specification, we collaborated directly with four departments to understand their existing inventory workflows and identify operational pain points. Those findings became the foundation for user stories and implementable requirements. This involved preparing stakeholder interviews, analyzing existing inventory datasets, documenting findings, and reconciling different departmental workflows within one shared platform."
+    },
+    "role": {
+      "title": "My Role",
+      "intro": "DawsAsset was a team effort by Talon Dunbar, Diego Bouda, and Massi Djaiz, supervised by Victor Ponce. I served as the team''s primary stakeholder communicator while leading the project''s infrastructure, deployment planning, and technical documentation. I also maintained much of the project planning in GitLab and helped translate departmental needs into implementable requirements.",
+      "item1": "Led stakeholder discovery and communication across four departments.",
+      "item2": "Prepared requirements meetings, analyzed existing inventory data, and translated findings into user stories.",
+      "item3": "Maintained project planning through GitLab issues, labels, and milestone tracking.",
+      "item4": "Designed the infrastructure approach and coordinated staging and production deployment.",
+      "item5": "Planned backups, testing, documentation, and final handoff."
+    },
+    "delivery": {
+      "title": "Delivery Timeline",
+      "intro": "The seven-week internship followed a week-by-week delivery path. Discovery, implementation, feedback, and deployment activities sometimes overlapped as the project evolved.",
+      "week": "Week {week}",
+      "step1Title": "Planning, research, and architecture",
+      "step1Description": "VM setup, Docker environment, project planning, stakeholder preparation, and architecture proposal.",
+      "step2Title": "Requirements discovery",
+      "step2Description": "Stakeholder meetings, inventory analysis, user stories, and department requirements.",
+      "step3Title": "Core platform implementation",
+      "step3Description": "Initial Odoo modules, Computer Science workflows, and equipment tracking.",
+      "step4Title": "Feature expansion and stakeholder feedback",
+      "step4Description": "Mechanical and Civil Engineering workflows, demonstrations, and feature iteration.",
+      "step5Title": "Refinement and deployment preparation",
+      "step5Description": "User experience improvements, workflow refinement, QA deployment, and documentation.",
+      "step6Title": "User acceptance testing",
+      "step6Description": "Stakeholder testing, bug fixes, deployment validation, and final refinements.",
+      "step7Title": "Presentation and handoff",
+      "step7Description": "Presented the completed platform to college leadership, project supervisors, and departmental representatives, demonstrating its operational value before completing production delivery and project handoff."
+    },
+    "engineering": {
+      "title": "Operational Responsibilities",
+      "intro": "Infrastructure, deployment, testing, documentation, and operational handoff were treated as core parts of the project lifecycle.",
+      "projectCoordination": { "title": "Project coordination", "body": "Maintained GitLab issues, labels, milestones, schedules, and project documentation to keep the team aligned." },
+      "infrastructure": { "title": "Infrastructure and deployment", "body": "Helped establish the VM and Docker-based environment and supported staging, testing, and production delivery." },
+      "requirements": { "title": "Requirements engineering", "body": "Prepared stakeholder interviews, analyzed inventory data, and translated findings into implementable requirements." },
+      "documentation": { "title": "Documentation", "body": "Produced technical and operational documentation so the receiving team could understand, deploy, and maintain the delivered system." },
+      "stakeholders": { "title": "Stakeholder coordination", "body": "Translated the needs of four departments into requirements for one shared platform while preserving their distinct workflows." },
+      "handoff": { "title": "Maintainable handoff", "body": "Delivered the system with the documentation, backup planning, and operational context needed to reduce dependence on the internship team." }
+    },
+    "challenges": {
+      "title": "Challenges",
+      "item1": "Gathering and clarifying requirements across four departments.",
+      "item2": "Reconciling different inventory workflows within one shared platform.",
+      "item3": "Moving from discovery to delivery within a seven-week internship.",
+      "item4": "Completing documentation and handoff without leaving the system dependent on the internship team."
+    },
+    "impact": {
+      "title": "Impact",
+      "item1": "A shared inventory platform delivered across four Dawson College departments.",
+      "item2": "Serialized equipment and consumable inventory supported in the same system.",
+      "item3": "Delivered, documented, and handed off within seven weeks.",
+      "item4": "The platform remains in production at Dawson College following project handoff.",
+      "item5": "Presented the delivered platform and its operational value to college leadership and department stakeholders."
+    },
+    "takeaways": {
+      "title": "Engineering Lessons",
+      "body": "This internship reinforced that successful software delivery extends beyond implementation. Stakeholder communication, requirements discovery, deployment planning, testing, backups, documentation, and handoff all contributed to a system that teams could successfully adopt and operate. It also showed me how much real-world delivery depends on navigating institutional constraints and incomplete information."
+    },
+    "ctaTitle": "Interested in my approach to infrastructure, deployment, and production software?",
+    "viewOtherProjects": "View other projects",
+    "contactCta": "Connect on LinkedIn"
   }
 }
