@@ -21,7 +21,7 @@ export default async function Home({ params }: Props) {
     "@type": "Person",
     name: "Talon Dunbar",
     url: `${siteUrl}/${locale}/`,
-    image: `${siteUrl}/headshot.jpg`,
+    image: `${siteUrl}/headshot.webp`,
     jobTitle:
       locale === "fr"
         ? "Développeur DevOps et Full-Stack"

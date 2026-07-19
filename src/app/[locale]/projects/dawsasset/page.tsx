@@ -16,13 +16,13 @@ const challengeItems = ["item1", "item2", "item3", "item4"] as const;
 const impactItems = ["item1", "item2", "item3", "item4", "item5"] as const;
 
 const galleryItems = [
-  { key: "equipmentList", image: "equipment-list.png" },
-  { key: "consumableList", image: "consumable-list.png" },
-  { key: "equipmentDetails", image: "equipment-details.png" },
-  { key: "consumableDetails", image: "consumable-details.png" },
+  { key: "equipmentList", image: "equipment-list.webp" },
+  { key: "consumableList", image: "consumable-list.webp" },
+  { key: "equipmentDetails", image: "equipment-details.webp" },
+  { key: "consumableDetails", image: "consumable-details.webp" },
 ] as const;
 
-const featuredGalleryItem = { key: "studentKiosk", image: "student-kiosk.png" } as const;
+const featuredGalleryItem = { key: "studentKiosk", image: "student-kiosk.webp" } as const;
 
 const technicalHighlights = [
   { key: "infrastructure", items: ["item1", "item2", "item3", "item4"] },
@@ -67,13 +67,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "Talon Dunbar",
       locale: locale === "fr" ? "fr_CA" : "en_US",
       type: "website",
-      images: ["/headshot.jpg"],
+      images: ["/headshot.webp"],
     },
     twitter: {
       card: "summary_large_image",
       title: t("metadata.openGraphTitle"),
       description: t("metadata.openGraphDescription"),
-      images: ["/headshot.jpg"],
+      images: ["/headshot.webp"],
     },
     robots: { index: true, follow: true },
   };

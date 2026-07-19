@@ -25,7 +25,7 @@ export const projects: Project[] = [
     type: "team",
     status: "completed",
     featured: true,
-    image: "/dawsasset.jpg",
+    image: "/dawsasset.webp",
     note: {
       en: "Deployed to production at Dawson College.",
       fr: "Déployé en production au Cégep Dawson.",
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     type: "team",
     status: "completed",
     featured: true,
-    image: "/coralreef.jpg",
+    image: "/coralreef.webp",
     note: {
       en: "620 capstone project. Live at thecoralreef.club.",
       fr: "Projet de fin d'études (620). En ligne au thecoralreef.club.",
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     technologies: ["React", "Vite", "Express.js", "Mocha", "Chai"],
     type: "team",
     status: "completed",
-    image: "/immigrationviz.jpg",
+    image: "/immigrationviz.webp",
     note: {
       en: "Data sourced from Statistics Canada census records.",
       fr: "Données tirées des recensements de Statistique Canada.",
@@ -86,7 +86,7 @@ export const projects: Project[] = [
     technologies: ["Flask", "PostgreSQL", "Docker", "Jinja"],
     type: "team",
     status: "completed",
-    image: "/trimtracker.jpg",
+    image: "/trimtracker.webp",
     note: {
       en: "Built for a server-side programming course.",
       fr: "Réalisé pour un cours de programmation côté serveur.",
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     technologies: ["C#", "Avalonia", "EF Core", "LINQ", "MSTest", "Moq"],
     type: "team",
     status: "completed",
-    image: "/dawsondial.jpg",
+    image: "/dawsondial.webp",
     githubUrl: "https://github.com/talonlikeaclaw/dawson-dial",
   },
   {
@@ -114,7 +114,7 @@ export const projects: Project[] = [
     technologies: ["Java", "PostgreSQL", "Maven", "JUnit"],
     type: "team",
     status: "completed",
-    image: "/dealership.jpg",
+    image: "/dealership.webp",
     githubUrl: "https://github.com/talonlikeaclaw/virtual-used-car-dealership",
   },
   {
@@ -126,7 +126,7 @@ export const projects: Project[] = [
     technologies: ["Java", "PostgreSQL", "PL/pgSQL", "JDBC", "JUnit"],
     type: "team",
     status: "completed",
-    image: "/dawscorp.jpg",
+    image: "/dawscorp.webp",
     githubUrl: "https://github.com/talonlikeaclaw/dawscorp-task-manager",
   },
   {
@@ -139,7 +139,7 @@ export const projects: Project[] = [
     type: "solo",
     status: "in-progress",
     featured: true,
-    image: "/homelab.jpg",
+    image: "/homelab.webp",
     note: {
       en: "17+ services in production. No public repo.",
       fr: "Plus de 17 services en production. Aucun dépôt public.",
@@ -155,7 +155,7 @@ export const projects: Project[] = [
     type: "solo",
     status: "in-progress",
     featured: true,
-    image: "/godash.jpg",
+    image: "/godash.webp",
     note: {
       en: "Core monitoring features complete. Active development.",
       fr: "Fonctionnalités de surveillance de base complétées. Développement actif.",
@@ -171,7 +171,7 @@ export const projects: Project[] = [
     technologies: ["Java", "ANSI", "CLI"],
     type: "solo",
     status: "completed",
-    image: "/picnicgo.jpg",
+    image: "/picnicgo.webp",
     githubUrl: "https://github.com/talonlikeaclaw/picnic-go",
   },
   {
@@ -183,7 +183,7 @@ export const projects: Project[] = [
     technologies: ["Python", "I2C", "Raspberry Pi", "ADS7830"],
     type: "solo",
     status: "completed",
-    image: "/thermostat.jpg",
+    image: "/thermostat.webp",
     githubUrl: "https://github.com/talonlikeaclaw/thermostat-driver",
   },
   {
@@ -195,7 +195,7 @@ export const projects: Project[] = [
     technologies: ["Zsh", "JSON", "Lua", "TOML"],
     type: "solo",
     status: "completed",
-    image: "/dotfiles.jpg",
+    image: "/dotfiles.webp",
     githubUrl: "https://github.com/talonlikeaclaw/dotfiles",
   },
 ];

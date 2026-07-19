@@ -85,7 +85,7 @@ export default function Achievements() {
             </div>
             <div className="relative mt-4 aspect-[3229/2480] w-full overflow-hidden rounded-md border border-border">
               <Image
-                src="/leadership-award.jpg"
+                src="/leadership-award.webp"
                 alt={t("leadershipTitle")}
                 fill
                 className="object-cover"

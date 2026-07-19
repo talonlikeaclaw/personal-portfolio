@@ -74,13 +74,13 @@ export async function generateMetadata({
       siteName: "Talon Dunbar",
       locale: locale === "fr" ? "fr_CA" : "en_US",
       type: "website",
-      images: ["/headshot.jpg"],
+      images: ["/headshot.webp"],
     },
     twitter: {
       card: "summary_large_image",
       title: t("twitter.title"),
       description: t("twitter.description"),
-      images: ["/headshot.jpg"],
+      images: ["/headshot.webp"],
     },
     robots: {
       index: true,

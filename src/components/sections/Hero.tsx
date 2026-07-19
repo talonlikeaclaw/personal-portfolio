@@ -54,7 +54,7 @@ export default function Hero() {
         <div className="text-center">
           <div className="mx-auto mb-8 flex h-40 w-40 items-center justify-center overflow-hidden rounded-full border-2 border-accent/1 sm:h-48 sm:w-48">
             <Image
-              src="/headshot.jpg"
+              src="/headshot.webp"
               alt={t("photoAlt")}
               width={192}
               height={192}
