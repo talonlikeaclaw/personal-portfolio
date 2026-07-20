@@ -53,15 +53,15 @@ export const projects: Project[] = [
   {
     title: { en: "The Coral Reef", fr: "The Coral Reef" },
     description: {
-      en: "Full-stack capstone platform built by a team around Tight Squeeze, a nautical card game inspired by Exploding Kittens. Features real-time multiplayer via Socket.IO, social auth, profile customization, friends, leaderboards, and an admin panel.",
-      fr: "Plateforme de projet de fin d'études full-stack construite en équipe autour de Tight Squeeze, un jeu de cartes nautique inspiré d'Exploding Kittens. Comprend du multijoueur en temps réel via Socket.IO, l'authentification sociale, la personnalisation de profil, des amis, des classements et un panneau d'administration.",
+      en: "Team capstone social card-game platform with real-time multiplayer, social auth, profiles, friends, leaderboards, and admin tools. Staging and production deployments auto-deploy through GitLab CI/CD to Azure Web Apps, using Azure Blob Storage for images and MongoDB for data persistence.",
+      fr: "Plateforme de projet de fin d'études en équipe autour d'un jeu de cartes social, avec multijoueur en temps réel, authentification sociale, profils, amis, classements et outils d'administration. Les déploiements de préproduction et de production sont automatisés par GitLab CI/CD vers Azure Web Apps, avec Azure Blob Storage pour les images et MongoDB pour la persistance des données.",
     },
     technologies: [
+      "Azure",
+      "CI/CD",
       "Next.js",
       "TypeScript",
       "MongoDB",
-      "Socket.IO",
-      "Better Auth",
     ],
     type: "team",
     status: "completed",

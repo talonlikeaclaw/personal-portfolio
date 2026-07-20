@@ -33,10 +33,14 @@ export default function HomelabArchitectureDiagram({
     <div className="overflow-hidden rounded-lg border border-border bg-card p-4 sm:p-6">
       <div className="grid gap-4 lg:grid-cols-[1fr_auto_1.35fr_auto_1fr] lg:items-stretch">
         <DiagramColumn>
-          <DiagramNode icon={Users} label={labels.publicUsers} />
-          <DiagramNode icon={Cloud} label={labels.cloudflareEdge} accent />
-          <DiagramNode icon={Laptop} label={labels.privateDevices} />
-          <DiagramNode icon={LockKeyhole} label={labels.tailscale} accent />
+          <div className="space-y-3 rounded border border-border bg-card/40 p-2">
+            <DiagramNode icon={Cloud} label={labels.cloudflareEdge} accent />
+            <DiagramNode icon={Users} label={labels.publicUsers} />
+          </div>
+          <div className="space-y-3 rounded border border-border bg-card/40 p-2">
+            <DiagramNode icon={LockKeyhole} label={labels.tailscale} accent />
+            <DiagramNode icon={Laptop} label={labels.privateDevices} />
+          </div>
         </DiagramColumn>
         <DiagramArrow />
         <DiagramColumn emphasis>
