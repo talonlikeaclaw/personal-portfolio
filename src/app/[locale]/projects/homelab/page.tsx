@@ -54,7 +54,7 @@ export default async function HomelabCaseStudy({ params }: Props) {
           <p className="font-mono text-sm font-semibold uppercase tracking-[0.2em] text-accent">{t("eyebrow")}</p>
           <h1 className="mt-4 font-mono text-4xl font-bold tracking-tight text-text sm:text-6xl">{t("title")}</h1>
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted sm:text-xl">{t.rich("subtitle", { strong })}</p>
-          <div className="mt-8 flex flex-wrap gap-3">{["ongoing", "iac", "stack", "focus"].map((key) => <span key={key} className="rounded-full border border-border bg-card px-3 py-1.5 font-mono text-sm text-accent">{t(`meta.${key}`)}</span>)}</div>
+          <div className="mt-8 flex flex-wrap gap-3">{["ongoing", "iac", "stack"].map((key) => <span key={key} className="rounded-full border border-border bg-card px-3 py-1.5 font-mono text-sm text-accent">{t(`meta.${key}`)}</span>)}</div>
         </header>
 
         <div className="mt-16 space-y-16">

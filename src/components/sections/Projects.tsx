@@ -16,7 +16,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-20">
-      <Container>
+      <Container className="max-w-6xl">
         <SectionHeading
           title={t("title")}
           subtitle={t("subtitle")}

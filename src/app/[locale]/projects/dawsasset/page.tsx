@@ -14,7 +14,7 @@ type Props = {
 const roleItems = ["item1", "item2", "item3", "item4", "item5"] as const;
 const deliverySteps = ["step1", "step2", "step3", "step4", "step5", "step6", "step7"] as const;
 const challengeItems = ["item1", "item2", "item3", "item4"] as const;
-const impactItems = ["item1", "item2", "item3", "item4", "item5"] as const;
+const impactItems = ["item1", "item2", "item4", "item5"] as const;
 const capabilityItems = ["assetTracking", "loans", "studentKiosk", "guidedWorkflows", "accessControl", "notifications"] as const;
 
 const galleryItems = [
@@ -224,8 +224,8 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
           <p className="mt-4 max-w-3xl leading-relaxed text-muted">{t.rich("delivery.intro", { strong })}</p>
           <ol className="mt-8 border-l border-border">
             {deliverySteps.map((step, index) => (
-              <li key={step} className="relative pb-5 pl-8 last:pb-0">
-                <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full border border-accent bg-background text-xs font-bold text-accent">{index + 1}</span>
+              <li key={step} className="relative mb-5 pl-8 last:mb-0">
+                <span className="absolute top-1/2 -left-3 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full border border-accent bg-background text-xs font-bold text-accent">{index + 1}</span>
                 <div className="rounded border border-border bg-background/50 px-4 py-3 font-mono text-sm text-text">
                   <h3 className="font-semibold">
                     <span className="text-accent">{t("delivery.week", { week: index + 1 })}</span>
@@ -266,8 +266,8 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
             </h2>
             <ul className="mt-5 space-y-3 text-sm leading-relaxed text-muted">
               {impactItems.map((item) => (
-                <li key={item} className="flex gap-3">
-                  <CheckCircle2 className="mt-0.5 shrink-0 text-accent" size={16} aria-hidden="true" />
+                <li key={item} className="flex items-center gap-3">
+                  <CheckCircle2 className="shrink-0 text-accent" size={16} aria-hidden="true" />
                   <span>{t.rich(`impact.${item}`, { strong })}</span>
                 </li>
               ))}
@@ -275,8 +275,11 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
           </section>
         </div>
 
-        <section aria-labelledby="takeaways" className="mt-16 border-t border-border pt-12">
-          <h2 id="takeaways" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("takeaways.title")}</h2>
+        <section aria-labelledby="takeaways" className="mt-16 rounded-lg border border-accent/60 bg-accent/10 p-5 sm:p-6">
+          <h2 id="takeaways" className="flex items-center gap-2 font-mono text-2xl font-bold text-text sm:text-3xl">
+            <CheckCircle2 className="text-accent" size={22} aria-hidden="true" />
+            {t("takeaways.title")}
+          </h2>
           <p className="mt-5 leading-relaxed text-muted">{t.rich("takeaways.body", { strong })}</p>
         </section>
 

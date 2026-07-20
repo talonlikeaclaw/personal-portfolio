@@ -29,7 +29,10 @@ export default function Education() {
                   {t("period")}
                 </p>
                 <div className="mt-4 flex flex-wrap items-center gap-2">
-                  <span className="rounded-full bg-accent/20 px-3 py-1 text-sm text-accent">
+                  <span
+                    className="rounded-full bg-accent/20 px-3 py-1 text-sm text-accent"
+                    title={t("rScoreDescription")}
+                  >
                     {t("rScore")}
                   </span>
                   <span className="rounded-full bg-accent/20 px-3 py-1 text-sm text-accent">

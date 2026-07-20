@@ -1,21 +1,23 @@
 {
   "metadata": {
-    "title": "Talon Dunbar | DevOps & Full-Stack Developer",
-    "description": "DevOps and full-stack developer based in Montreal. Specializing in infrastructure, React, Next.js, Go, and modern web technologies.",
+    "title": "Talon Dunbar | Infrastructure & Software Engineer",
+    "description": "Infrastructure and software engineer based in Montreal. Building maintainable infrastructure, deployment workflows, and software systems.",
     "openGraph": {
-      "title": "Talon Dunbar | DevOps & Full-Stack Developer",
-      "description": "DevOps and full-stack developer specializing in infrastructure, automation, and modern web technologies."
+      "title": "Talon Dunbar | Infrastructure & Software Engineer",
+      "description": "Infrastructure and software engineer specializing in maintainable systems and automation."
     },
     "twitter": {
-      "title": "Talon Dunbar | DevOps & Full-Stack Developer",
-      "description": "DevOps and full-stack developer specializing in infrastructure, automation, and modern web technologies."
+      "title": "Talon Dunbar | Infrastructure & Software Engineer",
+      "description": "Infrastructure and software engineer specializing in maintainable systems and automation."
     }
   },
   "nav": {
     "about": "About",
     "projects": "Projects",
+    "experience": "Experience",
     "skills": "Skills",
     "education": "Education",
+    "achievements": "Achievements",
     "contact": "Contact",
     "contactMeAria": "Contact me",
     "toggleMenuAria": "Toggle menu",
@@ -23,42 +25,41 @@
   },
   "hero": {
     "name": "Talon Dunbar",
-    "role": "DevOps & Full-Stack Developer",
-    "tagline": "Fast learner, detail-oriented, curious, collaborative.",
+    "role": "Infrastructure & Software Engineer",
+    "tagline": "Building maintainable infrastructure, reliable deployment workflows, and software systems teams can operate with confidence.",
     "ctaAbout": "About Me",
     "ctaProjects": "View Projects",
     "ctaContact": "Contact Me",
+    "scrollCue": "Explore my work",
+    "scrollCueAria": "Explore featured projects",
     "photoAlt": "Talon Dunbar"
   },
   "about": {
     "title": "About Me",
-    "subtitle": "I build things to understand them.",
-    "intro": "<strong>Computer Science graduate</strong> from <strong>Dawson College</strong> in Montréal, Québec.",
-    "dev0": "Builds full-stack apps with <strong>React</strong>, <strong>Flask</strong>, <strong>Java</strong>, and <strong>C#</strong>.",
-    "dev1": "Has a strong interest in <strong>infrastructure</strong> and <strong>DevOps</strong>.",
-    "dev2": "Self-hosts services with <strong>Proxmox</strong> and <strong>Docker</strong>.",
-    "dev3": "Is a <strong>Linux</strong> power user and administrator.",
-    "dev4": "Is an <strong>open-source</strong> advocate.",
-    "approach0": "Collaborates on team projects using <strong>Agile</strong> workflows.",
-    "approach1": "Tracks issues and collaborates via <strong>Git</strong> workflows.",
-    "approach2": "Learns quickly and cares about <strong>details</strong>.",
-    "approach3": "Reads <strong>documentation</strong> to understand tools deeply.",
-    "approach4": "Uses <strong>AI tooling</strong> deliberately as part of an engineering workflow.",
-    "interests0": "Always chases better <strong>coffee</strong>.",
+    "subtitle": "The systems and practices behind the projects.",
+    "intro": "Hi, I''m <strong>Talon</strong> (like a claw), a <strong>Computer Science graduate</strong> focused on infrastructure, DevOps, and software engineering. I have deployed a live departmental platform, automated my homelab with Infrastructure as Code, and built full-stack applications from design through deployment.",
+    "photoAlt": "Talon Dunbar",
+    "dev0": "Builds full-stack applications with <strong>React</strong>, <strong>Next.js</strong>, <strong>Flask</strong>, <strong>Java</strong>, and <strong>C#</strong>.",
+    "dev1": "Designs and operates infrastructure with <strong>Proxmox</strong>, <strong>OpenTofu</strong>, <strong>Ansible</strong>, and <strong>NixOS</strong>.",
+    "dev2": "Builds <strong>CI/CD workflows</strong> and repeatable deployment processes for cloud and self-hosted environments.",
+    "dev3": "Works daily across <strong>Linux</strong> systems, containers, networking, and databases.",
+    "dev4": "Values and advocates for <strong>open-source</strong> software.",
+    "approach0": "Breaks complex problems into <strong>testable, documented steps</strong>.",
+    "approach1": "Uses <strong>Git workflows</strong>, issue tracking, and code review in team projects.",
+    "approach2": "Reads <strong>primary documentation</strong> before adopting tools or patterns.",
+    "approach3": "Treats <strong>AI tooling</strong> as an engineering aid, not a substitute for validation.",
     "interests1": "Explores 3D rendering in <strong>Blender</strong>.",
     "interests2": "Experiments with music production in <strong>Ableton</strong>.",
-    "interests3": "Is curious about <strong>meteorology</strong> and <strong>astronomy</strong>.",
-    "interests4": "Competes as a <strong>Grand Champion</strong> in Rocket League.",
-    "githubActivity": "GitHub Activity",
-    "chartAlt": "GitHub Contribution Chart"
+    "interests3": "Loves <strong>aviation</strong>, <strong>meteorology</strong>, and <strong>space</strong>.",
+    "interests4": "Competes as a <strong>Grand Champion</strong> in Rocket League."
   },
   "skills": {
     "title": "Technical Toolkit",
     "subtitle": "Languages, frameworks, and tools I use."
   },
   "projects": {
-    "title": "What I''ve Built",
-    "subtitle": "Team and solo projects I''ve worked on.",
+    "title": "Featured Projects",
+    "subtitle": "Selected infrastructure and software projects.",
     "showLess": "Show less",
     "showMore": "Show {count} more projects"
   },
@@ -66,9 +67,10 @@
     "title": "Education",
     "subtitle": "Formal training behind the skills.",
     "school": "Dawson College",
-    "degree": "DEC in Computer Science Technology",
+    "degree": "Diploma of College Studies - Computer Science Technology",
     "period": "2023 - 2026 | Montreal, QC",
-    "rScore": "R Score: 34.81",
+    "rScore": "R-score: 34.8",
+    "rScoreDescription": "Quebec college academic performance measure.",
     "english": "English: Native",
     "french": "French: Conversational"
   },
@@ -81,9 +83,17 @@
     "devpost": "DevPost",
     "leadershipTitle": "CS 2026 Leadership Award"
   },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "Professional delivery experience.",
+    "role": "Software Engineering Intern - Dawson College",
+    "period": "April-May 2026 | Seven-week internship",
+    "description": "Served as the team''s primary infrastructure contributor and a main stakeholder contact while delivering DawsAsset to four departments. Designed the deployment environment, coordinated backups and testing, documented operations, and supported the production handoff.",
+    "caseStudy": "View internship project"
+  },
   "contact": {
     "title": "Let''s Work Together",
-    "subtitle": "Open to full-time DevOps, infrastructure, and full-stack roles.",
+    "subtitle": "Open to full-time infrastructure, DevOps, platform, and software engineering roles.",
     "links": {
       "github": "GitHub",
       "gitlab": "GitLab",
@@ -98,6 +108,7 @@
   },
   "ui": {
     "inProgress": "In Progress",
+    "ongoing": "Ongoing",
     "code": "Code",
     "liveDemo": "Live Demo",
     "screenshotAlt": "{title} screenshot",
@@ -255,9 +266,8 @@
     },
     "impact": {
       "title": "Impact",
-      "item1": "A <strong>shared inventory platform across four Dawson College departments</strong>.",
+      "item1": "A <strong>shared inventory platform across four departments</strong>, delivered, documented, and handed off in <strong>seven weeks</strong>.",
       "item2": "Serialized equipment and consumable inventory supported in the same system.",
-      "item3": "Delivered, documented, and handed off within <strong>seven weeks</strong>.",
       "item4": "The platform remains <strong>in production at Dawson College</strong> following project handoff.",
       "item5": "Presented the delivered platform and its operational value to college leadership and department stakeholders."
     },
@@ -275,7 +285,7 @@
     "eyebrow": "Personal infrastructure",
     "title": "Homelab Infrastructure",
     "subtitle": "A self-hosted environment built with <strong>Proxmox, TrueNAS, OpenTofu, Ansible, and NixOS</strong>, designed around repeatable provisioning, secure access, and layered backups.",
-    "meta": { "personal": "Personal infrastructure", "ongoing": "Ongoing", "focus": "Infrastructure and operations", "stack": "Proxmox · OpenTofu · Ansible · NixOS", "iac": "Infrastructure as Code" },
+    "meta": { "personal": "Personal infrastructure", "ongoing": "Ongoing", "stack": "Proxmox · OpenTofu · Ansible · NixOS", "iac": "Infrastructure as Code" },
     "diagram": { "backupDestinations": "Backup Destinations", "backupFlows": "Backup flows", "localCopy": "Local Copy", "offsiteDatasetCopy": "Offsite Dataset Copy", "offsitePbs": "Offsite PBS" },
     "backupTitle": "Storage, Backups, and Recovery",
     "backupStrategyTitle": "3-2-1 backup strategy",
@@ -289,14 +299,14 @@
     "overview": { "title": "Overview", "body1": "I designed and operate this homelab as a practical infrastructure environment for personal services, development workloads, and applications I build. After a host-level reboot incident exposed the fragility of my earlier Docker Compose-centric setup, I reorganized it around independently managed workloads, <strong>declarative provisioning</strong>, separated storage, and <strong>layered backups</strong>.", "body2": "The platform is intentionally modest: one Proxmox compute host, one TrueNAS system, and an offsite VPS. The engineering challenge is not scale, but making the environment understandable, maintainable, securely accessible, and recoverable under realistic hardware and time constraints." },
     "evolution": { "title": "Platform Evolution", "intro": "The environment originally relied more heavily on Docker Compose deployments. A host-level reboot incident made the cost of reconstructing an ad hoc environment clear and accelerated a redesign around <strong>independently managed workloads and documented operational workflows</strong>.", "before": { "title": "Earlier approach", "body": "Services were more tightly coupled to Compose-based deployments on the host, making reconstruction and operational ownership less explicit." }, "after": { "title": "Current direction", "body": "Most workloads now run in dedicated Proxmox LXCs, with OpenTofu declaring compute and Ansible provisioning services from a reproducible NixOS DevBox VM." } },
     "architecture": { "title": "Architecture", "intro": "The platform separates public application access, private administration, compute, shared storage, and independent backup destinations. This simplified diagram intentionally omits network identifiers, internal paths, and access-rule details.", "caption": "Simplified infrastructure view. Sensitive operational details are intentionally omitted.", "principles": { "compute": { "title": "Proxmox for compute", "body": "Most workloads run in dedicated LXCs; a NixOS DevBox VM provides a reproducible environment for infrastructure and development work." }, "storage": { "title": "TrueNAS for valuable data", "body": "Important user content resides on shared NAS storage, while application state remains local when network-filesystem semantics make that safer." }, "access": { "title": "Separate access paths", "body": "Cloudflare routes selected public applications, while Tailscale keeps administration private and AdGuard Home provides local DNS." } }, "nodes": { "publicUsers": "Public Users", "cloudflareEdge": "Cloudflare Edge", "privateDevices": "Private Remote Devices", "tailscale": "Tailscale", "computeHost": "Proxmox Compute Host", "serviceLxcs": "Service LXCs", "devBox": "NixOS DevBox VM", "storage": "TrueNAS Storage", "localBackup": "Local Backup Target", "offsiteBackup": "Offsite Backup Server", "pbs": "Proxmox Backup Server" } },
-    "automation": { "title": "Automation and Workload Design", "intro": "Most workloads run in dedicated LXCs, providing lower overhead than full VMs while keeping services independently managed. OpenTofu provides <strong>Infrastructure as Code</strong> for the Proxmox workload layer, while Ansible handles configuration and service provisioning. Unprivileged LXCs are preferred by default; privileged LXCs are used only where my current Docker nesting or writable CIFS requirements make them necessary. Changes are manually initiated from the NixOS DevBox rather than deployed through CI.", "declare": { "title": "Declare", "body": "OpenTofu defines the LXC as Infrastructure as Code, including compute sizing, privilege mode, nesting, storage mounts, network configuration, and desired state." }, "provision": { "title": "Provision", "body": "Ansible installs packages, deploys native or Compose applications, creates systemd services, writes configuration, and controls versions." }, "publish": { "title": "Publish", "body": "Cloudflare ingress rules and a manually created DNS route publish selected HTTP applications; game services use Playit tunnels." }, "document": { "title": "Document", "body": "Repository documentation records versions, upgrade notes, operational steps, and service-specific decisions." }, "manualTitle": "Manual boundaries", "manual": "Infrastructure changes, DNS creation, secret initialization, release review, major migrations, and restore validation remain deliberate manual steps." },
+    "automation": { "title": "Automation and Workload Design", "intro": "Most workloads run in dedicated LXCs, providing lower overhead than full VMs while keeping services independently managed. OpenTofu provides <strong>Infrastructure as Code</strong> for the Proxmox workload layer, while Ansible handles configuration and service provisioning. Unprivileged LXCs are preferred by default; privileged LXCs are used only where my current Docker nesting or writable CIFS requirements make them necessary. Changes are manually initiated from the NixOS DevBox rather than deployed through CI.", "declare": { "title": "Declare", "body": "OpenTofu defines the LXC as Infrastructure as Code, including compute sizing, privilege mode, nesting, storage mounts, network configuration, and desired state." }, "provision": { "title": "Provision", "body": "Ansible installs packages, deploys native or Compose applications, creates systemd services, writes configuration, and controls versions." }, "publish": { "title": "Publish", "body": "Cloudflare ingress rules and a manually created DNS route publish selected HTTP applications; game services use Playit tunnels." }, "document": { "title": "Document", "body": "Repository documentation records versions, upgrade notes, operational steps, and service-specific decisions." }, "manualTitle": "Manual boundaries", "manual": "Infrastructure changes, DNS creation, secret initialization, release review, and restore validation remain deliberate manual steps." },
     "goals": { "title": "Design Goals and Constraints", "repeatability": { "title": "Repeatable foundations", "body": "Make workload definitions and provisioning steps reviewable and reproducible without claiming one-click automation." }, "separation": { "title": "Deliberate boundaries", "body": "Keep application workloads independently managed while separating user content, local state, and disposable data." }, "secureAccess": { "title": "Constrained access", "body": "Expose selected web applications through a managed edge while keeping administrative access private." }, "recoverability": { "title": "Independent copies", "body": "Use snapshots, separate backup destinations, and workload backups to improve recovery options for important data." } },
     "placement": { "title": "Workload and Data Placement", "intro": "The Beelink SER6 Pro runs Debian with Proxmox VE installed on top. Most workloads run in individual LXCs; the NixOS DevBox is the only VM because it represents a complete reproducible development and infrastructure-management environment.", "applications": { "title": "Representative workloads", "body": "Cloudflared, AdGuard Home, PostgreSQL, Immich, and applications I built such as Plant Tracker, Chore, and Trek demonstrate distinct routing, state, and deployment needs." }, "data": { "title": "Application and user data", "body": "Important user content resides on the TrueNAS system. Workload databases, configuration, metadata, and indexes often remain close to the application." }, "private": { "title": "Private and supporting workloads", "body": "Private utilities, media workloads, game servers, and experimental services are kept out of this case study because the operating model matters more than a catalogue." }, "experimental": { "title": "Container boundaries", "body": "Unprivileged LXCs are preferred by default. Privileged containers are used only where Docker nesting or writable CIFS bind mounts require them." }, "principle": "<strong>Irreplaceable user content</strong> is placed on storage covered by snapshots and multiple copies. Workload-specific databases and configuration generally remain close to the application, while transient caches and scratch data are excluded from expensive redundancy.", "caveat": "LXCs share the host kernel and are not equivalent to VM isolation. CIFS ownership also differs between privileged and unprivileged LXCs; SQLite WAL mode is unsuitable over the current CIFS setup, so some applications retain databases locally while storing attachments on the NAS." },
     "provisioning": { "title": "Repeatable Service Provisioning", "intro": "Deployment is manually initiated from the DevBox, not through CI. Each service generally follows a <strong>three-layer model</strong> that separates compute declaration, service configuration, and selected public ingress.", "layers": { "tofu": { "title": "OpenTofu", "body": "Declares each LXC, including compute sizing, network configuration, privilege mode, nesting, NAS mounts, and desired power state." }, "ansible": { "title": "Ansible", "body": "Installs packages, configures repositories, deploys native binaries or Compose applications, creates systemd services, writes configuration, and controls versions." }, "ingress": { "title": "Cloudflared", "body": "Manages central tunnel ingress rules for selected web applications; DNS routes remain an explicit manual boundary." } }, "workflowTitle": "Documented onboarding workflow", "workflow": { "step1": "Define the LXC in OpenTofu.", "step2": "Review and apply the OpenTofu plan.", "step3": "Register the SSH host key.", "step4": "Create and run the Ansible playbook.", "step5": "Add the Cloudflare ingress rule.", "step6": "Create the DNS route manually.", "step7": "Update repository documentation and upgrade notes." }, "manualTitle": "Deliberately manual boundaries", "manual": { "apply": "OpenTofu plan and apply", "hostKeys": "SSH host-key registration", "dns": "Cloudflare DNS route creation", "secrets": "Secret-file initialization", "upgrades": "Release review and major migrations", "restore": "Restore validation" } },
     "network": { "title": "Networking and Secure Access", "intro": "No inbound ports are forwarded from the router. The design distinguishes public application access, private administration, local DNS, and game-service connectivity rather than treating every workload as publicly reachable.", "public": { "title": "Public application access", "body": "Selected HTTP applications route through one Cloudflare Tunnel and are protected with Cloudflare Access policies. Narrow bypasses exist only where an application needs them, such as mobile access for Immich." }, "private": { "title": "Private administration", "body": "Tailscale provides remote private access. SSH and router administration remain private rather than being exposed through the public application path." }, "dns": { "title": "Local DNS", "body": "AdGuard Home is configured as the primary DNS server through the router, providing network-wide DNS control without exposing management interfaces." }, "games": { "title": "Game-service connectivity", "body": "Game-server protocols use Playit tunnels instead of the HTTP-focused Cloudflare Tunnel path." } },
     "resilience": { "title": "Storage, Backups, and Recovery", "intro": "The Ugreen NAS runs TrueNAS SCALE with two 4 TB disks in a mirror. Selected SMB shares are mounted by Proxmox and bind-mounted into relevant LXCs. The backup design distinguishes redundancy, version recovery, independent copies, and workload backups.", "redundancy": { "title": "Mirror", "body": "The TrueNAS mirror provides disk redundancy. It is not a backup and does not replace independent copies." }, "snapshots": { "title": "Snapshots", "body": "Important datasets receive hourly TrueNAS snapshots retained for two weeks, providing short-term version recovery." }, "copies": { "title": "3-2-1 copies", "body": "Scheduled rsync tasks independently send important NAS datasets to a local external SSD on a separate workstation and to an offsite VPS." }, "workloads": { "title": "Workload backups", "body": "An offsite Proxmox Backup Server stores nightly backups of all LXCs and the DevBox VM, with email notifications for backup and garbage-collection jobs." }, "retention": "PBS retains <strong>seven daily, three weekly, and four monthly recovery points</strong>. Temporary downloads and scratch data are intentionally excluded. Restore procedures are documented, but comprehensive restoration testing has not yet been completed." },
     "operations": { "title": "Operations and Security", "intro": "No inbound ports are forwarded from the router. The platform combines separate access paths, deliberate maintenance, and static CI validation while keeping operational gaps visible.", "public": { "title": "Public access", "body": "Selected HTTP applications route through one Cloudflare Tunnel and are protected with Cloudflare Access policies. Narrow bypasses exist only where an application needs them." }, "private": { "title": "Private access", "body": "Tailscale provides remote private access. SSH and router administration remain private rather than being exposed through the public application path." }, "dns": { "title": "Local services", "body": "AdGuard Home is configured as the primary DNS server. Game-server protocols use Playit rather than the HTTP-focused Cloudflare path." }, "maintenance": { "title": "Deliberate maintenance", "body": "A monthly reminder, controlled versions, release-note review, post-upgrade connectivity checks, and disk-health visibility support measured change." }, "ci": { "title": "Static CI checks", "body": "GitHub Actions uses dclint, Checkov, Trivy, Hadolint, and Gitleaks to detect linting issues, leaked secrets, vulnerabilities, and infrastructure misconfigurations." }, "visibility": { "title": "Operational visibility", "body": "Backup and garbage-collection email notifications exist, but there is no centralized host or service monitoring, generalized uptime alerting, or centralized logging." } },
-    "incident": { "title": "Operational Incident: Host Reboot Instability", "intro": "A host-level instability incident exposed weaknesses in the earlier environment and shaped the redesign. The Beelink host began rebooting unexpectedly, turning workload reconstruction from a theoretical concern into an immediate operational risk.", "symptom": { "title": "Instability", "body": "The Debian host with Proxmox VE installed on top experienced unexpected reboots and could not be treated as dependable." }, "investigation": { "title": "Systems-level investigation", "body": "After investigating hardware, firmware, boot behaviour, and Linux-level causes, I traced the resets to the <strong><code>sp5100_tco</code> AMD watchdog kernel module</strong>." }, "resolution": { "title": "Targeted mitigation", "body": "Blacklisting the module resolved the reboot instability. The host has remained stable for approximately <strong>five months</strong>, and the incident continues to shape my emphasis on reproducibility and documentation." } },
+    "incident": { "title": "Operational Incident: Host Reboot Instability", "intro": "A host-level instability incident exposed weaknesses in the earlier environment and shaped the redesign. The Beelink host began rebooting unexpectedly, turning workload reconstruction from a theoretical concern into an immediate operational risk.", "symptom": { "title": "Instability", "body": "The Debian host with Proxmox VE installed on top experienced unexpected reboots and could not be treated as dependable." }, "investigation": { "title": "Systems-level investigation", "body": "After investigating hardware, firmware, boot behaviour, and Linux-level causes, I traced the resets to the <code>sp5100_tco</code> AMD watchdog kernel module." }, "resolution": { "title": "Targeted mitigation", "body": "Blacklisting the module resolved the reboot instability. The host has remained stable for approximately five months, and the incident continues to shape my emphasis on reproducibility and documentation." } },
     "decisions": { "title": "Decisions, Limitations, and Lessons" },
     "tradeoffs": { "title": "Architectural Decisions and Trade-offs", "lxc": { "title": "LXCs by default", "body": "LXCs reduce overhead relative to full VMs while giving workloads independently managed environments. Their shared host kernel is a deliberate isolation trade-off." }, "data": { "title": "State close to applications", "body": "NAS storage protects important user content, while databases and operational state often stay local to avoid unsuitable network-filesystem semantics." }, "automation": { "title": "Automation with explicit boundaries", "body": "OpenTofu and Ansible make common work repeatable, while deployment, DNS changes, secret initialization, migration decisions, and recovery validation remain deliberate manual steps." }, "recovery": { "title": "Recovery layers, not guarantees", "body": "Snapshots, copies, and PBS backups create multiple recovery options. <strong>No recovery objective or fully tested disaster-recovery claim is made.</strong>" } },
     "limitations": { "title": "Current Limitations", "monitoring": "No centralized host and service monitoring or generalized uptime alerts.", "logging": "No centralized logging.", "rollback": "No automated rollback path.", "secrets": "No automated secret distribution.", "failover": "No compute failover.", "restore": "Restore procedures are documented but not comprehensively tested.", "grouped": { "visibility": "Visibility: No centralized metrics, service monitoring, or log aggregation.", "recovery": "Recovery: Backup and restore procedures are documented, but full restoration testing remains incomplete.", "availability": "Availability: A single compute host remains a deliberate point of failure; there is no automated failover." } },

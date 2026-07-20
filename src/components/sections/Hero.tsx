@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { ArrowDown } from "lucide-react";
 import Container from "@/components/ui/Container";
 import FaultyTerminal from "@/components/ui/FaultyTerminal";
 
@@ -51,14 +52,14 @@ export default function Hero() {
       </div>
 
       <Container>
-        <div className="text-center">
-          <div className="mx-auto mb-8 flex h-40 w-40 items-center justify-center overflow-hidden rounded-full border-2 border-accent/1 sm:h-48 sm:w-48">
+        <div className="-translate-y-4 text-center lg:-translate-y-8">
+          <div className="mx-auto mb-6 flex h-36 w-36 items-center justify-center overflow-hidden rounded-full border-2 border-accent/1 sm:h-44 sm:w-44">
             <Image
               src="/headshot.webp"
               alt={t("photoAlt")}
-              width={192}
-              height={192}
-              sizes="(max-width: 640px) 160px, 192px"
+              width={176}
+              height={176}
+              sizes="(max-width: 640px) 144px, 176px"
               className="h-full w-full object-cover"
               priority
             />
@@ -74,16 +75,16 @@ export default function Hero() {
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
-              href="#about"
-              className="rounded-lg border border-accent bg-accent/10 backdrop-blur-sm px-6 py-3 font-mono font-medium text-accent transition-all hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
-            >
-              {t("ctaAbout")}
-            </a>
-            <a
               href="#projects"
-              className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              className="rounded-lg border border-accent bg-accent/10 px-6 py-3 font-mono font-medium text-accent transition-all hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               {t("ctaProjects")}
+            </a>
+            <a
+              href="#about"
+              className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+            >
+              {t("ctaAbout")}
             </a>
             <a
               href="#contact"
@@ -94,6 +95,18 @@ export default function Hero() {
           </div>
         </div>
       </Container>
+      <a
+        href="#projects"
+        aria-label={t("scrollCueAria")}
+        className="group absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-1 font-mono text-xs text-muted opacity-55 transition-opacity hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4"
+      >
+        <span>{t("scrollCue")}</span>
+        <ArrowDown
+          size={16}
+          aria-hidden="true"
+          className="scroll-cue text-accent"
+        />
+      </a>
     </section>
   );
 }

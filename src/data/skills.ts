@@ -9,29 +9,12 @@ export interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
   {
-    name: { en: "Languages", fr: "Langages" },
-    skills: ["Python", "C#", "Java", "Kotlin", "TypeScript", "JavaScript", "Go", "Rust", "Lua", "Bash", "PL/pgSQL"],
-  },
-  {
     name: { en: "Infrastructure & DevOps", fr: "Infrastructure & DevOps" },
-    skills: ["Linux", "Docker", "CI/CD", "Ansible", "OpenTofu", "Grafana", "TrueNAS", "Proxmox", "AWS", "Cloudflare", "Nginx"],
+    skills: ["Infrastructure as Code", "OpenTofu", "Ansible", "Proxmox", "Linux", "Docker", "CI/CD", "Cloudflare", "Azure", "AWS"],
   },
   {
-    name: { en: "Databases", fr: "Bases de données" },
-    skills: ["PostgreSQL", "MongoDB", "SQLite", "Room", "EF Core", "JDBC", "Normalization", "LINQ"],
-  },
-  {
-    name: { en: "Software Engineering", fr: "Génie logiciel" },
-    skills: [
-      { en: "Git Workflows", fr: "Flux de travail Git" },
-      { en: "Code Reviews", fr: "Revue de code" },
-      { en: "Design Patterns", fr: "Patrons de conception" },
-      "OOP",
-      "MVC",
-      "TDD",
-      "Multithreading",
-      "Async",
-    ],
+    name: { en: "Languages", fr: "Langages" },
+    skills: ["Python", "C#", "Java", "Kotlin", "TypeScript", "JavaScript", "Go", "Rust", "Lua", "XML", "Bash", "PL/pgSQL"],
   },
   {
     name: { en: "Web Development", fr: "Développement web" },
@@ -39,6 +22,19 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: { en: "Developer Tooling", fr: "Outils de développement" },
-    skills: ["Git", "GitLab", "Neovim", "Tmux", "VSCodium", "Bruno", "SSH", "Obsidian", { en: "Debugging", fr: "Débogage" }, { en: "AI Agents", fr: "Agents IA" }],
+    skills: ["Git", "GitHub", "GitLab", "OpenCode", "LazyGit", "Neovim", "WezTerm", "Tmux", "VSCodium", "Bruno", "Obsidian"],
+  },
+  {
+    name: { en: "Databases & Data Access", fr: "Bases de données et accès aux données" },
+    skills: ["PostgreSQL", "MongoDB", "SQLite", "Room", "EF Core", "JDBC", "LINQ"],
+  },
+  {
+    name: { en: "Software Engineering", fr: "Génie logiciel" },
+    skills: [
+      { en: "Git Workflows", fr: "Flux de travail Git" },
+      { en: "Code Reviews", fr: "Revue de code" },
+      { en: "Design Patterns", fr: "Patrons de conception" },
+      "Multithreading",
+    ],
   },
 ];

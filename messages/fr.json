@@ -1,21 +1,23 @@
 {
   "metadata": {
-    "title": "Talon Dunbar | Développeur DevOps et Full-Stack",
-    "description": "Développeur DevOps et full-stack basé à Montréal. Spécialisé en infrastructure, React, Next.js, Go et technologies web modernes.",
+    "title": "Talon Dunbar | Ingénieur infrastructure et logiciel",
+    "description": "Ingénieur infrastructure et logiciel basé à Montréal. Construction d''infrastructures, de flux de déploiement et de systèmes logiciels maintenables.",
     "openGraph": {
-      "title": "Talon Dunbar | Développeur DevOps et Full-Stack",
-      "description": "Développeur DevOps et full-stack spécialisé en infrastructure, automatisation et technologies web modernes."
+      "title": "Talon Dunbar | Ingénieur infrastructure et logiciel",
+      "description": "Ingénieur infrastructure et logiciel spécialisé en systèmes maintenables et automatisation."
     },
     "twitter": {
-      "title": "Talon Dunbar | Développeur DevOps et Full-Stack",
-      "description": "Développeur DevOps et full-stack spécialisé en infrastructure, automatisation et technologies web modernes."
+      "title": "Talon Dunbar | Ingénieur infrastructure et logiciel",
+      "description": "Ingénieur infrastructure et logiciel spécialisé en systèmes maintenables et automatisation."
     }
   },
   "nav": {
     "about": "À propos",
     "projects": "Projets",
+    "experience": "Expérience",
     "skills": "Compétences",
     "education": "Formation",
+    "achievements": "Réalisations",
     "contact": "Contact",
     "contactMeAria": "Me contacter",
     "toggleMenuAria": "Ouvrir le menu",
@@ -23,42 +25,41 @@
   },
   "hero": {
     "name": "Talon Dunbar",
-    "role": "Développeur DevOps & Full-Stack",
-    "tagline": "Apprentissage rapide, orienté détail, curieux, collaboratif.",
+    "role": "Ingénieur infrastructure et logiciel",
+    "tagline": "Construction d''infrastructures maintenables, de flux de déploiement fiables et de systèmes logiciels que les équipes peuvent exploiter en toute confiance.",
     "ctaAbout": "À propos de moi",
     "ctaProjects": "Voir les projets",
     "ctaContact": "Me contacter",
+    "scrollCue": "Découvrir mon travail",
+    "scrollCueAria": "Découvrir les projets vedettes",
     "photoAlt": "Talon Dunbar"
   },
   "about": {
     "title": "À propos de moi",
-    "subtitle": "Je construis pour comprendre.",
-    "intro": "<strong>Diplômé en informatique</strong> du <strong>Cégep Dawson</strong> à Montréal, Québec.",
-    "dev0": "Construit des applications full-stack avec <strong>React</strong>, <strong>Flask</strong>, <strong>Java</strong> et <strong>C#</strong>.",
-    "dev1": "Porte un fort intérêt à l''<strong>infrastructure</strong> et au <strong>DevOps</strong>.",
-    "dev2": "Auto-héberge des services avec <strong>Proxmox</strong> et <strong>Docker</strong>.",
-    "dev3": "Utilisateur avancé et administrateur <strong>Linux</strong>.",
-    "dev4": "Défenseur du <strong>logiciel libre</strong>.",
-    "approach0": "Collabore sur des projets d''équipe selon les méthodes <strong>Agiles</strong>.",
-    "approach1": "Suit les problèmes et collabore via les flux de travail <strong>Git</strong>.",
-    "approach2": "Apprend vite et soigne les <strong>détails</strong>.",
-    "approach3": "Lit la <strong>documentation</strong> pour bien comprendre les outils.",
-    "approach4": "Utilise les <strong>outils d''IA</strong> avec discernement dans un flux de travail d''ingénierie.",
-    "interests0": "Recherche toujours un meilleur <strong>café</strong>.",
+    "subtitle": "Les systèmes et pratiques derrière les projets.",
+    "intro": "Salut, je m''appelle <strong>Talon</strong> - comme une griffe. Je suis <strong>diplômé en informatique</strong> et axé sur l''infrastructure, le DevOps et l''ingénierie logicielle. J''ai déployé une plateforme départementale en production, automatisé mon homelab avec l''Infrastructure as Code et construit des applications full-stack de la conception au déploiement.",
+    "photoAlt": "Talon Dunbar",
+    "dev0": "Construit des applications full-stack avec <strong>React</strong>, <strong>Next.js</strong>, <strong>Flask</strong>, <strong>Java</strong> et <strong>C#</strong>.",
+    "dev1": "Conçoit et exploite de l''infrastructure avec <strong>Proxmox</strong>, <strong>OpenTofu</strong>, <strong>Ansible</strong> et <strong>NixOS</strong>.",
+    "dev2": "Construit des <strong>flux CI/CD</strong> et des processus de déploiement reproductibles pour des environnements cloud et auto-hébergés.",
+    "dev3": "Travaille chaque jour avec les systèmes <strong>Linux</strong>, les conteneurs, le réseautage et les bases de données.",
+    "dev4": "Valorise le <strong>logiciel libre</strong> et en fait la promotion.",
+    "approach0": "Décompose les problèmes complexes en étapes <strong>testables et documentées</strong>.",
+    "approach1": "Utilise les <strong>flux de travail Git</strong>, le suivi des tâches et la revue de code dans les projets d''équipe.",
+    "approach2": "Consulte la <strong>documentation primaire</strong> avant d''adopter des outils ou des modèles.",
+    "approach3": "Traite les <strong>outils d''IA</strong> comme une aide à l''ingénierie, et non un substitut à la validation.",
     "interests1": "Explore le rendu 3D dans <strong>Blender</strong>.",
     "interests2": "Expérimente la production musicale dans <strong>Ableton</strong>.",
-    "interests3": "Curieux de <strong>météorologie</strong> et d''<strong>astronomie</strong>.",
-    "interests4": "Competiteur <strong>Grand Champion</strong> sur Rocket League.",
-    "githubActivity": "Activité GitHub",
-    "chartAlt": "Graphique de contributions GitHub"
+    "interests3": "Aime l''<strong>aviation</strong>, la <strong>météorologie</strong> et l''<strong>espace</strong>.",
+    "interests4": "Compétiteur <strong>Grand Champion</strong> sur Rocket League."
   },
   "skills": {
     "title": "Boîte à outils technique",
     "subtitle": "Langages, frameworks et outils que j''utilise."
   },
   "projects": {
-    "title": "Ce que j''ai réalisé",
-    "subtitle": "Projets d''équipe et personnels sur lesquels j''ai travaillé.",
+    "title": "Projets vedettes",
+    "subtitle": "Projets d''infrastructure et logiciels sélectionnés.",
     "showLess": "Voir moins",
     "showMore": "Voir {count} projets de plus"
   },
@@ -66,9 +67,10 @@
     "title": "Formation",
     "subtitle": "Le parcours scolaire derrière les compétences.",
     "school": "Cégep Dawson",
-    "degree": "DEC en Technologie de l''informatique",
+    "degree": "Diplôme d''études collégiales - Technologie de l''informatique",
     "period": "2023 - 2026 | Montréal, QC",
-    "rScore": "Cote R : 34,81",
+    "rScore": "Cote R : 34,8",
+    "rScoreDescription": "Mesure de rendement scolaire des collèges québécois.",
     "english": "Anglais : Langue maternelle",
     "french": "Français : Intermédiaire"
   },
@@ -81,9 +83,17 @@
     "devpost": "DevPost",
     "leadershipTitle": "Prix de leadership 2026 en informatique"
   },
+  "experience": {
+    "title": "Expérience",
+    "subtitle": "Expérience de livraison professionnelle.",
+    "role": "Stagiaire en ingénierie logicielle - Cégep Dawson",
+    "period": "Avril-mai 2026 | Stage de sept semaines",
+    "description": "J''étais le principal contributeur à l''infrastructure et l''un des principaux interlocuteurs auprès des parties prenantes lors de la livraison de DawsAsset à quatre départements. J''ai conçu l''environnement de déploiement, coordonné les sauvegardes et les essais, documenté les opérations et soutenu la remise en production.",
+    "caseStudy": "Voir le projet de stage"
+  },
   "contact": {
     "title": "Travaillons ensemble",
-    "subtitle": "Ouvert aux postes full-time en DevOps, infrastructure et développement full-stack.",
+    "subtitle": "Ouvert aux postes à temps plein en infrastructure, DevOps, plateforme et ingénierie logicielle.",
     "links": {
       "github": "GitHub",
       "gitlab": "GitLab",
@@ -98,6 +108,7 @@
   },
   "ui": {
     "inProgress": "En cours",
+    "ongoing": "En évolution",
     "code": "Code",
     "liveDemo": "Démo en ligne",
     "screenshotAlt": "Capture d''écran de {title}",
@@ -255,9 +266,8 @@
     },
     "impact": {
       "title": "Impact",
-      "item1": "Une <strong>plateforme partagée de gestion des stocks</strong> livrée dans quatre départements du Cégep Dawson.",
+      "item1": "Une <strong>plateforme partagée de gestion des stocks</strong> livrée dans quatre départements, documentée et remise en <strong>sept semaines</strong>.",
       "item2": "<strong>Équipements sérialisés et consommables</strong> pris en charge dans le même système.",
-      "item3": "Livraison, documentation et remise réalisées en <strong>sept semaines</strong>.",
       "item4": "La plateforme demeure <strong>en production au Cégep Dawson</strong> après le transfert du projet.",
       "item5": "La plateforme livrée et sa <strong>valeur opérationnelle</strong> ont été présentées à la direction du collège et aux parties prenantes des départements."
     },
@@ -272,7 +282,7 @@
   "homelabCaseStudy": {
     "metadata": { "title": "Infrastructure Homelab", "description": "Un environnement auto-hébergé construit autour de Proxmox, TrueNAS, OpenTofu, Ansible et NixOS.", "openGraphTitle": "Infrastructure Homelab | Étude de cas", "openGraphDescription": "Comment Talon Dunbar conçoit, exploite et améliore progressivement un environnement d''infrastructure personnelle." },
     "backToProjects": "Retour aux projets", "eyebrow": "Infrastructure personnelle", "title": "Infrastructure Homelab", "subtitle": "Un environnement auto-hébergé construit avec <strong>Proxmox, TrueNAS, OpenTofu, Ansible et NixOS</strong>, conçu autour du provisionnement reproductible, de l''accès sécurisé et de sauvegardes par couches.",
-    "meta": { "personal": "Infrastructure personnelle", "ongoing": "En évolution", "focus": "Infrastructure et opérations", "stack": "Proxmox · OpenTofu · Ansible · NixOS", "iac": "Infrastructure as Code" },
+    "meta": { "personal": "Infrastructure personnelle", "ongoing": "En évolution", "stack": "Proxmox · OpenTofu · Ansible · NixOS", "iac": "Infrastructure as Code" },
     "diagram": { "backupDestinations": "Destinations de sauvegarde", "backupFlows": "Flux de sauvegarde", "localCopy": "Copie locale", "offsiteDatasetCopy": "Copie de données hors site", "offsitePbs": "PBS hors site" },
     "backupTitle": "Stockage, sauvegardes et récupération",
     "backupStrategyTitle": "Stratégie de sauvegarde 3-2-1",
@@ -289,11 +299,11 @@
     "goals": { "title": "Objectifs et contraintes", "repeatability": { "title": "Fondations reproductibles", "body": "Rendre les définitions de charges de travail et les étapes de provisionnement vérifiables et reproductibles, sans prétendre à une automatisation en un clic." }, "separation": { "title": "Limites réfléchies", "body": "Gérer les charges de travail indépendamment tout en séparant le contenu utilisateur, l''état local et les données jetables." }, "secureAccess": { "title": "Accès restreint", "body": "Exposer certaines applications Web par une périphérie gérée tout en gardant l''accès administratif privé." }, "recoverability": { "title": "Copies indépendantes", "body": "Utiliser des instantanés, des destinations de sauvegarde séparées et des sauvegardes de charges de travail pour améliorer les options de récupération." } },
     "placement": { "title": "Placement des charges de travail et des données", "intro": "Le Beelink SER6 Pro exécute Debian avec Proxmox VE installé par-dessus. La plupart des charges de travail s''exécutent dans des LXC individuels; la NixOS DevBox est la seule VM puisqu''elle représente un environnement complet et reproductible de développement et de gestion d''infrastructure.", "applications": { "title": "Charges représentatives", "body": "Cloudflared, AdGuard Home, PostgreSQL, Immich et des applications que j''ai créées, comme Plant Tracker, Chore et Trek, démontrent des besoins distincts de routage, d''état et de déploiement." }, "data": { "title": "Données applicatives et utilisateur", "body": "Le contenu utilisateur important réside sur le système TrueNAS. Les bases de données, la configuration, les métadonnées et les index restent souvent près de l''application." }, "private": { "title": "Charges privées et de soutien", "body": "Les utilitaires privés, charges multimédias, serveurs de jeux et services expérimentaux ne figurent pas tous ici, puisque le modèle opérationnel importe plus qu''un catalogue." }, "experimental": { "title": "Limites des conteneurs", "body": "Les LXC non privilégiés sont préférés par défaut. Les conteneurs privilégiés ne sont utilisés que lorsque l''imbrication Docker ou des montages CIFS inscriptibles le demandent." }, "principle": "Le <strong>contenu utilisateur irremplaçable</strong> est placé sur du stockage couvert par des instantanés et plusieurs copies. Les bases de données et la configuration propres aux charges restent généralement près de l''application, tandis que les caches transitoires et données temporaires sont exclus de la redondance coûteuse.", "caveat": "Les LXC partagent le noyau de l''hôte et ne sont pas équivalents à l''isolation des VM. La propriété CIFS diffère aussi entre LXC privilégiés et non privilégiés; le mode WAL de SQLite ne convient pas au montage CIFS actuel, donc certaines applications gardent leur base localement tout en stockant les pièces jointes sur le NAS." },
     "provisioning": { "title": "Provisionnement reproductible des services", "intro": "Le déploiement est lancé manuellement depuis la DevBox, et non par CI. Chaque service suit généralement un <strong>modèle à trois couches</strong> qui sépare la déclaration du calcul, la configuration du service et l''entrée publique sélectionnée.", "layers": { "tofu": { "title": "OpenTofu", "body": "Déclare chaque LXC, y compris les ressources de calcul, la configuration réseau, le mode de privilège, l''imbrication, les montages NAS et l''état d''alimentation voulu." }, "ansible": { "title": "Ansible", "body": "Installe les paquets, configure les dépôts, déploie des binaires natifs ou applications Compose, crée des services systemd, écrit la configuration et contrôle les versions." }, "ingress": { "title": "Cloudflared", "body": "Gère les règles centrales d''entrée du tunnel pour certaines applications Web; les routes DNS restent une limite manuelle explicite." } }, "workflowTitle": "Flux d''intégration documenté", "workflow": { "step1": "Définir le LXC dans OpenTofu.", "step2": "Réviser et appliquer le plan OpenTofu.", "step3": "Enregistrer la clé d''hôte SSH.", "step4": "Créer et exécuter le playbook Ansible.", "step5": "Ajouter la règle d''entrée Cloudflare.", "step6": "Créer la route DNS manuellement.", "step7": "Mettre à jour la documentation du dépôt et les notes de mise à niveau." }, "manualTitle": "Limites volontairement manuelles", "manual": { "apply": "Planification et application OpenTofu", "hostKeys": "Enregistrement des clés d''hôte SSH", "dns": "Création de routes DNS Cloudflare", "secrets": "Initialisation des fichiers secrets", "upgrades": "Revue des versions et migrations majeures", "restore": "Validation de récupération" } },
-    "automation": { "title": "Automatisation et conception des charges", "intro": "La plupart des charges s''exécutent dans des LXC dédiés, offrant moins de surcharge que des VM complètes tout en gardant les services gérés indépendamment. OpenTofu fournit l''<strong>Infrastructure as Code</strong> pour la couche de charges Proxmox, tandis qu''Ansible gère la configuration et le provisionnement des services. Les LXC non privilégiés sont préférés par défaut; les LXC privilégiés ne sont utilisés que lorsque mes exigences actuelles d''imbrication Docker ou de montages CIFS inscriptibles les rendent nécessaires. Les changements sont lancés manuellement depuis la NixOS DevBox plutôt que déployés par CI.", "declare": { "title": "Déclarer", "body": "OpenTofu définit le LXC comme Infrastructure as Code, y compris les ressources de calcul, le mode de privilège, l''imbrication, les montages de stockage, le réseau et l''état voulu." }, "provision": { "title": "Provisionner", "body": "Ansible installe les paquets, déploie des applications natives ou Compose, crée les services systemd, écrit la configuration et contrôle les versions." }, "publish": { "title": "Publier", "body": "Les règles d''entrée Cloudflare et une route DNS créée manuellement publient certaines applications HTTP; les services de jeux utilisent des tunnels Playit." }, "document": { "title": "Documenter", "body": "La documentation du dépôt consigne les versions, notes de mise à niveau, étapes opérationnelles et décisions propres aux services." }, "manualTitle": "Limites manuelles", "manual": "Les changements d''infrastructure, la création DNS, l''initialisation des secrets, la revue des versions, les migrations majeures et la validation de récupération restent des étapes manuelles délibérées." },
+    "automation": { "title": "Automatisation et conception des charges", "intro": "La plupart des charges s''exécutent dans des LXC dédiés, offrant moins de surcharge que des VM complètes tout en gardant les services gérés indépendamment. OpenTofu fournit l''<strong>Infrastructure as Code</strong> pour la couche de charges Proxmox, tandis qu''Ansible gère la configuration et le provisionnement des services. Les LXC non privilégiés sont préférés par défaut; les LXC privilégiés ne sont utilisés que lorsque mes exigences actuelles d''imbrication Docker ou de montages CIFS inscriptibles les rendent nécessaires. Les changements sont lancés manuellement depuis la NixOS DevBox plutôt que déployés par CI.", "declare": { "title": "Déclarer", "body": "OpenTofu définit le LXC comme Infrastructure as Code, y compris les ressources de calcul, le mode de privilège, l''imbrication, les montages de stockage, le réseau et l''état voulu." }, "provision": { "title": "Provisionner", "body": "Ansible installe les paquets, déploie des applications natives ou Compose, crée les services systemd, écrit la configuration et contrôle les versions." }, "publish": { "title": "Publier", "body": "Les règles d''entrée Cloudflare et une route DNS créée manuellement publient certaines applications HTTP; les services de jeux utilisent des tunnels Playit." }, "document": { "title": "Documenter", "body": "La documentation du dépôt consigne les versions, notes de mise à niveau, étapes opérationnelles et décisions propres aux services." }, "manualTitle": "Limites manuelles", "manual": "Les changements d''infrastructure, la création DNS, l''initialisation des secrets, la revue des versions et la validation de récupération restent des étapes manuelles délibérées." },
     "network": { "title": "Réseautage et accès sécurisé", "intro": "Aucun port entrant n''est redirigé depuis le routeur. La conception distingue l''accès public aux applications, l''administration privée, le DNS local et la connectivité des services de jeux plutôt que de rendre chaque charge de travail publiquement accessible.", "public": { "title": "Accès public aux applications", "body": "Certaines applications HTTP passent par un tunnel Cloudflare et sont protégées par des politiques Cloudflare Access. Des exceptions étroites existent seulement lorsqu''une application en a besoin, comme l''accès mobile à Immich." }, "private": { "title": "Administration privée", "body": "Tailscale offre l''accès distant privé. SSH et l''administration du routeur restent privés plutôt que d''être exposés par le chemin public des applications." }, "dns": { "title": "DNS local", "body": "AdGuard Home est configuré comme serveur DNS principal par le routeur, offrant un contrôle DNS pour tout le réseau sans exposer les interfaces de gestion." }, "games": { "title": "Connectivité des jeux", "body": "Les protocoles des serveurs de jeux utilisent des tunnels Playit plutôt que le chemin Cloudflare Tunnel orienté HTTP." } },
     "resilience": { "title": "Stockage, sauvegardes et récupération", "intro": "Le NAS Ugreen exécute TrueNAS SCALE avec deux disques de 4 To en miroir. Des partages SMB sélectionnés sont montés par Proxmox puis liés aux LXC concernés. La conception distingue redondance, récupération de versions, copies indépendantes et sauvegardes de charges de travail.", "redundancy": { "title": "Miroir", "body": "Le miroir TrueNAS offre une redondance de disque. Ce n''est pas une sauvegarde et il ne remplace pas les copies indépendantes." }, "snapshots": { "title": "Instantanés", "body": "Les jeux de données importants reçoivent des instantanés horaires TrueNAS conservés deux semaines, pour une récupération de versions à court terme." }, "copies": { "title": "Copies 3-2-1", "body": "Des tâches rsync planifiées envoient indépendamment les jeux de données NAS importants vers un SSD externe local sur un autre poste et vers un VPS hors site." }, "workloads": { "title": "Sauvegardes des charges", "body": "Un Proxmox Backup Server hors site stocke des sauvegardes nocturnes de tous les LXC et de la VM DevBox, avec des courriels pour les tâches de sauvegarde et de nettoyage." }, "retention": "PBS conserve <strong>sept points de récupération quotidiens, trois hebdomadaires et quatre mensuels</strong>. Les téléchargements temporaires et données de travail sont volontairement exclus. Les procédures de récupération sont documentées, mais les essais complets de restauration ne sont pas encore terminés." },
     "operations": { "title": "Opérations et sécurité", "intro": "Aucun port entrant n''est redirigé depuis le routeur. La plateforme combine des chemins d''accès volontairement séparés avec une maintenance régulière et une validation CI statique, tout en rendant visibles ses lacunes opérationnelles.", "public": { "title": "Accès public", "body": "Certaines applications HTTP passent par un tunnel Cloudflare et sont protégées par des politiques Cloudflare Access. Des exceptions étroites existent seulement lorsqu''une application en a besoin." }, "private": { "title": "Accès privé", "body": "Tailscale offre l''accès distant privé. SSH et l''administration du routeur restent privés plutôt que d''être exposés par le chemin public des applications." }, "dns": { "title": "Services locaux", "body": "AdGuard Home est configuré comme serveur DNS principal. Les protocoles de serveurs de jeux utilisent Playit plutôt que le chemin Cloudflare orienté HTTP." }, "maintenance": { "title": "Maintenance réfléchie", "body": "Un rappel mensuel, des versions contrôlées, la revue des notes de version, les vérifications de connectivité après mise à niveau et la visibilité sur la santé des disques favorisent des changements mesurés." }, "ci": { "title": "Vérifications CI statiques", "body": "GitHub Actions utilise dclint, Checkov, Trivy, Hadolint et Gitleaks pour détecter les problèmes de linting, les secrets exposés, les vulnérabilités et les mauvaises configurations." }, "visibility": { "title": "Visibilité opérationnelle", "body": "Des courriels de sauvegarde et nettoyage existent, mais il n''y a pas de surveillance centralisée des hôtes et services, d''alertes générales de disponibilité ni de journalisation centralisée." } },
-    "incident": { "title": "Incident opérationnel : instabilité des redémarrages", "intro": "Un incident d''instabilité au niveau de l''hôte a exposé les faiblesses de l''environnement initial et a orienté la refonte. L''hôte Beelink a commencé à redémarrer de manière inattendue, faisant de la reconstruction des charges un risque opérationnel immédiat plutôt qu''une préoccupation théorique.", "symptom": { "title": "Instabilité", "body": "L''hôte Debian avec Proxmox VE installé par-dessus subissait des redémarrages inattendus et ne pouvait pas être considéré comme fiable." }, "investigation": { "title": "Investigation au niveau système", "body": "Après avoir étudié le matériel, le micrologiciel, le comportement au démarrage et les causes au niveau Linux, j''ai retracé les redémarrages au <strong>module de noyau AMD watchdog <code>sp5100_tco</code></strong>." }, "resolution": { "title": "Mesure ciblée", "body": "Le placement du module sur liste noire a résolu l''instabilité. L''hôte est resté stable depuis environ <strong>cinq mois</strong>, et l''incident continue d''orienter l''accent mis sur la reproductibilité et la documentation." } },
+    "incident": { "title": "Incident opérationnel : instabilité des redémarrages", "intro": "Un incident d''instabilité au niveau de l''hôte a exposé les faiblesses de l''environnement initial et a orienté la refonte. L''hôte Beelink a commencé à redémarrer de manière inattendue, faisant de la reconstruction des charges un risque opérationnel immédiat plutôt qu''une préoccupation théorique.", "symptom": { "title": "Instabilité", "body": "L''hôte Debian avec Proxmox VE installé par-dessus subissait des redémarrages inattendus et ne pouvait pas être considéré comme fiable." }, "investigation": { "title": "Investigation au niveau système", "body": "Après avoir étudié le matériel, le micrologiciel, le comportement au démarrage et les causes au niveau Linux, j''ai retracé les redémarrages au module de noyau AMD watchdog <code>sp5100_tco</code>." }, "resolution": { "title": "Mesure ciblée", "body": "Le placement du module sur liste noire a résolu l''instabilité. L''hôte est resté stable depuis environ cinq mois, et l''incident continue d''orienter l''accent mis sur la reproductibilité et la documentation." } },
     "decisions": { "title": "Décisions, limites et leçons" },
     "tradeoffs": { "title": "Décisions et compromis architecturaux", "lxc": { "title": "LXC par défaut", "body": "Les LXC réduisent la surcharge par rapport aux VM complètes tout en donnant aux charges des environnements gérés indépendamment. Leur noyau partagé est un compromis d''isolation délibéré." }, "data": { "title": "État près des applications", "body": "Le stockage NAS protège le contenu utilisateur important, tandis que les bases de données et l''état opérationnel restent souvent locaux afin d''éviter des sémantiques de systèmes de fichiers réseau inadaptées." }, "automation": { "title": "Automatisation avec limites explicites", "body": "OpenTofu et Ansible rendent le travail courant reproductible, mais le déploiement, les changements DNS, les secrets, les migrations et la validation de récupération restent manuels aujourd''hui." }, "recovery": { "title": "Couches de récupération, non garanties", "body": "Les instantanés, copies et sauvegardes PBS créent plusieurs options de récupération. <strong>Aucun objectif de récupération ni affirmation de reprise après sinistre entièrement testée n''est avancé.</strong>" } },
     "limitations": { "title": "Limites actuelles", "monitoring": "Aucune surveillance centralisée des hôtes et services ni alerte générale de disponibilité.", "logging": "Aucune journalisation centralisée.", "rollback": "Aucun mécanisme de retour arrière automatisé.", "secrets": "Aucune distribution automatisée des secrets.", "failover": "Aucun basculement de calcul.", "restore": "Les procédures de récupération sont documentées mais non entièrement testées.", "grouped": { "visibility": "Visibilité : aucune métrique centralisée, surveillance des services ni agrégation de journaux.", "recovery": "Récupération : les procédures de sauvegarde et restauration sont documentées, mais les essais complets de restauration restent incomplets.", "availability": "Disponibilité : un seul hôte de calcul demeure un point de défaillance assumé; il n''y a aucun basculement automatisé." } },

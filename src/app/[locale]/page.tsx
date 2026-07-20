@@ -3,6 +3,7 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
+import Experience from "@/components/sections/Experience";
 import Education from "@/components/sections/Education";
 import Achievements from "@/components/sections/Achievements";
 import Contact from "@/components/sections/Contact";
@@ -24,12 +25,12 @@ export default async function Home({ params }: Props) {
     image: `${siteUrl}/headshot.webp`,
     jobTitle:
       locale === "fr"
-        ? "Développeur DevOps et Full-Stack"
-        : "DevOps & Full-Stack Developer",
+        ? "Ingénieur infrastructure et logiciel"
+        : "Infrastructure & Software Engineer",
     description:
       locale === "fr"
-        ? "Développeur DevOps et full-stack basé à Montréal."
-        : "DevOps and full-stack developer based in Montreal.",
+        ? "Ingénieur infrastructure et logiciel basé à Montréal."
+        : "Infrastructure and software engineer based in Montreal.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Montreal",
@@ -55,11 +56,12 @@ export default async function Home({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <Hero />
-      <About />
       <Projects />
-      <Skills />
+      <Experience />
+      <About />
       <Education />
       <Achievements />
+      <Skills />
       <Contact />
     </>
   );

@@ -41,6 +41,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               {t("inProgress")}
             </span>
           )}
+          {project.status === "ongoing" && (
+            <span className="rounded-full bg-accent/20 px-2 py-0.5 font-mono text-xs text-accent">
+              {t("ongoing")}
+            </span>
+          )}
           <span className="rounded-full bg-background px-2 py-0.5 font-mono text-s text-accent">
             {project.type === "team" ? t("typeTeam") : t("typeSolo")}
           </span>
@@ -68,7 +73,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.caseStudyPath && (
             <a
               href={`/${locale}${project.caseStudyPath}`}
-              className="flex items-center gap-1 font-mono text-sm text-accent hover:text-text transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              className="group inline-flex items-center gap-1.5 rounded-md border border-accent bg-accent/10 px-3 py-1.5 font-mono text-sm text-accent transition-all hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               <ExternalLinkIcon size={16} />
               <span>{t("caseStudy")}</span>

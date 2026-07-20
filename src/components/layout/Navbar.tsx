@@ -8,10 +8,10 @@ import { Menu, X } from "lucide-react";
 import MailIcon from "@/components/icons/MailIcon";
 
 const navLinks = [
-  { id: "about", key: "about" },
   { id: "projects", key: "projects" },
+  { id: "experience", key: "experience" },
+  { id: "about", key: "about" },
   { id: "skills", key: "skills" },
-  { id: "education", key: "education" },
 ];
 
 export default function Navbar() {
@@ -29,7 +29,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:gap-8">
+          <div className="hidden lg:flex lg:items-center lg:gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.id}
@@ -50,7 +50,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Buttons */}
-          <div className="flex items-center gap-3 md:hidden">
+          <div className="flex items-center gap-3 lg:hidden">
             <LanguageToggle />
             <a
               href={`${homeHref}#contact`}
@@ -73,7 +73,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div id="mobile-navigation" className="md:hidden border-t border-border py-4">
+          <div id="mobile-navigation" className="border-t border-border py-4 lg:hidden">
             {navLinks.map((link) => (
               <a
                 key={link.id}

@@ -5,7 +5,7 @@ export interface Project {
   description: LocalizedText;
   technologies: string[];
   type: "team" | "solo";
-  status?: "in-progress" | "completed";
+  status?: "in-progress" | "ongoing" | "completed";
   featured?: boolean;
   image?: string;
   note?: LocalizedText;
@@ -18,8 +18,8 @@ export const projects: Project[] = [
   {
     title: { en: "DawsAsset", fr: "DawsAsset" },
     description: {
-      en: "Odoo 17-based asset and inventory platform for Dawson College. Replaced spreadsheet tracking across four departments with barcode scanning, equipment loans, and a student self-service kiosk.",
-      fr: "Plateforme de gestion d'équipements et d'inventaire basée sur Odoo 17 pour le Cégep Dawson. Remplace le suivi par tableurs dans quatre départements par numérisation de codes-barres, prêts d'équipement et un kiosque en libre-service pour les étudiants.",
+      en: "Production asset-management platform delivered during a seven-week software engineering internship at Dawson College. Replaced spreadsheet tracking across four departments with barcode scanning, equipment loans, inventory workflows, and a student self-service kiosk.",
+      fr: "Plateforme de gestion des actifs livrée en production lors d'un stage de sept semaines en ingénierie logicielle au Cégep Dawson. Remplace le suivi par tableurs dans quatre départements par numérisation de codes-barres, prêts d'équipement, flux d'inventaire et borne libre-service étudiante.",
     },
     technologies: ["Python", "Odoo", "PostgreSQL", "Docker"],
     type: "team",
@@ -34,27 +34,27 @@ export const projects: Project[] = [
     caseStudyPath: "/projects/dawsasset/",
   },
   {
-    title: { en: "Self-Hosted Homelab", fr: "Self-Hosted Homelab" },
+    title: { en: "Homelab Infrastructure", fr: "Infrastructure Homelab" },
     description: {
-      en: "17+ self-hosted services on local physical hardware, managed as code with Ansible and OpenTofu. TrueNAS provides storage with a 3-2-1 backup strategy including offsite VPS sync.",
-      fr: "Plus de 17 services auto-hébergés sur du matériel physique local, gérés comme code avec Ansible et OpenTofu. TrueNAS assure le stockage avec une stratégie de sauvegarde 3-2-1 incluant la synchronisation hors site vers un VPS.",
+      en: "Personal infrastructure environment built on Proxmox and TrueNAS, with LXCs provisioned through OpenTofu and configured using Ansible. Includes secure remote access, layered backups, and documented operational workflows.",
+      fr: "Environnement d'infrastructure personnel construit sur Proxmox et TrueNAS, avec des LXC provisionnés par OpenTofu et configurés avec Ansible. Comprend un accès distant sécurisé, des sauvegardes par couches et des flux opérationnels documentés.",
     },
     technologies: ["Proxmox", "TrueNAS", "Docker", "Ansible", "OpenTofu"],
     type: "solo",
-    status: "in-progress",
+    status: "ongoing",
     featured: true,
     image: "homelab.webp",
     note: {
-      en: "17+ services in production. No public repo.",
-      fr: "Plus de 17 services en production. Aucun dépôt public.",
+      en: "Infrastructure as Code.",
+      fr: "Infrastructure as Code.",
     },
     caseStudyPath: "/projects/homelab/",
   },
   {
     title: { en: "The Coral Reef", fr: "The Coral Reef" },
     description: {
-      en: "Full-stack social platform built around Tight Squeeze, a nautical card game inspired by Exploding Kittens. Features real-time multiplayer via Socket.IO, social auth, profile customization, friends system, leaderboard, and admin panel.",
-      fr: "Plateforme sociale full-stack construite autour de Tight Squeeze, un jeu de cartes nautique inspiré d'Exploding Kittens. Comprend du multijoueur en temps réel via Socket.IO, authentification sociale, personnalisation de profil, système d'amis, classement et panneau d'administration.",
+      en: "Full-stack capstone platform built by a team around Tight Squeeze, a nautical card game inspired by Exploding Kittens. Features real-time multiplayer via Socket.IO, social auth, profile customization, friends, leaderboards, and an admin panel.",
+      fr: "Plateforme de projet de fin d'études full-stack construite en équipe autour de Tight Squeeze, un jeu de cartes nautique inspiré d'Exploding Kittens. Comprend du multijoueur en temps réel via Socket.IO, l'authentification sociale, la personnalisation de profil, des amis, des classements et un panneau d'administration.",
     },
     technologies: [
       "Next.js",
@@ -62,16 +62,14 @@ export const projects: Project[] = [
       "MongoDB",
       "Socket.IO",
       "Better Auth",
-      "Docker",
-      "GitLab CI",
     ],
     type: "team",
     status: "completed",
     featured: true,
     image: "/coralreef.webp",
     note: {
-      en: "620 capstone project. Live at thecoralreef.club.",
-      fr: "Projet de fin d'études (620). En ligne au thecoralreef.club.",
+      en: "Team capstone project.",
+      fr: "Projet de fin d'études en équipe.",
     },
     liveUrl: "https://thecoralreef.club/",
     githubUrl: "https://github.com/talonlikeaclaw/the-coral-reef",
@@ -149,8 +147,8 @@ export const projects: Project[] = [
   {
     title: { en: "Godash", fr: "Godash" },
     description: {
-      en: "A terminal user interface (TUI) dashboard for monitoring Proxmox virtual environments. Provides real-time stats and management capabilities.",
-      fr: "Tableau de bord en interface terminal (TUI) pour surveiller les environnements virtuels Proxmox. Fournit des statistiques en temps réel et des capacités de gestion.",
+      en: "Go-based TUI for monitoring Proxmox virtual machines and containers through the Proxmox API, with live resource usage and lifecycle controls.",
+      fr: "Interface terminal en Go pour surveiller les machines virtuelles et conteneurs Proxmox par l'API Proxmox, avec utilisation des ressources en direct et contrôles de cycle de vie.",
     },
     technologies: ["Go", "Bubble Tea", "Proxmox API"],
     type: "solo",
