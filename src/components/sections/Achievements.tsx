@@ -81,6 +81,15 @@ export default function Achievements() {
                 <h3 className="text-xl font-semibold text-text">
                   {t("leadershipTitle")}
                 </h3>
+                <a
+                  href="https://www.dawsoncollege.qc.ca/news/computer-science-technology-celebrates-its-2026-graduating-class/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1 font-mono text-sm text-accent transition-colors hover:text-text focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                >
+                  <ExternalLinkIcon size={16} />
+                  <span>{t("leadershipArticle")}</span>
+                </a>
               </div>
             </div>
             <div className="relative mt-4 aspect-[3229/2480] w-full overflow-hidden rounded-md border border-border">
