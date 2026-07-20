@@ -25,13 +25,29 @@ export const projects: Project[] = [
     type: "team",
     status: "completed",
     featured: true,
-    image: "/dawsasset.webp",
+    image: "dawsasset/student-kiosk.webp",
     note: {
       en: "Deployed to production at Dawson College.",
       fr: "Déployé en production au Cégep Dawson.",
     },
     githubUrl: "https://github.com/talonlikeaclaw/dawsasset",
     caseStudyPath: "/projects/dawsasset/",
+  },
+  {
+    title: { en: "Self-Hosted Homelab", fr: "Self-Hosted Homelab" },
+    description: {
+      en: "17+ self-hosted services on local physical hardware, managed as code with Ansible and OpenTofu. TrueNAS provides storage with a 3-2-1 backup strategy including offsite VPS sync.",
+      fr: "Plus de 17 services auto-hébergés sur du matériel physique local, gérés comme code avec Ansible et OpenTofu. TrueNAS assure le stockage avec une stratégie de sauvegarde 3-2-1 incluant la synchronisation hors site vers un VPS.",
+    },
+    technologies: ["Proxmox", "TrueNAS", "Docker", "Ansible", "OpenTofu"],
+    type: "solo",
+    status: "in-progress",
+    featured: true,
+    image: "/homelab.webp",
+    note: {
+      en: "17+ services in production. No public repo.",
+      fr: "Plus de 17 services en production. Aucun dépôt public.",
+    },
   },
   {
     title: { en: "The Coral Reef", fr: "The Coral Reef" },
@@ -128,22 +144,6 @@ export const projects: Project[] = [
     status: "completed",
     image: "/dawscorp.webp",
     githubUrl: "https://github.com/talonlikeaclaw/dawscorp-task-manager",
-  },
-  {
-    title: { en: "Self-Hosted Homelab", fr: "Self-Hosted Homelab" },
-    description: {
-      en: "17+ self-hosted services on local physical hardware, managed as code with Ansible and OpenTofu. TrueNAS provides storage with a 3-2-1 backup strategy including offsite VPS sync.",
-      fr: "Plus de 17 services auto-hébergés sur du matériel physique local, gérés comme code avec Ansible et OpenTofu. TrueNAS assure le stockage avec une stratégie de sauvegarde 3-2-1 incluant la synchronisation hors site vers un VPS.",
-    },
-    technologies: ["Proxmox", "TrueNAS", "Docker", "Ansible", "OpenTofu"],
-    type: "solo",
-    status: "in-progress",
-    featured: true,
-    image: "/homelab.webp",
-    note: {
-      en: "17+ services in production. No public repo.",
-      fr: "Plus de 17 services en production. Aucun dépôt public.",
-    },
   },
   {
     title: { en: "Godash", fr: "Godash" },
