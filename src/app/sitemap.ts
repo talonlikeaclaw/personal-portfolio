@@ -15,6 +15,12 @@ const dawsassetLanguages = {
   "x-default": `${siteUrl}/en/projects/dawsasset/`,
 };
 
+const homelabLanguages = {
+  en: `${siteUrl}/en/projects/homelab/`,
+  fr: `${siteUrl}/fr/projects/homelab/`,
+  "x-default": `${siteUrl}/en/projects/homelab/`,
+};
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
@@ -40,6 +46,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
       alternates: { languages: dawsassetLanguages },
+    },
+    {
+      url: homelabLanguages.en,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: { languages: homelabLanguages },
+    },
+    {
+      url: homelabLanguages.fr,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: { languages: homelabLanguages },
     },
   ];
 }

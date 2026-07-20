@@ -43,11 +43,12 @@ export const projects: Project[] = [
     type: "solo",
     status: "in-progress",
     featured: true,
-    image: "/homelab.webp",
+    image: "homelab.webp",
     note: {
       en: "17+ services in production. No public repo.",
       fr: "Plus de 17 services en production. Aucun dépôt public.",
     },
+    caseStudyPath: "/projects/homelab/",
   },
   {
     title: { en: "The Coral Reef", fr: "The Coral Reef" },
