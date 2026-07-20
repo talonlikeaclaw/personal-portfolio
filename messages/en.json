@@ -115,7 +115,7 @@
     "backToProjects": "Back to projects",
     "organization": "Dawson College",
     "title": "DawsAsset",
-    "subtitle": "Shared asset-management platform delivered to production during a seven-week software engineering internship at Dawson College.",
+    "subtitle": "Shared asset-management platform <strong>delivered to production</strong> during a seven-week software engineering internship at Dawson College.",
     "meta": {
       "internship": "Internship",
       "team": "Team project",
@@ -125,7 +125,7 @@
     },
     "overview": {
       "title": "Overview",
-      "body": "During a seven-week software engineering internship in April and May 2026, our team delivered a shared asset-management platform for Dawson College. Built on Odoo 17, DawsAsset replaced spreadsheet-based tracking for serialized equipment and consumable inventory across four departments: Computer Science, Radiation Oncology, Mechanical Engineering Technologies, and Civil Engineering Technology."
+      "body": "During a seven-week software engineering internship in April and May 2026, our team delivered a <strong>shared asset-management platform</strong> for Dawson College. Built on Odoo 17, DawsAsset replaced spreadsheet-based tracking for serialized equipment and consumable inventory across <strong>four departments</strong>: Computer Science, Radiation Oncology, Mechanical Engineering Technologies, and Civil Engineering Technology."
     },
     "architecture": {
       "title": "System Overview",
@@ -192,20 +192,30 @@
     },
     "problem": {
       "title": "The Problem",
-      "body": "Before DawsAsset, inventory was managed independently by multiple departments using spreadsheets and manual processes. This made it difficult to maintain a consistent view of assets while still supporting each department''s unique workflow. The goal was to replace those disconnected systems with a shared platform that could manage both serialized equipment and consumable inventory without forcing every department into the same process."
+      "body": "Before DawsAsset, inventory was managed independently by multiple departments using spreadsheets and manual processes. This made it difficult to maintain a consistent view of assets while still supporting each department''s unique workflow. The goal was to replace those disconnected systems with a <strong>shared platform</strong> that could manage both serialized equipment and consumable inventory without forcing every department into the same process."
     },
     "requirements": {
       "title": "Requirements Engineering",
-      "body": "Rather than working from a fixed specification, we collaborated directly with four departments to understand their existing inventory workflows and identify operational pain points. Those findings became the foundation for user stories and implementable requirements. This involved preparing stakeholder interviews, analyzing existing inventory datasets, documenting findings, and reconciling different departmental workflows within one shared platform."
+      "body": "Rather than working from a fixed specification, we collaborated directly with <strong>four departments</strong> to understand their existing inventory workflows and identify operational pain points. Those findings became the foundation for <strong>workflow diagrams, user stories, and implementable requirements</strong>. This involved preparing stakeholder interviews, analyzing existing inventory datasets, documenting findings, and reconciling different departmental workflows within one shared platform."
+    },
+    "capabilities": {
+      "title": "Platform Capabilities",
+      "intro": "The delivered platform combined department-specific workflows with shared operational foundations.",
+      "assetTracking": { "title": "Equipment and inventory", "body": "Managed serialized assets with barcode generation, scanning, and printing alongside consumable inventory, reorder rules, and kit verification audits." },
+      "loans": { "title": "Loans and sessions", "body": "Supported equipment checkout, overdue detection, condition tracking, in-lab usage sessions, and high-volume bulk actions." },
+      "studentKiosk": { "title": "Student kiosk", "body": "Let students self-serve checkout, returns, and lab sessions using an ID and equipment barcode, with damage and near-miss reporting." },
+      "guidedWorkflows": { "title": "Guided workflows", "body": "Supported multi-step workflows for equipment registration, stock receiving, interdepartmental transfers, and semester reports." },
+      "accessControl": { "title": "Department access control", "body": "Scoped chairs, teachers, lab technicians, and read-only users to their department's inventory while preserving local autonomy." },
+      "notifications": { "title": "Operational notifications", "body": "Delivered low-stock, damage, and maintenance reminders through Dawson-branded email, Odoo Discuss, and record activities." }
     },
     "role": {
       "title": "My Role",
-      "intro": "DawsAsset was a team effort by Talon Dunbar, Diego Bouda, and Massi Djaiz, supervised by Victor Ponce. I served as the team''s primary stakeholder communicator while leading the project''s infrastructure, deployment planning, and technical documentation. I also maintained much of the project planning in GitLab and helped translate departmental needs into implementable requirements.",
-      "item1": "Led stakeholder discovery and communication across four departments.",
-      "item2": "Prepared requirements meetings, analyzed existing inventory data, and translated findings into user stories.",
-      "item3": "Maintained project planning through GitLab issues, labels, and milestone tracking.",
-      "item4": "Designed the infrastructure approach and coordinated staging and production deployment.",
-      "item5": "Planned backups, testing, documentation, and final handoff."
+      "intro": "DawsAsset was a team effort by Talon Dunbar, Diego Bouda, and Massi Djaiz, supervised by Victor Ponce. I served as the team''s <strong>primary stakeholder communicator</strong> while leading the project''s <strong>infrastructure, deployment planning, and technical documentation</strong>. I also maintained much of the project planning in GitLab and helped translate departmental needs into implementable requirements.",
+      "item1": "Led <strong>stakeholder discovery and communication</strong> across four departments.",
+      "item2": "Prepared <strong>requirements meetings</strong>, analyzed existing inventory data, and translated findings into <strong>user stories</strong>.",
+      "item3": "Maintained <strong>project planning</strong> through GitLab issues, labels, and milestone tracking.",
+      "item4": "<strong>Designed the infrastructure</strong> approach and coordinated staging and <strong>production deployment</strong>.",
+      "item5": "<strong>Planned backups, testing, documentation</strong>, and final handoff."
     },
     "delivery": {
       "title": "Delivery Timeline",
@@ -245,15 +255,15 @@
     },
     "impact": {
       "title": "Impact",
-      "item1": "A shared inventory platform delivered across four Dawson College departments.",
+      "item1": "A <strong>shared inventory platform across four Dawson College departments</strong>.",
       "item2": "Serialized equipment and consumable inventory supported in the same system.",
-      "item3": "Delivered, documented, and handed off within seven weeks.",
-      "item4": "The platform remains in production at Dawson College following project handoff.",
+      "item3": "Delivered, documented, and handed off within <strong>seven weeks</strong>.",
+      "item4": "The platform remains <strong>in production at Dawson College</strong> following project handoff.",
       "item5": "Presented the delivered platform and its operational value to college leadership and department stakeholders."
     },
     "takeaways": {
       "title": "Engineering Lessons",
-      "body": "This internship reinforced that successful software delivery extends beyond implementation. Stakeholder communication, requirements discovery, deployment planning, testing, backups, documentation, and handoff all contributed to a system that teams could successfully adopt and operate. It also showed me how much real-world delivery depends on navigating institutional constraints and incomplete information."
+      "body": "This internship reinforced that <strong>successful software delivery extends beyond implementation</strong>. Stakeholder communication, requirements discovery, deployment planning, testing, backups, documentation, and handoff all contributed to a system that teams could successfully adopt and operate. It also showed me how much real-world delivery depends on navigating institutional constraints and incomplete information."
     },
     "ctaTitle": "Interested in my approach to infrastructure, deployment, and production software?",
     "viewOtherProjects": "View other projects",

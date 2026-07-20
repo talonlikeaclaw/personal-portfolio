@@ -115,7 +115,7 @@
     "backToProjects": "Retour aux projets",
     "organization": "Cégep Dawson",
     "title": "DawsAsset",
-    "subtitle": "Plateforme partagée de gestion des actifs livrée en production lors d''un stage de sept semaines en ingénierie logicielle au Cégep Dawson.",
+    "subtitle": "Plateforme partagée de gestion des actifs <strong>livrée en production</strong> lors d''un stage de sept semaines en ingénierie logicielle au Cégep Dawson.",
     "meta": {
       "internship": "Stage",
       "team": "Projet d''équipe",
@@ -125,7 +125,7 @@
     },
     "overview": {
       "title": "Aperçu",
-      "body": "Lors d''un stage de sept semaines en ingénierie logicielle, en avril et mai 2026, notre équipe a livré une plateforme partagée de gestion des actifs pour le Cégep Dawson. Basé sur Odoo 17, DawsAsset a remplacé le suivi par tableurs des équipements sérialisés et des consommables dans quatre départements : l''informatique, la radio-oncologie, les technologies de génie mécanique et la technologie du génie civil."
+      "body": "Lors d''un stage de sept semaines en ingénierie logicielle, en avril et mai 2026, notre équipe a livré une <strong>plateforme partagée de gestion des actifs</strong> pour le Cégep Dawson. Basé sur Odoo 17, DawsAsset a remplacé le suivi par tableurs des équipements sérialisés et des consommables dans <strong>quatre départements</strong> : l''informatique, la radio-oncologie, les technologies de génie mécanique et la technologie du génie civil."
     },
     "architecture": {
       "title": "Vue d''ensemble du système",
@@ -136,7 +136,7 @@
     },
     "gallery": {
       "title": "Aperçu de la plateforme",
-      "intro": "Quelques vues de DawsAsset montrant la présentation des équipements sérialisés, des consommables et du kiosque étudiant dans la plateforme.",
+      "intro": "Quelques vues de DawsAsset montrant la présentation des équipements sérialisés, des consommables et de la borne étudiante dans la plateforme.",
       "openImage": "Ouvrir {title} en grand format",
       "closeImage": "Fermer la visionneuse d''images",
       "equipmentList": {
@@ -192,20 +192,30 @@
     },
     "problem": {
       "title": "Le problème",
-      "body": "Avant DawsAsset, plusieurs départements géraient leur inventaire de façon indépendante au moyen de tableurs et de processus manuels. Il était alors difficile de conserver une vue cohérente des actifs tout en respectant le flux de travail propre à chaque département. L''objectif était de remplacer ces systèmes déconnectés par une plateforme partagée capable de gérer les équipements sérialisés et les consommables sans imposer le même processus à tous les départements."
+      "body": "Avant DawsAsset, plusieurs départements géraient leur inventaire de façon indépendante au moyen de tableurs et de processus manuels. Il était alors difficile de conserver une vue cohérente des actifs tout en respectant le flux de travail propre à chaque département. L''objectif était de remplacer ces systèmes déconnectés par une <strong>plateforme partagée</strong> capable de gérer les équipements sérialisés et les consommables sans imposer le même processus à tous les départements."
     },
     "requirements": {
       "title": "Ingénierie des exigences",
-      "body": "Plutôt que de partir d''un cahier des charges fixe, nous avons collaboré directement avec quatre départements afin de comprendre leurs flux d''inventaire et de cerner les difficultés opérationnelles. Ces constats ont servi de base aux récits utilisateurs et aux exigences réalisables. Cela a impliqué la préparation d''entrevues avec les parties prenantes, l''analyse de jeux de données d''inventaire existants, la documentation des constats et la conciliation de flux de travail distincts dans une plateforme partagée."
+      "body": "Plutôt que de partir d''un cahier des charges fixe, nous avons collaboré directement avec <strong>quatre départements</strong> afin de comprendre leurs flux d''inventaire et de cerner les difficultés opérationnelles. Ces constats ont servi de base aux <strong>diagrammes de flux, récits utilisateurs et exigences réalisables</strong>. Cela a impliqué la préparation d''entrevues avec les parties prenantes, l''analyse de jeux de données d''inventaire existants, la documentation des constats et la conciliation de flux de travail distincts dans une plateforme partagée."
+    },
+    "capabilities": {
+      "title": "Fonctionnalités de la plateforme",
+      "intro": "La plateforme livrée combinait des flux de travail propres aux départements avec des fondations opérationnelles partagées.",
+      "assetTracking": { "title": "Équipement et inventaire", "body": "Gestion des actifs sérialisés avec génération, numérisation et impression de codes-barres, ainsi que de l''inventaire de consommables, des seuils de réapprovisionnement et des vérifications de trousses." },
+      "loans": { "title": "Prêts et sessions", "body": "Prise en charge des prêts d''équipement, retards, suivi de l''état, sessions d''utilisation en laboratoire et actions groupées à grand volume." },
+      "studentKiosk": { "title": "Borne étudiante", "body": "Permettait aux étudiants d''emprunter, de retourner et d''utiliser l''équipement avec leur identifiant et un code-barres, en signalant les dommages et incidents évités." },
+      "guidedWorkflows": { "title": "Flux guidés", "body": "Prenait en charge des flux en plusieurs étapes pour l''enregistrement d''équipement, la réception de stock, les transferts interdépartementaux et les rapports de semestre." },
+      "accessControl": { "title": "Accès par département", "body": "Limitait les chaires, enseignants, techniciens de laboratoire et utilisateurs en lecture seule à l''inventaire de leur département tout en préservant leur autonomie." },
+      "notifications": { "title": "Notifications opérationnelles", "body": "Envoyait les alertes de stock bas, dommages et maintenance par courriel Dawson, Odoo Discuss et activités sur les dossiers." }
     },
     "role": {
       "title": "Mon rôle",
-      "intro": "DawsAsset était un projet d''équipe de Talon Dunbar, Diego Bouda et Massi Djaiz, supervisé par Victor Ponce. J''étais le principal interlocuteur auprès des parties prenantes tout en menant l''infrastructure, la planification du déploiement et la documentation technique du projet. J''ai aussi assuré une grande partie de la planification dans GitLab et aidé à traduire les besoins des départements en exigences réalisables.",
-      "item1": "J''ai mené la découverte et la communication avec les parties prenantes de quatre départements.",
-      "item2": "J''ai préparé les rencontres sur les exigences, analysé les données d''inventaire existantes et traduit les constats en récits utilisateurs.",
-      "item3": "J''ai maintenu la planification à l''aide des tickets GitLab, des étiquettes et du suivi des jalons.",
-      "item4": "J''ai conçu l''approche d''infrastructure et coordonné les déploiements de préproduction et de production.",
-      "item5": "J''ai planifié les sauvegardes, les essais, la documentation et la remise finale."
+      "intro": "DawsAsset était un projet d''équipe de Talon Dunbar, Diego Bouda et Massi Djaiz, supervisé par Victor Ponce. J''étais le <strong>principal interlocuteur auprès des parties prenantes</strong> tout en menant l''<strong>infrastructure, la planification du déploiement et la documentation technique</strong> du projet. J''ai aussi assuré une grande partie de la planification dans GitLab et aidé à traduire les besoins des départements en exigences réalisables.",
+      "item1": "J''ai mené la <strong>découverte et la communication avec les parties prenantes</strong> de quatre départements.",
+      "item2": "J''ai préparé les <strong>rencontres sur les exigences</strong>, analysé les données d''inventaire existantes et traduit les constats en <strong>récits utilisateurs</strong>.",
+      "item3": "J''ai maintenu la <strong>planification du projet</strong> à l''aide des tickets GitLab, des étiquettes et du suivi des jalons.",
+      "item4": "J''ai <strong>conçu l''approche d''infrastructure</strong> et coordonné les déploiements de préproduction et de <strong>production</strong>.",
+      "item5": "J''ai <strong>planifié les sauvegardes, les essais et la documentation</strong>, ainsi que la remise finale."
     },
     "delivery": {
       "title": "Chronologie de livraison",
@@ -229,31 +239,31 @@
     "engineering": {
       "title": "Responsabilités opérationnelles",
       "intro": "L''infrastructure, le déploiement, les essais, la documentation et le transfert opérationnel ont été traités comme des éléments essentiels du cycle de vie du projet.",
-      "projectCoordination": { "title": "Coordination du projet", "body": "J''ai maintenu les tickets GitLab, les étiquettes, les jalons, les échéanciers et la documentation du projet afin de garder l''équipe alignée." },
-      "infrastructure": { "title": "Infrastructure et déploiement", "body": "J''ai contribué à la mise en place de la VM et de l''environnement Docker, ainsi qu''à la préproduction, aux essais et à la livraison en production." },
-      "requirements": { "title": "Ingénierie des exigences", "body": "J''ai préparé les entrevues avec les parties prenantes, analysé les données d''inventaire et traduit les constats en exigences réalisables." },
-      "documentation": { "title": "Documentation", "body": "Documentation technique et opérationnelle produite pour que l''équipe destinataire puisse comprendre, déployer et maintenir le système livré." },
-      "stakeholders": { "title": "Coordination avec les parties prenantes", "body": "J''ai travaillé avec quatre départements afin de concilier des flux d''inventaire distincts dans une plateforme partagée." },
-      "handoff": { "title": "Transfert maintenable", "body": "Le système a été livré avec la documentation, la planification des sauvegardes et le contexte opérationnel nécessaires pour réduire la dépendance envers l''équipe de stage." }
+      "projectCoordination": { "title": "Coordination du projet", "body": "J''ai maintenu les <strong>tickets GitLab, les étiquettes, les jalons, les échéanciers et la documentation du projet</strong> afin de garder l''équipe alignée." },
+      "infrastructure": { "title": "Infrastructure et déploiement", "body": "J''ai contribué à la mise en place de la <strong>VM et de l''environnement Docker</strong>, ainsi qu''à la préproduction, aux essais et à la <strong>livraison en production</strong>." },
+      "requirements": { "title": "Ingénierie des exigences", "body": "J''ai préparé les entrevues avec les parties prenantes, analysé les données d''inventaire et traduit les constats en <strong>exigences réalisables</strong>." },
+      "documentation": { "title": "Documentation", "body": "<strong>Documentation technique et opérationnelle</strong> produite pour que l''équipe destinataire puisse comprendre, déployer et maintenir le système livré." },
+      "stakeholders": { "title": "Coordination avec les parties prenantes", "body": "J''ai travaillé avec <strong>quatre départements</strong> afin de concilier des flux d''inventaire distincts dans une <strong>plateforme partagée</strong>." },
+      "handoff": { "title": "Transfert maintenable", "body": "Le système a été livré avec la <strong>documentation, la planification des sauvegardes et le contexte opérationnel</strong> nécessaires pour réduire la dépendance envers l''équipe de stage." }
     },
     "challenges": {
       "title": "Défis",
-      "item1": "Recueillir et préciser les exigences auprès de quatre départements.",
-      "item2": "Concilier différents flux d''inventaire dans une plateforme partagée.",
-      "item3": "Passer de la découverte à la livraison dans un stage de sept semaines.",
-      "item4": "Terminer la documentation et la remise sans laisser le système dépendre de l''équipe de stage."
+      "item1": "Recueillir et préciser les exigences auprès de <strong>quatre départements</strong>.",
+      "item2": "Concilier différents flux d''inventaire dans une <strong>plateforme partagée</strong>.",
+      "item3": "Passer de la découverte à la livraison dans un <strong>stage de sept semaines</strong>.",
+      "item4": "Terminer la <strong>documentation et la remise</strong> sans laisser le système dépendre de l''équipe de stage."
     },
     "impact": {
       "title": "Impact",
-      "item1": "Une plateforme partagée de gestion des stocks livrée dans quatre départements du Cégep Dawson.",
-      "item2": "Équipements sérialisés et consommables pris en charge dans le même système.",
-      "item3": "Livraison, documentation et remise réalisées en sept semaines.",
-      "item4": "La plateforme demeure en production au Cégep Dawson après le transfert du projet.",
-      "item5": "La plateforme livrée et sa valeur opérationnelle ont été présentées à la direction du collège et aux parties prenantes des départements."
+      "item1": "Une <strong>plateforme partagée de gestion des stocks</strong> livrée dans quatre départements du Cégep Dawson.",
+      "item2": "<strong>Équipements sérialisés et consommables</strong> pris en charge dans le même système.",
+      "item3": "Livraison, documentation et remise réalisées en <strong>sept semaines</strong>.",
+      "item4": "La plateforme demeure <strong>en production au Cégep Dawson</strong> après le transfert du projet.",
+      "item5": "La plateforme livrée et sa <strong>valeur opérationnelle</strong> ont été présentées à la direction du collège et aux parties prenantes des départements."
     },
     "takeaways": {
       "title": "Leçons d''ingénierie",
-      "body": "Ce stage a renforcé l''idée qu''une livraison logicielle réussie va au-delà de la mise en œuvre. La communication avec les parties prenantes, la découverte des exigences, la planification du déploiement, les essais, les sauvegardes, la documentation et le transfert ont tous contribué à un système que les équipes pouvaient adopter et exploiter avec succès. Il m''a aussi montré à quel point une livraison concrète dépend de la capacité à composer avec des contraintes institutionnelles et une information incomplète."
+      "body": "Ce stage a renforcé l''idée qu''une <strong>livraison logicielle réussie va au-delà de la mise en œuvre</strong>. La communication avec les parties prenantes, la découverte des exigences, la planification du déploiement, les essais, les sauvegardes, la documentation et le transfert ont tous contribué à un système que les équipes pouvaient adopter et exploiter avec succès. Il m''a aussi montré à quel point une livraison concrète dépend de la capacité à composer avec des <strong>contraintes institutionnelles et une information incomplète</strong>."
     },
     "ctaTitle": "Vous intéressez-vous à mon approche de l''infrastructure, du déploiement et des logiciels en production?",
     "viewOtherProjects": "Voir mes autres projets",

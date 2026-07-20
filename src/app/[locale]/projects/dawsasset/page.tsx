@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { ArrowLeft, ArrowRight, CheckCircle2, ClipboardList, Cloud, FileText, HandHeart, MessagesSquare } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Container from "@/components/ui/Container";
@@ -14,6 +15,7 @@ const roleItems = ["item1", "item2", "item3", "item4", "item5"] as const;
 const deliverySteps = ["step1", "step2", "step3", "step4", "step5", "step6", "step7"] as const;
 const challengeItems = ["item1", "item2", "item3", "item4"] as const;
 const impactItems = ["item1", "item2", "item3", "item4", "item5"] as const;
+const capabilityItems = ["assetTracking", "loans", "studentKiosk", "guidedWorkflows", "accessControl", "notifications"] as const;
 
 const galleryItems = [
   { key: "equipmentList", image: "equipment-list.webp" },
@@ -84,6 +86,7 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "dawsassetCaseStudy" });
   const homeHref = `/${locale}/`;
+  const strong = (chunks: ReactNode) => <strong>{chunks}</strong>;
 
   return (
     <article className="py-28 sm:py-32">
@@ -99,7 +102,7 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
         <header className="mt-10 border-b border-border pb-12">
           <p className="font-mono text-sm font-semibold uppercase tracking-[0.2em] text-accent">{t("organization")}</p>
           <h1 className="mt-4 font-mono text-4xl font-bold tracking-tight text-text sm:text-6xl">{t("title")}</h1>
-          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted sm:text-xl">{t("subtitle")}</p>
+          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted sm:text-xl">{t.rich("subtitle", { strong })}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             {["internship", "team", "production", "duration", "platform"].map((key) => (
               <span key={key} className="rounded-full border border-border bg-card px-3 py-1.5 font-mono text-sm text-accent">
@@ -112,12 +115,12 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
         <div className="mt-16 space-y-16">
           <section aria-labelledby="overview">
             <h2 id="overview" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("overview.title")}</h2>
-            <p className="mt-5 leading-relaxed text-muted">{t("overview.body")}</p>
+            <p className="mt-5 leading-relaxed text-muted">{t.rich("overview.body", { strong })}</p>
           </section>
 
           <section aria-labelledby="architecture">
             <h2 id="architecture" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("architecture.title")}</h2>
-            <p className="mt-4 leading-relaxed text-muted">{t("architecture.intro")}</p>
+            <p className="mt-4 leading-relaxed text-muted">{t.rich("architecture.intro", { strong })}</p>
             <div className="mt-8">
               <CaseStudyGalleryFigure
                 naturalAspect
@@ -135,7 +138,7 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
 
           <section aria-labelledby="gallery">
             <h2 id="gallery" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("gallery.title")}</h2>
-            <p className="mt-4 leading-relaxed text-muted">{t("gallery.intro")}</p>
+            <p className="mt-4 leading-relaxed text-muted">{t.rich("gallery.intro", { strong })}</p>
             <div className="mt-8 grid gap-6 md:grid-cols-2">
               {galleryItems.map(({ key, image }) => (
                 <CaseStudyGalleryFigure
@@ -164,15 +167,28 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
             </div>
           </section>
 
+          <section aria-labelledby="capabilities">
+            <h2 id="capabilities" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("capabilities.title")}</h2>
+            <p className="mt-4 max-w-3xl leading-relaxed text-muted">{t("capabilities.intro")}</p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {capabilityItems.map((item) => (
+                <section key={item} className="rounded-lg border border-border bg-card p-5">
+                  <h3 className="font-mono font-semibold text-text">{t(`capabilities.${item}.title`)}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{t(`capabilities.${item}.body`)}</p>
+                </section>
+              ))}
+            </div>
+          </section>
+
           <section aria-labelledby="technical-highlights">
             <h2 id="technical-highlights" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("technicalHighlights.title")}</h2>
-            <p className="mt-4 leading-relaxed text-muted">{t("technicalHighlights.intro")}</p>
+            <p className="mt-4 leading-relaxed text-muted">{t.rich("technicalHighlights.intro", { strong })}</p>
             <div className="mt-6 grid overflow-hidden rounded-lg border border-border sm:grid-cols-3">
               {technicalHighlights.map(({ key, items }) => (
                 <section key={key} className="border-b border-border bg-card p-4 last:border-b-0 sm:border-r sm:border-b-0 sm:last:border-r-0">
                   <h3 className="border-b border-border pb-2 font-mono text-sm font-semibold text-accent">{t(`technicalHighlights.${key}.title`)}</h3>
                   <ul className="mt-3 list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-muted">
-                    {items.map((item) => <li key={item}>{t(`technicalHighlights.${key}.${item}`)}</li>)}
+                    {items.map((item) => <li key={item}>{t.rich(`technicalHighlights.${key}.${item}`, { strong })}</li>)}
                   </ul>
                 </section>
               ))}
@@ -181,22 +197,22 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
 
           <section aria-labelledby="problem">
             <h2 id="problem" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("problem.title")}</h2>
-            <p className="mt-5 leading-relaxed text-muted">{t("problem.body")}</p>
+            <p className="mt-5 leading-relaxed text-muted">{t.rich("problem.body", { strong })}</p>
           </section>
 
           <section aria-labelledby="requirements">
             <h2 id="requirements" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("requirements.title")}</h2>
-            <p className="mt-5 leading-relaxed text-muted">{t("requirements.body")}</p>
+            <p className="mt-5 leading-relaxed text-muted">{t.rich("requirements.body", { strong })}</p>
           </section>
 
           <section aria-labelledby="role">
             <h2 id="role" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("role.title")}</h2>
-            <p className="mt-5 leading-relaxed text-muted">{t("role.intro")}</p>
+            <p className="mt-5 leading-relaxed text-muted">{t.rich("role.intro", { strong })}</p>
             <ul className="mt-6 space-y-3">
               {roleItems.map((item) => (
                 <li key={item} className="flex gap-3 leading-relaxed text-muted">
                   <CheckCircle2 className="mt-1 shrink-0 text-accent" size={18} aria-hidden="true" />
-                  <span>{t(`role.${item}`)}</span>
+                  <span>{t.rich(`role.${item}`, { strong })}</span>
                 </li>
               ))}
             </ul>
@@ -205,7 +221,7 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
 
         <section aria-labelledby="delivery" className="mt-16 rounded-lg border border-border bg-card p-6 sm:p-8">
           <h2 id="delivery" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("delivery.title")}</h2>
-          <p className="mt-4 max-w-3xl leading-relaxed text-muted">{t("delivery.intro")}</p>
+          <p className="mt-4 max-w-3xl leading-relaxed text-muted">{t.rich("delivery.intro", { strong })}</p>
           <ol className="mt-8 border-l border-border">
             {deliverySteps.map((step, index) => (
               <li key={step} className="relative pb-5 pl-8 last:pb-0">
@@ -213,9 +229,9 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
                 <div className="rounded border border-border bg-background/50 px-4 py-3 font-mono text-sm text-text">
                   <h3 className="font-semibold">
                     <span className="text-accent">{t("delivery.week", { week: index + 1 })}</span>
-                    <span>{" - "}{t(`delivery.${step}Title`)}</span>
+                    <span>{" - "}{t.rich(`delivery.${step}Title`, { strong })}</span>
                   </h3>
-                  <p className="mt-2 font-sans text-sm leading-relaxed text-muted">{t(`delivery.${step}Description`)}</p>
+                  <p className="mt-2 font-sans text-sm leading-relaxed text-muted">{t.rich(`delivery.${step}Description`, { strong })}</p>
                 </div>
               </li>
             ))}
@@ -224,13 +240,13 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
 
         <section aria-labelledby="engineering" className="mt-16">
           <h2 id="engineering" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("engineering.title")}</h2>
-          <p className="mt-4 max-w-3xl leading-relaxed text-muted">{t("engineering.intro")}</p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <p className="mt-4 max-w-3xl leading-relaxed text-muted">{t.rich("engineering.intro", { strong })}</p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {engineeringItems.map(({ key, icon: Icon }) => (
               <section key={key} className="rounded-lg border border-border bg-card p-5">
                 <Icon className="text-accent" size={22} aria-hidden="true" />
                 <h3 className="mt-4 font-mono font-semibold text-text">{t(`engineering.${key}.title`)}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{t(`engineering.${key}.body`)}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{t.rich(`engineering.${key}.body`, { strong })}</p>
               </section>
             ))}
           </div>
@@ -239,8 +255,8 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
         <div className="mt-16 grid gap-8 md:grid-cols-2">
           <section aria-labelledby="challenges" className="rounded-lg border border-border bg-card p-6">
             <h2 id="challenges" className="font-mono text-2xl font-bold text-text">{t("challenges.title")}</h2>
-            <ul className="mt-5 space-y-3 text-sm leading-relaxed text-muted">
-              {challengeItems.map((item) => <li key={item}>{t(`challenges.${item}`)}</li>)}
+            <ul className="mt-5 list-disc space-y-3 pl-5 text-sm leading-relaxed text-muted marker:text-text">
+              {challengeItems.map((item) => <li key={item}>{t.rich(`challenges.${item}`, { strong })}</li>)}
             </ul>
           </section>
           <section aria-labelledby="impact" className="rounded-lg border border-accent/60 bg-accent/10 p-6">
@@ -252,7 +268,7 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
               {impactItems.map((item) => (
                 <li key={item} className="flex gap-3">
                   <CheckCircle2 className="mt-0.5 shrink-0 text-accent" size={16} aria-hidden="true" />
-                  <span>{t(`impact.${item}`)}</span>
+                  <span>{t.rich(`impact.${item}`, { strong })}</span>
                 </li>
               ))}
             </ul>
@@ -261,7 +277,7 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
 
         <section aria-labelledby="takeaways" className="mt-16 border-t border-border pt-12">
           <h2 id="takeaways" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("takeaways.title")}</h2>
-          <p className="mt-5 leading-relaxed text-muted">{t("takeaways.body")}</p>
+          <p className="mt-5 leading-relaxed text-muted">{t.rich("takeaways.body", { strong })}</p>
         </section>
 
         <section aria-labelledby="case-study-cta" className="mt-16 border-t border-border pt-8">
