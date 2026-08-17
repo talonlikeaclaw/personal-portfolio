@@ -73,6 +73,7 @@ export const projects: Project[] = [
     },
     liveUrl: "https://thecoralreef.club/",
     githubUrl: "https://github.com/talonlikeaclaw/the-coral-reef",
+    caseStudyPath: "/projects/coral-reef/",
   },
   {
     title: { en: "Canadian Immigration Viz", fr: "Canadian Immigration Viz" },
