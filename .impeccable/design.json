@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-16T00:00:00Z",
+  "title": "Design System: Talon Dunbar Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "console-black": {
+        "role": "neutral",
+        "displayName": "Console Black",
+        "canonical": "oklch(14.7% 0.0107 285)",
+        "tonalRamp": ["#0b0b10", "#24242a", "#414148", "#606067", "#818289", "#a4a4ac", "#c8c8d0", "#edeef6"]
+      },
+      "panel-graphite": {
+        "role": "neutral",
+        "displayName": "Panel Graphite",
+        "canonical": "oklch(21.0% 0.0059 285.9)",
+        "tonalRamp": ["#0b0b0e", "#252528", "#424245", "#616164", "#828286", "#a4a4a9", "#c9c9cd", "#eeeef2"]
+      },
+      "hairline-graphite": {
+        "role": "neutral",
+        "displayName": "Hairline Graphite",
+        "canonical": "oklch(27.4% 0.0055 286)",
+        "tonalRamp": ["#0b0b0d", "#252528", "#424245", "#616164", "#828285", "#a4a4a8", "#c9c9cd", "#eeeef2"]
+      },
+      "chalk": {
+        "role": "neutral",
+        "displayName": "Chalk",
+        "canonical": "oklch(92.0% 0.004 286.3)",
+        "tonalRamp": ["#0b0b0d", "#252527", "#424244", "#616163", "#828285", "#a5a5a7", "#c9c9cc", "#eeeef1"],
+        "note": "--muted resolves to this same value; the secondary text tone is currently missing (known drift)."
+      },
+      "signal-green": {
+        "role": "primary",
+        "displayName": "Signal Green",
+        "canonical": "oklch(72.3% 0.192 149.6)",
+        "tonalRamp": ["#001003", "#002e0f", "#005120", "#007632", "#009d45", "#21c55e", "#57eb81", "#c7ffd0"]
+      },
+      "signal-green-tint": {
+        "role": "primary",
+        "displayName": "Signal Green Tint",
+        "canonical": "oklch(72.3% 0.192 149.6 / 0.1)",
+        "tonalRamp": ["#001003", "#002e0f", "#005120", "#007632", "#009d45", "#21c55e", "#57eb81", "#c7ffd0"],
+        "note": "Surface tint at 10% alpha; the maximum surface presence Signal Green is allowed."
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero name and case-study h1. Tightest tracking in the system (-0.025em)." },
+      "headline": { "displayName": "Headline", "purpose": "Section h2 via SectionHeading; steps down to 24/30px inside case studies." },
+      "title": { "displayName": "Title", "purpose": "Card titles: green on project cards, chalk in panels." },
+      "subhead": { "displayName": "Subhead", "purpose": "Hero role line at sm; case-study closing CTA h2." },
+      "body": { "displayName": "Body", "purpose": "Prose paragraphs in Inter only, 1.5 line-height, 4xl measure on case studies." },
+      "label": { "displayName": "Label", "purpose": "Eyebrows, pills, buttons, captions, navigation, subtitles. 0.2em tracking when uppercase." },
+      "micro": { "displayName": "Micro", "purpose": "Diagram labels, card metadata, technology tags, status notes. 0.14em tracking, uppercase." }
+    },
+    "shadows": [
+      { "name": "overlay-panel", "value": "0 25px 50px -12px rgb(0 0 0 / 0.25)", "purpose": "The only shipped shadow: the full-screen gallery lightbox panel (Tailwind shadow-2xl)." }
+    ],
+    "motion": [
+      { "name": "scroll-cue", "value": "1.8s ease-in-out infinite", "purpose": "Hero arrow bob (translateY 0 -> 0.35rem). Disabled under prefers-reduced-motion." },
+      { "name": "icon-stroke", "value": "0.35s easeInOut, delay 0.05s", "purpose": "Single stroke path draws on icon hover or parent-card hover via motion/react LazyMotion; skipped under useReducedMotion." },
+      { "name": "transition-colors", "value": "150ms cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Default hover/focus transition for every link and button. Colors and borders only." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The hero and case-study primary action: Signal Green tint at rest, solid green fill on hover. Route the reader to projects or contact.",
+      "html": "<button class=\"ds-btn-primary\">View Projects</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; border: 1px solid var(--accent, #22c55e); background: color-mix(in srgb, var(--accent, #22c55e) 10%, transparent); color: var(--accent, #22c55e); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; font-weight: 500; line-height: 20px; cursor: pointer; transition: background-color 150ms cubic-bezier(0.4,0,0.2,1), color 150ms cubic-bezier(0.4,0,0.2,1); } .ds-btn-primary:hover { background: var(--accent, #22c55e); color: var(--background, #0a0a0f); } .ds-btn-primary:focus-visible { outline: 2px solid var(--accent, #22c55e); outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "The paired quiet action over the WebGL hero: translucent console black with a backdrop blur; hover shifts only border and text to green.",
+      "html": "<button class=\"ds-btn-secondary\">About Me</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; border: 1px solid var(--border, #27272a); background: color-mix(in srgb, var(--background, #0a0a0f) 40%, transparent); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); color: var(--text, #e4e4e7); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; font-weight: 500; line-height: 20px; cursor: pointer; transition: border-color 150ms cubic-bezier(0.4,0,0.2,1), color 150ms cubic-bezier(0.4,0,0.2,1); } .ds-btn-secondary:hover { border-color: var(--accent, #22c55e); color: var(--accent, #22c55e); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--accent, #22c55e); outline-offset: 2px; }"
+    },
+    {
+      "name": "Compact Action",
+      "kind": "button",
+      "refersTo": "action-compact",
+      "description": "The in-card link to a case study. Same treatment as the primary button at 4px radius and smaller padding.",
+      "html": "<a class=\"ds-action-compact\" href=\"#\">Read case study</a>",
+      "css": ".ds-action-compact { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--accent, #22c55e); background: color-mix(in srgb, var(--accent, #22c55e) 10%, transparent); color: var(--accent, #22c55e); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; line-height: 20px; text-decoration: none; cursor: pointer; transition: background-color 150ms cubic-bezier(0.4,0,0.2,1), color 150ms cubic-bezier(0.4,0,0.2,1); } .ds-action-compact:hover { background: var(--accent, #22c55e); color: var(--background, #0a0a0f); } .ds-action-compact:focus-visible { outline: 2px solid var(--accent, #22c55e); outline-offset: 2px; }"
+    },
+    {
+      "name": "Meta Pill",
+      "kind": "chip",
+      "refersTo": "pill-meta",
+      "description": "Case-study meta as data: internship, team project, production, duration, platform.",
+      "html": "<ul class=\"ds-pill-row\"><li class=\"ds-pill\">Internship</li><li class=\"ds-pill\">Team project</li><li class=\"ds-pill\">Production</li></ul>",
+      "css": ".ds-pill-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; padding: 0; list-style: none; } .ds-pill { padding: 6px 12px; border-radius: 9999px; border: 1px solid var(--border, #27272a); background: var(--card, #18181b); color: var(--accent, #22c55e); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; line-height: 20px; white-space: nowrap; }"
+    },
+    {
+      "name": "Skill Chip",
+      "kind": "chip",
+      "refersTo": "chip-skill",
+      "description": "Tool names in the skills grid. Borderless, console-black fill, green on hover — the only chip that changes text color.",
+      "html": "<div class=\"ds-chip-row\"><span class=\"ds-chip\">Proxmox</span><span class=\"ds-chip\">OpenTofu</span><span class=\"ds-chip\">Ansible</span></div>",
+      "css": ".ds-chip-row { display: flex; flex-wrap: wrap; gap: 12px; } .ds-chip { padding: 6px 16px; border-radius: 9999px; background: var(--background, #0a0a0f); color: var(--text, #e4e4e7); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 16px; line-height: 24px; transition: color 150ms cubic-bezier(0.4,0,0.2,1); } .ds-chip:hover { color: var(--accent, #22c55e); }"
+    },
+    {
+      "name": "Panel Card",
+      "kind": "card",
+      "refersTo": "card-panel",
+      "description": "The base surface: hairline border, panel graphite fill, 8px radius, and the 1% radial accent sheen on top.",
+      "html": "<section class=\"ds-card\"><div class=\"ds-card-sheen\"></div><h3 class=\"ds-card-title\">~/approach</h3><p class=\"ds-card-body\">Breaks complex problems into testable, documented steps.</p></section>",
+      "css": ".ds-card { position: relative; overflow: hidden; padding: 24px; border-radius: 8px; border: 1px solid var(--border, #27272a); background: var(--card, #18181b); color: var(--text, #e4e4e7); } .ds-card-sheen { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at top, var(--accent, #22c55e) 0%, transparent 70%); opacity: 0.01; } .ds-card-title { margin: 0 0 16px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; font-weight: 600; line-height: 28px; color: var(--accent, #22c55e); } .ds-card-body { margin: 0; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 26px; color: var(--text, #e4e4e7); }"
+    },
+    {
+      "name": "Accent Callout",
+      "kind": "card",
+      "refersTo": "card-callout",
+      "description": "Reserved for impact, lessons, and retention notes: green border at 60% alpha on a 10% tint.",
+      "html": "<section class=\"ds-callout\"><h3 class=\"ds-callout-title\">Impact</h3><p class=\"ds-callout-body\">A shared inventory platform across four departments, delivered, documented, and handed off in seven weeks.</p></section>",
+      "css": ".ds-callout { padding: 24px; border-radius: 8px; border: 1px solid color-mix(in srgb, var(--accent, #22c55e) 60%, transparent); background: color-mix(in srgb, var(--accent, #22c55e) 10%, transparent); color: var(--text, #e4e4e7); } .ds-callout-title { margin: 0 0 12px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; font-weight: 600; line-height: 28px; color: var(--text, #e4e4e7); } .ds-callout-body { margin: 0; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 26px; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "card-panel",
+      "description": "The featured work unit: image stage, green mono title, status note, description, tech tags, and links. Border shifts to green on hover — the card's only state change.",
+      "html": "<article class=\"ds-project\"><div class=\"ds-project-stage\"><div class=\"ds-project-shot\">screenshot</div></div><div class=\"ds-project-body\"><div class=\"ds-project-head\"><h3 class=\"ds-project-title\">DawsAsset</h3><span class=\"ds-project-type\">Team</span></div><p class=\"ds-project-note\">Deployed to production at Dawson College.</p><p class=\"ds-project-desc\">Production asset-management platform delivered during a seven-week software engineering internship at Dawson College.</p><ul class=\"ds-project-tags\"><li class=\"ds-tag\">Python</li><li class=\"ds-tag\">Odoo</li><li class=\"ds-tag\">PostgreSQL</li></ul></div></article>",
+      "css": ".ds-project { overflow: hidden; display: flex; flex-direction: column; border-radius: 8px; border: 1px solid var(--border, #27272a); background: var(--card, #18181b); transition: border-color 150ms cubic-bezier(0.4,0,0.2,1); } .ds-project:hover { border-color: color-mix(in srgb, var(--accent, #22c55e) 50%, transparent); } .ds-project-stage { height: 180px; overflow: hidden; } .ds-project-shot { display: flex; align-items: center; justify-content: center; height: 100%; border-bottom: 1px solid var(--border, #27272a); background: var(--background, #0a0a0f); color: var(--accent, #22c55e); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; } .ds-project-body { flex: 1; display: flex; flex-direction: column; padding: 24px; } .ds-project-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; } .ds-project-title { margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; font-weight: 600; line-height: 28px; color: var(--accent, #22c55e); } .ds-project-type { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text, #e4e4e7); } .ds-project-note { margin: 12px 0 8px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: color-mix(in srgb, var(--accent, #22c55e) 80%, transparent); } .ds-project-desc { flex: 1; margin: 0 0 16px; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 26px; color: var(--text, #e4e4e7); } .ds-project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; } .ds-tag { padding: 2px 8px; border: 1px solid var(--border, #27272a); border-radius: 4px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: var(--text, #e4e4e7); }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "nav-bar",
+      "description": "Fixed translucent bar over the page, 80px tall, bottom hairline, mono wordmark, green-on-hover links, and a green-tinted mail button.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-mark\">talonlikeaclaw</span><div class=\"ds-nav-links\"><a class=\"ds-nav-link\" href=\"#\">Projects</a><a class=\"ds-nav-link\" href=\"#\">Experience</a><a class=\"ds-nav-link\" href=\"#\">About</a><button class=\"ds-nav-cta\" aria-label=\"Contact me\">&#9993;</button></div></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; height: 80px; padding: 0 32px; border-bottom: 1px solid var(--border, #27272a); background: color-mix(in srgb, var(--background, #0a0a0f) 80%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: var(--text, #e4e4e7); } .ds-nav-mark { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; font-weight: 700; } .ds-nav-links { display: flex; align-items: center; gap: 24px; } .ds-nav-link { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 16px; color: var(--text, #e4e4e7); text-decoration: none; transition: color 150ms cubic-bezier(0.4,0,0.2,1); } .ds-nav-link:hover { color: var(--accent, #22c55e); } .ds-nav-link:focus-visible { outline: 2px solid var(--accent, #22c55e); outline-offset: 2px; } .ds-nav-cta { padding: 8px; border-radius: 8px; border: 1px solid var(--accent, #22c55e); background: color-mix(in srgb, var(--accent, #22c55e) 10%, transparent); color: var(--accent, #22c55e); font-size: 16px; line-height: 18px; cursor: pointer; transition: background-color 150ms cubic-bezier(0.4,0,0.2,1), color 150ms cubic-bezier(0.4,0,0.2,1); } .ds-nav-cta:hover { background: var(--accent, #22c55e); color: var(--background, #0a0a0f); }"
+    },
+    {
+      "name": "Inline Code",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Monospace token for a real value — a module name, a path, an endpoint. Never decorative.",
+      "html": "<p class=\"ds-code-body\">Traced the resets to the <code class=\"ds-code\">sp5100_tco</code> AMD watchdog kernel module.</p>",
+      "css": ".ds-code-body { margin: 0; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 26px; color: var(--text, #e4e4e7); } .ds-code { padding: 2px 4px; border-radius: 4px; background: var(--card, #18181b); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.9em; color: var(--text, #e4e4e7); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Operations Console",
+    "overview": "The site is built to read like a well-run control surface rather than a brochure. Every fact about Talon's work — a role, a date, a stack, a deployment target, a platform still running in production — appears as data on a dark panel, separated from its neighbours by a 1px hairline, and marked with exactly one status color. Nothing floats, nothing glows, and nothing asks to be admired. The visitor reads a system that is already working, and the reading is the pitch. Density is high but never crowded: sections step on a fixed 80px rhythm, panels carry 24px of internal padding, and the page holds exactly two content widths. Hierarchy is carried by family, size, and weight — not by dimming. Prose runs in Inter; everything the tool would say (headings, navigation, labels, buttons, captions, values, code, even section subtitles) runs in JetBrains Mono. Depth is a line and a tonal step, never a shadow. Motion is close to absent by design: no entrance choreography, no parallax on content, no hover lift. What exists is functional — a scroll cue that bobs, an icon whose stroke draws itself on hover, and the WebGL terminal behind the hero.",
+    "keyCharacteristics": [
+      "Hairline-delimited dark panels on a near-black field; zero box-shadows in flow.",
+      "One signal color (Signal Green) for status, action, and inline emphasis — never for large surfaces.",
+      "JetBrains Mono as the machine voice, Inter only for prose paragraphs.",
+      "Two content widths, one 80px vertical step, 8px radius almost everywhere.",
+      "Hover and focus are color and line events; nothing moves, scales, or lifts.",
+      "Confirmed feel: tactile and confident, reached today through committed accent fills and hairline shifts rather than motion."
+    ],
+    "rules": [
+      { "name": "The One Signal Rule", "body": "Signal Green is for status, action, and emphasis. A surface may take it at 10% alpha or less; it fills only small interactive elements and their hover states. At most one solid green fill is visible at a time.", "section": "colors" },
+      { "name": "The Emphasis-Is-Color Rule", "body": "Inline <strong> and <b> are Signal Green at 600 weight — that is the system's emphasis mechanism, applied globally in globals.css. Never bold text and leave it chalk.", "section": "colors" },
+      { "name": "The Machine Voice Rule", "body": "JetBrains Mono speaks for the system: headings, navigation, buttons, labels, subtitles, meta, captions, numbers, and code. Inter speaks only for prose paragraphs. Mixing the two inside one element is a defect.", "section": "typography" },
+      { "name": "The No-Dim Rule", "body": "Hierarchy comes from family, size, and weight. Do not create a secondary text tone by lowering opacity or switching to a grey — the system has deliberately lost that dimension.", "section": "typography" },
+      { "name": "The Two-Width Rule", "body": "The page has exactly two content widths — 1024px and the projects' 1152px. A new section invents neither a third width nor its own padding scale.", "section": "layout" },
+      { "name": "The 80px Step Rule", "body": "Sections breathe on an 80px vertical step; only case studies escalate to 112/128px because they are read, not scanned.", "section": "layout" },
+      { "name": "The Hairline-First Rule", "body": "If a surface needs to read as separate from the field, give it a 1px #27272a border and a tonal step. Reach for a shadow only when the element is genuinely above the document.", "section": "elevation" },
+      { "name": "The Blur-Means-Behind Rule", "body": "Backdrop blur marks a translucent plane with moving or scrolling content behind it. It is not a decoration for static cards.", "section": "elevation" },
+      { "name": "The 8px Rule", "body": "Working surfaces are 8px. Pills are full. Diagram and inner sub-cards may take 4px. Nothing takes a bespoke radius.", "section": "shapes" },
+      { "name": "The Pill-For-Data Rule", "body": "Fully round shapes are for short pieces of data — status, tool, tag, step number. Never for buttons, cards, or images.", "section": "shapes" },
+      { "name": "The Color-Event Rule", "body": "Hover and focus change color, border, and outline — never size, position, or shadow. transition-colors/transition-all on a hover that also moves the element is a defect.", "section": "components" }
+    ],
+    "dos": [
+      "Do build every working surface as 8px radius, 1px #27272a border, Panel Graphite #18181b fill, 24px padding — the recipe is the system.",
+      "Do keep JetBrains Mono for anything the system would say and Inter for prose sentences, following the Machine Voice Rule.",
+      "Do tint Signal Green surfaces at ≤10% alpha (#22c55e1a) and reserve the solid fill for the primary action's hover state.",
+      "Do express emphasis with Signal Green at 600 weight, inline, as globals.css already does for <strong>.",
+      "Do use focus-visible:outline-2 outline-accent with an offset of 2 on controls and 4 on inline links; it is uniform across the codebase and must stay that way.",
+      "Do carry structure with hairlines, tonal steps, and divider grids before considering any other device.",
+      "Do keep the page at exactly two content widths and one 80px section step.",
+      "Do respect prefers-reduced-motion in every animation, including custom ones."
+    ],
+    "donts": [
+      "Don't add box-shadows to in-flow surfaces. The rendered system has none; shadows belong to overlays that genuinely float.",
+      "Don't dim body copy to fake hierarchy or reach for grey text — hierarchy is family, size, and weight. The muted token is currently a broken duplicate of #e4e4e7; do not spread it further.",
+      "Don't introduce neon, emoji, sticker badges, gradient text, or decorative fake terminal chrome — the confirmed anti-reference for this world.",
+      "Don't add a second accent color, a second dark hue family, or a third content width.",
+      "Don't use fully round shapes for buttons, cards, or images; pills are for data.",
+      "Don't animate content on entry, on scroll, or on hover beyond the documented scroll cue, icon stroke, and WebGL canvas.",
+      "Don't letter-space or uppercase prose; uppercase tracking is reserved for eyebrows and diagram labels.",
+      "Don't replace the committed headshot with an illustration, silhouette, or generated stand-in."
+    ]
+  }
+}
