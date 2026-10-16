@@ -23,7 +23,7 @@ export default function Experience() {
               <p className="mt-4 leading-relaxed text-muted">{t("description")}</p>
               <a
                 href={`/${locale}/projects/dawsasset/`}
-                className="group mt-4 inline-flex items-center gap-1.5 rounded-md border border-accent bg-accent/10 px-3 py-1.5 font-mono text-sm text-accent transition-all hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                className="group mt-4 inline-flex items-center gap-1.5 rounded-md border border-accent bg-accent/10 px-3 py-1.5 font-mono text-sm text-accent transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
               >
                 <ExternalLinkIcon size={16} />
                 <span>{t("caseStudy")}</span>

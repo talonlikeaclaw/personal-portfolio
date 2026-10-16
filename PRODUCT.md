@@ -46,7 +46,7 @@ The defensible part is not the list of tools: it is that both halves terminate i
 - Content model: project and skill entries are TypeScript arrays in `src/data/`; translatable fields use `LocalizedText` (`{ en, fr }`). All UI copy lives in `messages/{en,fr}.json` under namespaced keys.
 - Assets are committed files under `public/` (headshot, 12 project images, DawsAsset diagrams and platform screenshots, leadership-award image). `cwebp` is the available image converter; the site ships WebP.
 - Fonts self-hosted through `next/font/google`: Inter (body) and JetBrains Mono (headings, nav, code).
-- Runtime third-party dependencies visible to visitors: the About contribution chart is loaded live from `ghchart.rshah.org` (attributed in the footer), and the hero background is WebGL via `ogl`. Both are external to the static export.
+- Runtime third-party dependencies: the hero background is WebGL via `ogl` (ReactBits' FaultyTerminal), icons are `lucide-react` plus two adapted animated icons from Its Hover. No remote image, font, or data source is fetched at runtime — an earlier GitHub contribution chart loaded from `ghchart.rshah.org` was removed from the About section, and its stale footer credit was dropped in polish.
 - No analytics, tag manager, or tracking script of any kind is installed. This is current state, not a documented policy.
 
 **Terminology that must stay consistent:** "Infrastructure & Software Engineer" as the role label; EN and FR strings are the source of truth for all rendered copy, including data-layer text.

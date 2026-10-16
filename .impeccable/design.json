@@ -27,7 +27,14 @@
         "displayName": "Chalk",
         "canonical": "oklch(92.0% 0.004 286.3)",
         "tonalRamp": ["#0b0b0d", "#252527", "#424244", "#616163", "#828285", "#a5a5a7", "#c9c9cc", "#eeeef1"],
-        "note": "--muted resolves to this same value; the secondary text tone is currently missing (known drift)."
+        "note": "Leading text tone: prose, headings, card titles."
+      },
+      "chalk-dim": {
+        "role": "neutral",
+        "displayName": "Chalk Dim",
+        "canonical": "oklch(71.2% 0.0129 286.1)",
+        "tonalRamp": ["#0b0a10", "#24242b", "#414149", "#606068", "#81818a", "#a4a4ad", "#c8c8d1", "#ededf7"],
+        "note": "Supporting text tone (--muted): descriptions, subtitles, list copy, footer, secondary links. Clears AA on every surface; restored in polish after it had collapsed to the Chalk value."
       },
       "signal-green": {
         "role": "primary",
@@ -163,14 +170,15 @@
       { "name": "The One Signal Rule", "body": "Signal Green is for status, action, and emphasis. A surface may take it at 10% alpha or less; it fills only small interactive elements and their hover states. At most one solid green fill is visible at a time.", "section": "colors" },
       { "name": "The Emphasis-Is-Color Rule", "body": "Inline <strong> and <b> are Signal Green at 600 weight — that is the system's emphasis mechanism, applied globally in globals.css. Never bold text and leave it chalk.", "section": "colors" },
       { "name": "The Machine Voice Rule", "body": "JetBrains Mono speaks for the system: headings, navigation, buttons, labels, subtitles, meta, captions, numbers, and code. Inter speaks only for prose paragraphs. Mixing the two inside one element is a defect.", "section": "typography" },
-      { "name": "The No-Dim Rule", "body": "Hierarchy comes from family, size, and weight. Do not create a secondary text tone by lowering opacity or switching to a grey — the system has deliberately lost that dimension.", "section": "typography" },
+      { "name": "The No-Dim Rule", "body": "Hierarchy comes from family, size, and weight first; the Chalk/Graphite pair exists to demote supporting prose, not to fade copy into unreadability. Both tones clear AA on every surface — if a new text tone fails that, it is not a tone, it is a defect.", "section": "typography" },
       { "name": "The Two-Width Rule", "body": "The page has exactly two content widths — 1024px and the projects' 1152px. A new section invents neither a third width nor its own padding scale.", "section": "layout" },
       { "name": "The 80px Step Rule", "body": "Sections breathe on an 80px vertical step; only case studies escalate to 112/128px because they are read, not scanned.", "section": "layout" },
       { "name": "The Hairline-First Rule", "body": "If a surface needs to read as separate from the field, give it a 1px #27272a border and a tonal step. Reach for a shadow only when the element is genuinely above the document.", "section": "elevation" },
       { "name": "The Blur-Means-Behind Rule", "body": "Backdrop blur marks a translucent plane with moving or scrolling content behind it. It is not a decoration for static cards.", "section": "elevation" },
       { "name": "The 8px Rule", "body": "Working surfaces are 8px. Pills are full. Diagram and inner sub-cards may take 4px. Nothing takes a bespoke radius.", "section": "shapes" },
       { "name": "The Pill-For-Data Rule", "body": "Fully round shapes are for short pieces of data — status, tool, tag, step number. Never for buttons, cards, or images.", "section": "shapes" },
-      { "name": "The Color-Event Rule", "body": "Hover and focus change color, border, and outline — never size, position, or shadow. transition-colors/transition-all on a hover that also moves the element is a defect.", "section": "components" }
+      { "name": "The Color-Event Rule", "body": "Hover and focus change color, border, and outline — never size, position, or shadow. Use transition-colors; transition-all is a defect here, because it also animates outline-width and outline-offset, so the focus ring grows in from medium (3px) instead of appearing at its measured 2px with a 2px offset. Every interactive element carries focus-visible:outline-2 focus-visible:outline-accent: offset 2 by default, 4 on case-study back links and the hero scroll cue, [-2px] on the gallery trigger.", "section": "components" },
+      { "name": "The Two-Tone Text Rule", "body": "Chalk leads, Chalk Dim supports. Chalk Dim clears AA on every surface in the palette (7.7:1 on Console Black, 6.9:1 on Panel Graphite, 7.4:1 on the translucent card wash). The token had been collapsed to #e4e4e7 — identical to Chalk — which flattened 32 elements into one tone; polish restored it. Do not let the two values converge again, and never reach for opacity to approximate the second tone.", "section": "colors" }
     ],
     "dos": [
       "Do build every working surface as 8px radius, 1px #27272a border, Panel Graphite #18181b fill, 24px padding — the recipe is the system.",
@@ -184,7 +192,9 @@
     ],
     "donts": [
       "Don't add box-shadows to in-flow surfaces. The rendered system has none; shadows belong to overlays that genuinely float.",
-      "Don't dim body copy to fake hierarchy or reach for grey text — hierarchy is family, size, and weight. The muted token is currently a broken duplicate of #e4e4e7; do not spread it further.",
+      "Don't dim body copy to fake hierarchy, and don't reach for opacity where Chalk Dim exists. The two text tones clear AA on every surface; a third tone that fails that is not a tone.",
+      "Don't use transition-all. It animates the focus ring along with the colors; the system transitions color only.",
+      "Don't ship an interactive text link shorter than 24px. Isolated link rows carry py-1 so their target box clears WCAG 2.2 target size on touch.",
       "Don't introduce neon, emoji, sticker badges, gradient text, or decorative fake terminal chrome — the confirmed anti-reference for this world.",
       "Don't add a second accent color, a second dark hue family, or a third content width.",
       "Don't use fully round shapes for buttons, cards, or images; pills are for data.",

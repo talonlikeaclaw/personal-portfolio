@@ -6,6 +6,7 @@ colors:
   panel-graphite: "#18181b"
   hairline-graphite: "#27272a"
   chalk: "#e4e4e7"
+  chalk-dim: "#a1a1aa"
   signal-green: "#22c55e"
   signal-green-tint: "#22c55e1a"
 typography:
@@ -158,9 +159,10 @@ A single-hue instrument palette: five near-black-to-chalk neutrals on a 285° hu
 - **Console Black** (`#0a0a0f`, oklch(14.7% 0.011 285)): the page field and the base of every glass panel (`bg-background/35`→`/60`), the fill behind skill chips, and the code-block surface.
 - **Panel Graphite** (`#18181b`, oklch(21.0% 0.006 286)): the working surface for every card, diagram, gallery frame, and the navigation's translucent bar at 80%.
 - **Hairline Graphite** (`#27272a`, oklch(27.4% 0.006 286)): the 1px border that separates every surface. It is the system's primary structural device — the thing that replaces shadow.
-- **Chalk** (`#e4e4e7`, oklch(92.0% 0.004 286)): all text, at 400 weight in prose and 600–700 in headings.
+- **Chalk** (`#e4e4e7`, oklch(92.0% 0.004 286)): leading text — prose paragraphs, headings, card titles, and anything that carries the argument.
+- **Chalk Dim** (`#a1a1aa`, oklch(71.2% 0.013 286.1)): supporting text — prose descriptions, section subtitles, list copy, footer text, and secondary links.
 
-**Known drift — the muted tone.** `--muted` exists in `globals.css` and is requested by 32 rendered elements (`text-muted`), but it resolves to `#e4e4e7`, identical to `--text`. This is **not** an intentional collapse; the secondary tone was lost in a contrast fix. Consequences today: no paragraph is visually demoted, and the mono section subtitles sit at full text tone. Treat `#e4e4e7` as the correct reading tone for now, and do not propagate the duplicate token into new work — restoring a genuine secondary value is separate work.
+**The two-tone text rule.** Chalk leads, Chalk Dim supports. Chalk Dim clears AA on every surface in the palette (7.7:1 on Console Black, 6.9:1 on Panel Graphite, 7.4:1 on the translucent card wash). The token had been collapsed to `#e4e4e7` — identical to Chalk — which flattened 32 elements into one tone; polish restored it. Do not let the two values converge again, and never reach for opacity to approximate the second tone.
 
 **The One Signal Rule.** Signal Green is for status, action, and emphasis. A surface may take it at 10% alpha or less; it fills only small interactive elements and their hover states. At most one solid green fill is visible at a time.
 
@@ -189,7 +191,7 @@ Both faces are self-hosted through `next/font/google` with `display: swap`, and 
 
 **The Machine Voice Rule.** JetBrains Mono speaks for the system: headings, navigation, buttons, labels, subtitles, meta, captions, numbers, and code. Inter speaks only for prose paragraphs. Mixing the two inside one element is a defect.
 
-**The No-Dim Rule.** Hierarchy comes from family, size, and weight. Do not create a secondary text tone by lowering opacity or switching to a grey — the system has deliberately lost that dimension (see Colors).
+**The No-Dim Rule.** Hierarchy comes from family, size, and weight first; the Chalk/Graphite pair exists to demote supporting prose, not to fade copy into unreadability. Both tones clear AA on every surface — if a new text tone fails that, it is not a tone, it is a defect.
 
 ## Layout
 
@@ -228,11 +230,11 @@ Allowed going forward: soft shadows on overlays (modals, dropdowns, popovers, li
 
 ## Shapes
 
-Form language is rectilinear and instrument-like, softened only at an 8px radius. A radius census across both sampled pages: **8px (`rounded-lg`) dominates** — cards, panels, buttons, figure frames, diagrams, code blocks, the lightbox panel. `rounded-full` is reserved for data-shaped elements: meta pills, skill chips, and the timeline's numbered nodes. **4px** (`rounded`) appears on diagram nodes, inner sub-cards, and the lightbox close button. **6px** (`rounded-md`) appears once, on the inline case-study link inside the Experience card, and is an outlier rather than a step.
+Form language is rectilinear and instrument-like, softened only at an 8px radius. A radius census across both sampled pages: **8px (`rounded-lg`) dominates** — cards, panels, buttons, figure frames, diagrams, code blocks, the lightbox panel. **4–6px is the inner tier**: diagram nodes and sub-cards, inline code, technology tags, the lightbox close button, and image frames nested inside a card take `rounded` (4px); the two small in-card links and the leadership-award image frame take `rounded-md` (6px). The tier exists so an element inside a card never wears the same corner as the card itself. `rounded-full` is reserved for data-shaped elements: meta pills, skill chips, and the timeline's numbered nodes.
 
 Borders are always 1px, and accent borders are always translucent — `border-accent/50`, `/60`, `/70` — never solid. Filled accent surfaces pair with a matching tint: `border-accent/60 bg-accent/10` for callouts, `border-accent/50 bg-accent/5` for sub-surfaces inside diagrams, `border-accent/50 bg-accent/10 text-accent` for highlighted diagram nodes.
 
-Portraits are circular. About uses a 1px ring at 30% alpha (`border-accent/30`); the hero's portrait carries `border-2 border-accent/1`, a 2px ring at 1% alpha that is visually absent — observed as-is, not replicated in new work.
+Portraits are circular with a Signal Green ring: 2px at 30% alpha on the hero portrait (`border-2 border-accent/30`), 1px at 30% on the About portrait (`border border-accent/30`). The hero ring was previously written at 1% alpha and rendered as nothing; polish restored the intended alpha.
 
 **The 8px Rule.** Working surfaces are 8px. Pills are full. Diagram and inner sub-cards may take 4px. Nothing takes a bespoke radius.
 
@@ -246,7 +248,7 @@ Portraits are circular. About uses a 1px ring at 30% alpha (`border-accent/30`);
 - **Primary:** Signal Green at 10% alpha on Console Black, Signal Green text, Signal Green border, `px-6 py-3` for hero CTAs and `px-4 py-2` for case-study CTAs. Compact variant in the Experience card: `rounded-md px-3 py-1.5`.
 - **Primary Hover:** fills solid — `hover:bg-accent hover:text-black` — so the label flips to Console Black. This is the system's most tactile moment and its strongest signal of "this is the action."
 - **Secondary:** Console Black at 40% over a backdrop blur, Chalk text, Hairline Graphite border; hover shifts only the border and text to Signal Green.
-- **Focus:** `focus-visible:outline-2 focus-visible:outline-accent` with `outline-offset-2` on controls, `-4` on inline links, `-2` on the gallery trigger. Uniform across every interactive element in the codebase.
+- **Focus:** `focus-visible:outline-2 focus-visible:outline-accent` with `outline-offset-2` as the default, `4` on the case-study back links and the hero scroll cue, and `[-2px]` on the gallery trigger, which sits flush inside its frame. 31 of 32 interactive elements carry the ring; the count is uniform enough that any element without one is a defect.
 - **Navigation icon button:** circular-target square button, `border-accent bg-accent/10` with `p-2`, mail icon at 18px.
 
 ### Metadata Pills and Chips
@@ -286,7 +288,7 @@ Inline code: `rounded bg-card px-1 font-mono text-[0.9em] text-text` (the homela
 
 Two functional motions exist. A CSS `scroll-cue` keyframe bobs the hero's arrow on a 1.8s `ease-in-out` loop, disabled under `prefers-reduced-motion`. Icons installed through the `motion/react` `LazyMotion` provider draw a single stroke path (`pathLength: [0,1]`, opacity fade, 0.35s `easeInOut`) when hovered or when their parent card is hovered, and skip entirely under `useReducedMotion`. The hero's WebGL terminal canvas is the only ambient animation, tinted `#338953` at 1.5–3 grid spacing with the mouse reaction disabled. No other component animates — content never fades, slides, or lifts on entry.
 
-**The Color-Event Rule.** Hover and focus change color, border, and outline — never size, position, or shadow. `transition-colors`/`transition-all` on a hover that also moves the element is a defect.
+**The Color-Event Rule.** Hover and focus change color, border, and outline — never size, position, or shadow. Use `transition-colors`; `transition-all` is a defect here, because it also animates `outline-width` and `outline-offset`, so the focus ring grows in from `medium` (3px) instead of appearing at its measured 2px with a 2px offset. Every interactive element carries `focus-visible:outline-2 focus-visible:outline-accent`: offset 2 by default, 4 on case-study back links and the hero scroll cue, `[-2px]` on the gallery trigger.
 
 ## Do's and Don'ts
 
@@ -304,7 +306,9 @@ Two functional motions exist. A CSS `scroll-cue` keyframe bobs the hero's arrow 
 ### Don't:
 
 - **Don't** add box-shadows to in-flow surfaces. The rendered system has none; shadows belong to overlays that genuinely float.
-- **Don't** dim body copy to fake hierarchy or reach for grey text — hierarchy is family, size, and weight. The muted token is currently a broken duplicate of `#e4e4e7`; do not spread it further.
+- **Don't** dim body copy to fake hierarchy, and don't reach for opacity where Chalk Dim exists. The two text tones clear AA on every surface; a third tone that fails that is not a tone.
+- **Don't** use `transition-all`. It animates the focus ring along with the colors; the system transitions color only.
+- **Don't** ship an interactive text link shorter than 24px. Isolated link rows carry `py-1` so their target box clears WCAG 2.2 target size on touch.
 - **Don't** introduce neon, emoji, sticker badges, gradient text, or decorative fake terminal chrome — the confirmed anti-reference for this world.
 - **Don't** add a second accent color, a second dark hue family, or a third content width.
 - **Don't** use fully round shapes for buttons, cards, or images; pills are for data.

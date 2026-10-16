@@ -8,7 +8,6 @@ const attributions = [
   { name: "ReactBits", href: "https://reactbits.dev" },
   { name: "Its Hover", href: "https://itshover.com" },
   { name: "Lucide", href: "https://lucide.dev" },
-  { name: "ghchart", href: "https://ghchart.rshah.org" },
 ];
 
 export default function Footer() {
@@ -28,7 +27,7 @@ export default function Footer() {
                   href={attr.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                  className="inline-block py-1 text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                 >
                   {attr.name}
                 </a>

@@ -53,7 +53,7 @@ export default function Hero() {
 
       <Container>
         <div className="-translate-y-4 text-center lg:-translate-y-8">
-          <div className="mx-auto mb-6 flex h-36 w-36 items-center justify-center overflow-hidden rounded-full border-2 border-accent/1 sm:h-44 sm:w-44">
+          <div className="mx-auto mb-6 flex h-36 w-36 items-center justify-center overflow-hidden rounded-full border-2 border-accent/30 sm:h-44 sm:w-44">
             <Image
               src="/headshot.webp"
               alt={t("photoAlt")}
@@ -76,19 +76,19 @@ export default function Hero() {
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
               href="#projects"
-              className="rounded-lg border border-accent bg-accent/10 px-6 py-3 font-mono font-medium text-accent transition-all hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              className="rounded-lg border border-accent bg-accent/10 px-6 py-3 font-mono font-medium text-accent transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               {t("ctaProjects")}
             </a>
             <a
               href="#about"
-              className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               {t("ctaAbout")}
             </a>
             <a
               href="#contact"
-              className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-all hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               {t("ctaContact")}
             </a>

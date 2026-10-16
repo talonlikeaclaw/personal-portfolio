@@ -14,7 +14,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const t = useTranslations("ui");
 
   return (
-    <div className="group relative overflow-hidden flex h-full flex-col rounded-lg border border-border bg-card transition-all hover:border-accent/50">
+    <div className="group relative overflow-hidden flex h-full flex-col rounded-lg border border-border bg-card transition-colors hover:border-accent/50">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
 
       {project.image && (
@@ -46,7 +46,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               {t("ongoing")}
             </span>
           )}
-          <span className="rounded-full bg-background px-2 py-0.5 font-mono text-s text-accent">
+          <span className="rounded-full bg-background px-2 py-0.5 font-mono text-xs text-accent">
             {project.type === "team" ? t("typeTeam") : t("typeSolo")}
           </span>
         </div>
@@ -73,7 +73,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.caseStudyPath && (
             <a
               href={`/${locale}${project.caseStudyPath}`}
-              className="group inline-flex items-center gap-1.5 rounded-md border border-accent bg-accent/10 px-3 py-1.5 font-mono text-sm text-accent transition-all hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              className="group inline-flex items-center gap-1.5 rounded-md border border-accent bg-accent/10 px-3 py-1.5 font-mono text-sm text-accent transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               <ExternalLinkIcon size={16} />
               <span>{t("caseStudy")}</span>
@@ -84,7 +84,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+            className="flex items-center gap-1 py-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
           >
             <GithubIcon size={16} />
             <span>{t("code")}</span>
@@ -95,7 +95,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+            className="flex items-center gap-1 py-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
           >
             <ExternalLinkIcon size={16} />
             <span>{t("liveDemo")}</span>

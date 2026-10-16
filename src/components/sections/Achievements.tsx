@@ -53,7 +53,7 @@ export default function Achievements() {
                     href="https://github.com/talonlikeaclaw/dawshacks-2026"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                    className="flex items-center gap-1 py-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                   >
                     <GithubIcon size={16} />
                     <span>{tUi("code")}</span>
@@ -62,7 +62,7 @@ export default function Achievements() {
                     href="https://devpost.com/software/reachout-ai"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                    className="flex items-center gap-1 py-1 font-mono text-sm text-muted hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                   >
                     <ExternalLinkIcon size={16} />
                     <span>{t("devpost")}</span>
@@ -85,7 +85,7 @@ export default function Achievements() {
                   href="https://www.dawsoncollege.qc.ca/news/computer-science-technology-celebrates-its-2026-graduating-class/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-1 font-mono text-sm text-accent transition-colors hover:text-text focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                  className="mt-3 inline-flex items-center gap-1 py-1 font-mono text-sm text-accent transition-colors hover:text-text focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                 >
                   <ExternalLinkIcon size={16} />
                   <span>{t("leadershipArticle")}</span>

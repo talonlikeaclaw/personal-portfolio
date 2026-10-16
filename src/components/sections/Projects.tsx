@@ -31,7 +31,7 @@ export default function Projects() {
           <>
             <button
               onClick={() => setShowMore(!showMore)}
-              className="mt-8 mx-auto flex items-center gap-2 rounded-lg border border-border bg-card/50 px-4 py-2 font-mono text-sm text-muted transition-colors hover:border-accent hover:text-accent"
+              className="mt-8 mx-auto flex items-center gap-2 rounded-lg border border-border bg-card/50 px-4 py-2 font-mono text-sm text-muted transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               {showMore ? (
                 <>
