@@ -11,8 +11,12 @@ import { projects } from "@/data/projects";
 export default function Projects() {
   const [showMore, setShowMore] = useState(false);
   const t = useTranslations("projects");
-  const featured = projects.filter((p) => p.featured);
-  const other = projects.filter((p) => !p.featured);
+  const primary = projects.filter(
+    (p) => p.delivery !== "local" && p.delivery !== "in-progress",
+  );
+  const rest = projects.filter(
+    (p) => p.delivery === "local" || p.delivery === "in-progress",
+  );
 
   return (
     <section id="projects" className="py-20">
@@ -22,12 +26,12 @@ export default function Projects() {
           subtitle={t("subtitle")}
         />
         <div className="grid gap-6 md:grid-cols-2">
-          {featured.map((project, index) => (
+          {primary.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
         </div>
 
-        {other.length > 0 && (
+        {rest.length > 0 && (
           <>
             <button
               onClick={() => setShowMore(!showMore)}
@@ -40,7 +44,7 @@ export default function Projects() {
                 </>
               ) : (
                 <>
-                  {t("showMore", { count: other.length })}
+                  {t("showMore", { count: rest.length })}
                   <ChevronDown size={16} />
                 </>
               )}
@@ -48,7 +52,7 @@ export default function Projects() {
 
             {showMore && (
               <div className="mt-6 grid gap-6 md:grid-cols-2">
-                {other.map((project, index) => (
+                {rest.map((project, index) => (
                   <ProjectCard key={index} project={project} />
                 ))}
               </div>

@@ -47,6 +47,7 @@ src/
 │       ├── SectionHeading.tsx
 │       ├── SkillCategory.tsx
 │       ├── ProjectCard.tsx
+│       ├── CaseStudyNav.tsx    # Section rail on case studies (sticky at lg)
 │       └── FaultyTerminal.tsx  # WebGL terminal background (from ReactBits)
 ├── data/
 │   ├── projects.ts         # Project entries (title/description/note are LocalizedText)
@@ -61,7 +62,7 @@ messages/                   # Translation files (root level)
 ### Data Layer
 
 Content is stored as TypeScript arrays in `src/data/`. Translatable text fields (`title`, `description`, `note`, category `name`) use the `LocalizedText` type (`{ en: string; fr: string }`); components read `value[locale]` via `useLocale()`.
-- `projects.ts`: Project entries with title, description, technologies, type (team/solo), status, featured flag, URLs. Featured projects display with a green left border accent.
+- `projects.ts`: Project entries with title, description, technologies, type (team/solo), `delivery`, URLs. `delivery` is the sort key and the card's eyebrow: `production` | `ongoing` | `live` | `live-demo` | `in-progress` | `local`. The array is ordered by delivery reality (production first, local coursework last); the first four non-local, non-in-progress entries render as the primary grid and the rest sit behind "Show N more". There is no runtime sort — keep the array in order when adding a project.
 - `skills.ts`: Skill categories with name and skills array. Balance item counts visually — longer skill names need fewer items per category for consistent spacing.
 
 To add/edit projects or skills, modify these data files directly (provide both `en` and `fr` for translatable fields).
@@ -98,7 +99,7 @@ Uses Tailwind CSS v4 with custom theme colors:
 
 This portfolio is optimized for a ~55-second hiring manager scan. Key decisions:
 - **Hero signals low risk**: role, focus area, availability, and soft skills (fast learner, team player, AI-literate) all visible above the fold
-- **Featured projects**: 4 projects marked `featured: true` render first with a green left border; remaining projects follow in the same card format without the accent
+- **Projects are ordered by delivery reality**: production and live work render first with a `PRODUCTION · TEAM`-style eyebrow; local coursework follows behind "Show N more". The hero leads with the shipped result (DawsAsset, in production at Dawson College) as a single primary action instead of three equal buttons.
 - **Section headings are descriptive**, not generic (e.g. "What I've Built" not "Projects")
 - **About section is concise**: first paragraph establishes developer identity and strengths; second paragraph is kept short with personality-defining hobbies only
 - **Contact section creates urgency**: specific internship availability window (Spring 2026)

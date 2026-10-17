@@ -32,7 +32,6 @@
     "ctaProjects": "View Projects",
     "ctaContact": "Contact Me",
     "scrollCue": "Explore my work",
-    "scrollCueAria": "Explore featured projects",
     "photoAlt": "Talon Dunbar"
   },
   "about": {
@@ -109,14 +108,21 @@
     "builtWith": "Built with"
   },
   "ui": {
-    "inProgress": "In Progress",
-    "ongoing": "Ongoing",
     "code": "Code",
     "liveDemo": "Live Demo",
     "screenshotAlt": "{title} screenshot",
     "typeTeam": "Team",
     "typeSolo": "Solo",
-    "caseStudy": "Read case study"
+    "caseStudy": "Read case study",
+    "sectionsAria": "Case study sections",
+    "delivery": {
+      "production": "Production",
+      "ongoing": "Ongoing",
+      "live": "Live service",
+      "live-demo": "Live Demo",
+      "in-progress": "In Progress",
+      "local": "Local development"
+    }
   },
   "dawsassetCaseStudy": {
     "metadata": {

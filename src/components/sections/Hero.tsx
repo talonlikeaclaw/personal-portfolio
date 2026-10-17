@@ -1,14 +1,19 @@
 "use client";
 
-import { useState, useEffect, useMemo, useRef } from "react";
-import { useTranslations } from "next-intl";
+import { useState, useEffect, useMemo, useRef, type ReactNode } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 import Container from "@/components/ui/Container";
 import FaultyTerminal from "@/components/ui/FaultyTerminal";
+import ExternalLinkIcon from "@/components/icons/ExternalLinkIcon";
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const caseStudy = useTranslations("dawsassetCaseStudy");
+  const ui = useTranslations("ui");
+  const locale = useLocale();
+  const strong = (chunks: ReactNode) => <strong>{chunks}</strong>;
   const sectionRef = useRef<HTMLElement | null>(null);
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" ? window.innerWidth < 768 : false,
@@ -69,7 +74,7 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex min-h-screen items-center pt-12"
+      className="relative flex min-h-screen items-center pt-24 pb-8"
     >
       {/* Background - offset for navbar */}
       <div className="absolute inset-0 -top-20 -z-10">
@@ -95,14 +100,14 @@ export default function Hero() {
       </div>
 
       <Container>
-        <div className="-translate-y-4 text-center lg:-translate-y-8">
-          <div className="mx-auto mb-6 flex h-36 w-36 items-center justify-center overflow-hidden rounded-full border-2 border-accent/30 sm:h-44 sm:w-44">
+        <div className="text-center">
+          <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border-2 border-accent/30 sm:mb-6 sm:h-32 sm:w-32">
             <Image
               src="/headshot.webp"
               alt={t("photoAlt")}
-              width={176}
-              height={176}
-              sizes="(max-width: 640px) 144px, 176px"
+              width={128}
+              height={128}
+              sizes="(max-width: 640px) 80px, 128px"
               className="h-full w-full object-cover"
               priority
             />
@@ -110,49 +115,69 @@ export default function Hero() {
           <h1 className="font-mono text-3xl font-bold tracking-tight text-text sm:text-6xl">
             {t("name")}
           </h1>
-          <p className="mt-4 font-mono text-lg text-accent font-semibold sm:text-2xl">
+          <p className="mt-2 font-mono text-lg text-accent font-semibold sm:text-2xl">
             <span className="sm:inline block">{t("role")}</span>
           </p>
           <p className="mt-2 font-mono text-sm text-muted sm:text-base">
             {t("meta")}
           </p>
-          <p className="mt-4 max-w-xl mx-auto text-sm text-muted sm:text-base">
+          <p className="mx-auto mt-3 max-w-xl text-sm text-muted sm:text-base">
             {t("tagline")}
           </p>
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
+
+          <div className="mx-auto mt-6 max-w-xl rounded-lg border border-accent/60 bg-accent/10 p-4 text-left sm:p-6">
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+              {caseStudy("meta.production")}
+            </p>
+            <p className="mt-1.5 font-mono text-xl font-semibold text-text">
+              {caseStudy("title")}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-muted sm:text-base">
+              {caseStudy.rich("subtitle", { strong })}
+            </p>
+            <a
+              href={`/${locale}/projects/dawsasset/`}
+              className="mt-3 inline-flex items-center gap-2 rounded-lg border border-accent px-4 py-2 font-mono text-sm text-accent transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+            >
+              <ExternalLinkIcon size={16} />
+              <span>{ui("caseStudy")}</span>
+            </a>
+          </div>
+
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-1 font-mono text-sm">
             <a
               href="#projects"
-              className="rounded-lg border border-accent bg-accent/10 px-6 py-3 font-mono font-medium text-accent transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              className="py-1 text-muted transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               {t("ctaProjects")}
             </a>
             <a
               href="#about"
-              className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              className="py-1 text-muted transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               {t("ctaAbout")}
             </a>
             <a
               href="#contact"
-              className="rounded-lg border border-border bg-background/40 backdrop-blur-sm px-6 py-3 font-mono font-medium text-text transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              className="py-1 text-muted transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
               {t("ctaContact")}
             </a>
           </div>
+
+          <a
+            href="#projects"
+            className="group mt-6 flex flex-col items-center gap-1 font-mono text-xs text-muted transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4"
+          >
+            <span>{t("scrollCue")}</span>
+            <ArrowDown
+              size={16}
+              aria-hidden="true"
+              className="scroll-cue text-accent"
+            />
+          </a>
         </div>
       </Container>
-      <a
-        href="#projects"
-        aria-label={t("scrollCueAria")}
-        className="group absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-1 font-mono text-xs text-muted opacity-55 transition-opacity hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4"
-      >
-        <span>{t("scrollCue")}</span>
-        <ArrowDown
-          size={16}
-          aria-hidden="true"
-          className="scroll-cue text-accent"
-        />
-      </a>
     </section>
   );
 }

@@ -5,8 +5,7 @@ export interface Project {
   description: LocalizedText;
   technologies: string[];
   type: "team" | "solo";
-  status?: "in-progress" | "ongoing" | "completed";
-  featured?: boolean;
+  delivery: "production" | "ongoing" | "live" | "live-demo" | "in-progress" | "local";
   image?: string;
   note?: LocalizedText;
   liveUrl?: string;
@@ -23,8 +22,7 @@ export const projects: Project[] = [
     },
     technologies: ["Python", "Odoo", "PostgreSQL", "Docker"],
     type: "team",
-    status: "completed",
-    featured: true,
+    delivery: "production",
     image: "dawsasset/student-kiosk.webp",
     note: {
       en: "Deployed to production at Dawson College.",
@@ -33,6 +31,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/talonlikeaclaw/dawsasset",
     caseStudyPath: "/projects/dawsasset/",
   },
+
   {
     title: { en: "Homelab Infrastructure", fr: "Infrastructure Homelab" },
     description: {
@@ -41,8 +40,7 @@ export const projects: Project[] = [
     },
     technologies: ["Proxmox", "TrueNAS", "Docker", "Ansible", "OpenTofu"],
     type: "solo",
-    status: "ongoing",
-    featured: true,
+    delivery: "ongoing",
     image: "homelab.webp",
     note: {
       en: "Infrastructure as Code.",
@@ -50,6 +48,7 @@ export const projects: Project[] = [
     },
     caseStudyPath: "/projects/homelab/",
   },
+
   {
     title: { en: "The Coral Reef", fr: "The Coral Reef" },
     description: {
@@ -64,8 +63,7 @@ export const projects: Project[] = [
       "MongoDB",
     ],
     type: "team",
-    status: "completed",
-    featured: true,
+    delivery: "live",
     image: "/coralreef.webp",
     note: {
       en: "Team capstone project.",
@@ -75,6 +73,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/talonlikeaclaw/the-coral-reef",
     caseStudyPath: "/projects/coral-reef/",
   },
+
   {
     title: { en: "Canadian Immigration Viz", fr: "Canadian Immigration Viz" },
     description: {
@@ -83,7 +82,7 @@ export const projects: Project[] = [
     },
     technologies: ["React", "Vite", "Express.js", "Mocha", "Chai"],
     type: "team",
-    status: "completed",
+    delivery: "live-demo",
     image: "/immigrationviz.webp",
     note: {
       en: "Data sourced from Statistics Canada census records.",
@@ -93,58 +92,7 @@ export const projects: Project[] = [
     githubUrl:
       "https://github.com/talonlikeaclaw/canadian-immigration-visualization",
   },
-  {
-    title: { en: "TrimTracker", fr: "TrimTracker" },
-    description: {
-      en: "A salon booking and management system with appointment scheduling, client management, and service tracking. Containerized for easy deployment.",
-      fr: "Système de réservation et de gestion pour salon avec planification de rendez-vous, gestion de clientèle et suivi des services. Conteneurisé pour un déploiement facile.",
-    },
-    technologies: ["Flask", "PostgreSQL", "Docker", "Jinja"],
-    type: "team",
-    status: "completed",
-    image: "/trimtracker.webp",
-    note: {
-      en: "Built for a server-side programming course.",
-      fr: "Réalisé pour un cours de programmation côté serveur.",
-    },
-    githubUrl: "https://github.com/talonlikeaclaw/trim-tracker",
-  },
-  {
-    title: { en: "Dawson Dial", fr: "Dawson Dial" },
-    description: {
-      en: "Event planning platform for Dawson College enabling scheduling of classes, office hours, and conferences. Built for professors and students to manage academic events and resources.",
-      fr: "Plateforme de planification d'événements pour le Cégep Dawson permettant la planification de cours, de permanences et de conférences. Conçue pour que les professeurs et les étudiants gèrent les événements et ressources académiques.",
-    },
-    technologies: ["C#", "Avalonia", "EF Core", "LINQ", "MSTest", "Moq"],
-    type: "team",
-    status: "completed",
-    image: "/dawsondial.webp",
-    githubUrl: "https://github.com/talonlikeaclaw/dawson-dial",
-  },
-  {
-    title: { en: "Virtual Used Car Dealership", fr: "Virtual Used Car Dealership" },
-    description: {
-      en: "Console-based dealership management simulation system with vehicle browsing, advanced filtering/sorting, shopping cart, and transaction tracking. Supports both PostgreSQL and CSV persistence.",
-      fr: "Système de simulation de gestion de concessionnaire en console avec navigation de véhicules, filtrage et tri avancés, panier d'achat et suivi des transactions. Prend en charge la persistance PostgreSQL et CSV.",
-    },
-    technologies: ["Java", "PostgreSQL", "Maven", "JUnit"],
-    type: "team",
-    status: "completed",
-    image: "/dealership.webp",
-    githubUrl: "https://github.com/talonlikeaclaw/virtual-used-car-dealership",
-  },
-  {
-    title: { en: "Dawscorp Task Manager", fr: "Dawscorp Task Manager" },
-    description: {
-      en: "A Jira-like task management system built for team collaboration. Features include project boards, task assignment, progress tracking, and team management.",
-      fr: "Système de gestion de tâches de type Jira conçu pour la collaboration d'équipe. Comprend des tableaux de projet, l'assignation de tâches, le suivi de progression et la gestion d'équipe.",
-    },
-    technologies: ["Java", "PostgreSQL", "PL/pgSQL", "JDBC", "JUnit"],
-    type: "team",
-    status: "completed",
-    image: "/dawscorp.webp",
-    githubUrl: "https://github.com/talonlikeaclaw/dawscorp-task-manager",
-  },
+
   {
     title: { en: "Godash", fr: "Godash" },
     description: {
@@ -153,8 +101,7 @@ export const projects: Project[] = [
     },
     technologies: ["Go", "Bubble Tea", "Proxmox API"],
     type: "solo",
-    status: "in-progress",
-    featured: true,
+    delivery: "in-progress",
     image: "/godash.webp",
     note: {
       en: "Core monitoring features complete. Active development.",
@@ -162,6 +109,63 @@ export const projects: Project[] = [
     },
     githubUrl: "https://github.com/talonlikeaclaw/godash",
   },
+
+  {
+    title: { en: "TrimTracker", fr: "TrimTracker" },
+    description: {
+      en: "A salon booking and management system with appointment scheduling, client management, and service tracking. Containerized for easy deployment.",
+      fr: "Système de réservation et de gestion pour salon avec planification de rendez-vous, gestion de clientèle et suivi des services. Conteneurisé pour un déploiement facile.",
+    },
+    technologies: ["Flask", "PostgreSQL", "Docker", "Jinja"],
+    type: "team",
+    delivery: "local",
+    image: "/trimtracker.webp",
+    note: {
+      en: "Built for a server-side programming course.",
+      fr: "Réalisé pour un cours de programmation côté serveur.",
+    },
+    githubUrl: "https://github.com/talonlikeaclaw/trim-tracker",
+  },
+
+  {
+    title: { en: "Dawscorp Task Manager", fr: "Dawscorp Task Manager" },
+    description: {
+      en: "A Jira-like task management system built for team collaboration. Features include project boards, task assignment, progress tracking, and team management.",
+      fr: "Système de gestion de tâches de type Jira conçu pour la collaboration d'équipe. Comprend des tableaux de projet, l'assignation de tâches, le suivi de progression et la gestion d'équipe.",
+    },
+    technologies: ["Java", "PostgreSQL", "PL/pgSQL", "JDBC", "JUnit"],
+    type: "team",
+    delivery: "local",
+    image: "/dawscorp.webp",
+    githubUrl: "https://github.com/talonlikeaclaw/dawscorp-task-manager",
+  },
+
+  {
+    title: { en: "Dawson Dial", fr: "Dawson Dial" },
+    description: {
+      en: "Event planning platform for Dawson College enabling scheduling of classes, office hours, and conferences. Built for professors and students to manage academic events and resources.",
+      fr: "Plateforme de planification d'événements pour le Cégep Dawson permettant la planification de cours, de permanences et de conférences. Conçue pour que les professeurs et les étudiants gèrent les événements et ressources académiques.",
+    },
+    technologies: ["C#", "Avalonia", "EF Core", "LINQ", "MSTest", "Moq"],
+    type: "team",
+    delivery: "local",
+    image: "/dawsondial.webp",
+    githubUrl: "https://github.com/talonlikeaclaw/dawson-dial",
+  },
+
+  {
+    title: { en: "Virtual Used Car Dealership", fr: "Virtual Used Car Dealership" },
+    description: {
+      en: "Console-based dealership management simulation system with vehicle browsing, advanced filtering/sorting, shopping cart, and transaction tracking. Supports both PostgreSQL and CSV persistence.",
+      fr: "Système de simulation de gestion de concessionnaire en console avec navigation de véhicules, filtrage et tri avancés, panier d'achat et suivi des transactions. Prend en charge la persistance PostgreSQL et CSV.",
+    },
+    technologies: ["Java", "PostgreSQL", "Maven", "JUnit"],
+    type: "team",
+    delivery: "local",
+    image: "/dealership.webp",
+    githubUrl: "https://github.com/talonlikeaclaw/virtual-used-car-dealership",
+  },
+
   {
     title: { en: "PicnicGo", fr: "PicnicGo" },
     description: {
@@ -170,10 +174,11 @@ export const projects: Project[] = [
     },
     technologies: ["Java", "ANSI", "CLI"],
     type: "solo",
-    status: "completed",
+    delivery: "local",
     image: "/picnicgo.webp",
     githubUrl: "https://github.com/talonlikeaclaw/picnic-go",
   },
+
   {
     title: { en: "Thermostat Driver", fr: "Thermostat Driver" },
     description: {
@@ -182,10 +187,11 @@ export const projects: Project[] = [
     },
     technologies: ["Python", "I2C", "Raspberry Pi", "ADS7830"],
     type: "solo",
-    status: "completed",
+    delivery: "local",
     image: "/thermostat.webp",
     githubUrl: "https://github.com/talonlikeaclaw/thermostat-driver",
   },
+
   {
     title: { en: "Dotfiles", fr: "Dotfiles" },
     description: {
@@ -194,7 +200,7 @@ export const projects: Project[] = [
     },
     technologies: ["Zsh", "JSON", "Lua", "TOML"],
     type: "solo",
-    status: "completed",
+    delivery: "local",
     image: "/dotfiles.webp",
     githubUrl: "https://github.com/talonlikeaclaw/dotfiles",
   },

@@ -32,7 +32,6 @@
     "ctaProjects": "Voir les projets",
     "ctaContact": "Me contacter",
     "scrollCue": "Découvrir mon travail",
-    "scrollCueAria": "Découvrir les projets vedettes",
     "photoAlt": "Talon Dunbar"
   },
   "about": {
@@ -109,14 +108,21 @@
     "builtWith": "Conçu avec"
   },
   "ui": {
-    "inProgress": "En cours",
-    "ongoing": "En évolution",
     "code": "Code",
     "liveDemo": "Démo en ligne",
     "screenshotAlt": "Capture d''écran de {title}",
     "typeTeam": "Équipe",
     "typeSolo": "Solo",
-    "caseStudy": "Lire l''étude de cas"
+    "caseStudy": "Lire l''étude de cas",
+    "sectionsAria": "Sections de l''étude de cas",
+    "delivery": {
+      "production": "Production",
+      "ongoing": "En évolution",
+      "live": "Service en ligne",
+      "live-demo": "Démo en ligne",
+      "in-progress": "En cours",
+      "local": "Développement local"
+    }
   },
   "dawsassetCaseStudy": {
     "metadata": {

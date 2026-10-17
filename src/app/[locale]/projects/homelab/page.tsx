@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2, CircleAlert, Cloud, HardDrive, Loc
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Container from "@/components/ui/Container";
 import HomelabArchitectureDiagram from "@/components/ui/HomelabArchitectureDiagram";
+import CaseStudyNav from "@/components/ui/CaseStudyNav";
 import { routing } from "@/i18n/routing";
 import { siteUrl } from "@/lib/site";
 
@@ -45,6 +46,17 @@ export default async function HomelabCaseStudy({ params }: Props) {
   const homeHref = `/${locale}/`;
   const strong = (chunks: ReactNode) => <strong>{chunks}</strong>;
   const code = (chunks: ReactNode) => <code className="rounded bg-card px-1 font-mono text-[0.9em] text-text">{chunks}</code>;
+  const sectionLinks = [
+    { id: "overview", label: t("overview.title") },
+    { id: "architecture", label: t("architecture.title") },
+    { id: "automation", label: t("automation.title") },
+    { id: "backups", label: t("backupTitle") },
+    { id: "operations", label: t("operations.title") },
+    { id: "incident", label: t("incidentShortTitle") },
+    { id: "tradeoffs", label: t("tradeoffsShortTitle") },
+    { id: "limitations", label: t("limitations.title") },
+    { id: "lessons", label: t("lessons.title") },
+  ];
 
   return (
     <article className="py-28 sm:py-32">
@@ -56,6 +68,8 @@ export default async function HomelabCaseStudy({ params }: Props) {
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted sm:text-xl">{t.rich("subtitle", { strong })}</p>
           <div className="mt-8 flex flex-wrap gap-3">{["ongoing", "iac", "stack"].map((key) => <span key={key} className="rounded-full border border-border bg-card px-3 py-1.5 font-mono text-sm text-accent">{t(`meta.${key}`)}</span>)}</div>
         </header>
+
+        <CaseStudyNav items={sectionLinks} />
 
         <div className="mt-16 space-y-16">
           <section aria-labelledby="overview"><Heading id="overview">{t("overview.title")}</Heading><p className="mt-5 max-w-4xl leading-relaxed text-muted">{t.rich("overview.body1", { strong })}</p><p className="mt-5 max-w-4xl leading-relaxed text-muted">{t("overview.body2")}</p></section>
@@ -77,14 +91,14 @@ export default async function HomelabCaseStudy({ params }: Props) {
           <section aria-labelledby="lessons" className="rounded-lg border border-accent/60 bg-accent/10 p-5 sm:p-6"><Heading id="lessons"><span className="flex items-center gap-2"><CheckCircle2 className="text-accent" size={22} aria-hidden="true" />{t("lessons.title")}</span></Heading><p className="mt-4 max-w-4xl leading-relaxed text-muted">{t.rich("lessons.body", { strong })}</p></section>
         </div>
 
-        <section aria-labelledby="case-study-cta" className="mt-16 border-t border-border pt-8"><h2 id="case-study-cta" className="max-w-2xl font-mono text-xl font-bold text-text sm:text-2xl">{t("ctaShortTitle")}</h2><div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center"><a href={`${homeHref}#projects`} className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-4 py-2 font-mono text-sm text-text transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2">{t("viewOtherProjects")}<ArrowRight size={16} aria-hidden="true" /></a><a href="https://www.linkedin.com/in/talon-dunbar" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-accent bg-accent/10 px-4 py-2 font-mono text-sm text-accent transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2">{t("contactCta")}<ArrowRight size={16} aria-hidden="true" /></a></div></section>
+        <section aria-labelledby="case-study-cta" className="mt-16 border-t border-border pt-8"><h2 id="case-study-cta" className="scroll-mt-24 lg:scroll-mt-40 max-w-2xl font-mono text-xl font-bold text-text sm:text-2xl">{t("ctaShortTitle")}</h2><div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center"><a href={`${homeHref}#projects`} className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-4 py-2 font-mono text-sm text-text transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2">{t("viewOtherProjects")}<ArrowRight size={16} aria-hidden="true" /></a><a href="https://www.linkedin.com/in/talon-dunbar" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-accent bg-accent/10 px-4 py-2 font-mono text-sm text-accent transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2">{t("contactCta")}<ArrowRight size={16} aria-hidden="true" /></a></div></section>
       </Container>
     </article>
   );
 }
 
 function Heading({ id, children }: { id: string; children: ReactNode }) {
-  return <h2 id={id} className="font-mono text-2xl font-bold text-text sm:text-3xl">{children}</h2>;
+  return <h2 id={id} className="scroll-mt-24 lg:scroll-mt-40 font-mono text-2xl font-bold text-text sm:text-3xl">{children}</h2>;
 }
 
 function Card({ children, className = "" }: { children: ReactNode; className?: string }) {

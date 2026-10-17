@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2, Cloud, Container, GitBranch, Heart
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import ContainerLayout from "@/components/ui/Container";
 import CoralReefDeploymentDiagram from "@/components/ui/CoralReefDeploymentDiagram";
+import CaseStudyNav from "@/components/ui/CaseStudyNav";
 import { routing } from "@/i18n/routing";
 import { siteUrl } from "@/lib/site";
 
@@ -40,6 +41,15 @@ export default async function CoralReefCaseStudy({ params }: Props) {
   const homeHref = `/${locale}/`;
   const strong = (chunks: ReactNode) => <strong>{chunks}</strong>;
   const code = (chunks: ReactNode) => <code className="inline-block whitespace-nowrap rounded bg-background px-1 font-mono text-[0.9em] text-text">{chunks}</code>;
+  const sectionLinks = [
+    { id: "overview", label: t("overview.title") },
+    { id: "role", label: t("role.title") },
+    { id: "delivery", label: t("delivery.title") },
+    { id: "pipeline", label: t("pipeline.title") },
+    { id: "environments", label: t("environments.title") },
+    { id: "reliability", label: t("reliability.title") },
+    { id: "learned", label: t("learned.title") },
+  ];
 
   return (
     <article className="py-28 sm:py-32">
@@ -51,6 +61,8 @@ export default async function CoralReefCaseStudy({ params }: Props) {
           <p className="mt-5 text-lg leading-relaxed text-muted sm:text-xl">{t.rich("subtitle", { strong })}</p>
           <div className="mt-8 flex flex-wrap gap-3">{["team", "azure", "environments", "live"].map((key) => <span key={key} className="rounded-full border border-border bg-card px-3 py-1.5 font-mono text-sm text-accent">{t(`meta.${key}`)}</span>)}</div>
         </header>
+
+        <CaseStudyNav items={sectionLinks} />
 
         <div className="mt-16 space-y-16">
           <section aria-labelledby="overview"><Heading id="overview">{t("overview.title")}</Heading><p className="mt-5 max-w-4xl leading-relaxed text-muted">{t.rich("overview.body", { strong })}</p></section>
@@ -67,14 +79,14 @@ export default async function CoralReefCaseStudy({ params }: Props) {
           <section aria-labelledby="learned" className="rounded-lg border border-accent/60 bg-accent/10 p-5 sm:p-6"><Heading id="learned"><span className="flex items-center gap-2"><ShieldCheck className="text-accent" size={22} aria-hidden="true" />{t("learned.title")}</span></Heading><p className="mt-4 max-w-4xl leading-relaxed text-muted">{t.rich("learned.intro", { strong })}</p><ul className="mt-5 grid gap-3 text-sm leading-relaxed text-muted sm:grid-cols-2">{learningItems.map((item) => <li key={item} className="flex gap-3"><CheckCircle2 className="mt-0.5 shrink-0 text-accent" size={16} aria-hidden="true" />{t(`learned.${item}`)}</li>)}</ul></section>
         </div>
 
-        <section aria-labelledby="case-study-cta" className="mt-16 border-t border-border pt-8"><h2 id="case-study-cta" className="max-w-2xl font-mono text-xl font-bold text-text sm:text-2xl">{t("ctaTitle")}</h2><div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center"><a href={`${homeHref}#projects`} className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-4 py-2 font-mono text-sm text-text transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2">{t("viewOtherProjects")}<ArrowRight size={16} aria-hidden="true" /></a><a href="https://thecoralreef.club/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-accent bg-accent/10 px-4 py-2 font-mono text-sm text-accent transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2">{t("viewLive")}<ArrowRight size={16} aria-hidden="true" /></a></div></section>
+        <section aria-labelledby="case-study-cta" className="mt-16 border-t border-border pt-8"><h2 id="case-study-cta" className="scroll-mt-24 lg:scroll-mt-40 max-w-2xl font-mono text-xl font-bold text-text sm:text-2xl">{t("ctaTitle")}</h2><div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center"><a href={`${homeHref}#projects`} className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-4 py-2 font-mono text-sm text-text transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2">{t("viewOtherProjects")}<ArrowRight size={16} aria-hidden="true" /></a><a href="https://thecoralreef.club/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-accent bg-accent/10 px-4 py-2 font-mono text-sm text-accent transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2">{t("viewLive")}<ArrowRight size={16} aria-hidden="true" /></a></div></section>
       </ContainerLayout>
     </article>
   );
 }
 
 function Heading({ id, children }: { id: string; children: ReactNode }) {
-  return <h2 id={id} className="font-mono text-2xl font-bold text-text sm:text-3xl">{children}</h2>;
+  return <h2 id={id} className="scroll-mt-24 lg:scroll-mt-40 font-mono text-2xl font-bold text-text sm:text-3xl">{children}</h2>;
 }
 
 function FeatureCard({ icon: Icon, title, body }: { icon: typeof Cloud; title: string; body: string }) {

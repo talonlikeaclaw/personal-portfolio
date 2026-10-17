@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2, ClipboardList, Cloud, FileText, Ha
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Container from "@/components/ui/Container";
 import CaseStudyGalleryFigure from "@/components/ui/CaseStudyGalleryFigure";
+import CaseStudyNav from "@/components/ui/CaseStudyNav";
 import { routing } from "@/i18n/routing";
 import { siteUrl } from "@/lib/site";
 
@@ -87,6 +88,20 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
   const t = await getTranslations({ locale, namespace: "dawsassetCaseStudy" });
   const homeHref = `/${locale}/`;
   const strong = (chunks: ReactNode) => <strong>{chunks}</strong>;
+  const sectionLinks = [
+    { id: "overview", label: t("overview.title") },
+    { id: "architecture", label: t("architecture.title") },
+    { id: "gallery", label: t("gallery.title") },
+    { id: "capabilities", label: t("capabilities.title") },
+    { id: "technical-highlights", label: t("technicalHighlights.title") },
+    { id: "problem", label: t("problem.title") },
+    { id: "requirements", label: t("requirements.title") },
+    { id: "role", label: t("role.title") },
+    { id: "delivery", label: t("delivery.title") },
+    { id: "engineering", label: t("engineering.title") },
+    { id: "impact", label: t("impact.title") },
+    { id: "takeaways", label: t("takeaways.title") },
+  ];
 
   return (
     <article className="py-28 sm:py-32">
@@ -112,14 +127,16 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
           </div>
         </header>
 
+        <CaseStudyNav items={sectionLinks} />
+
         <div className="mt-16 space-y-16">
           <section aria-labelledby="overview">
-            <h2 id="overview" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("overview.title")}</h2>
+            <h2 id="overview" className="scroll-mt-24 lg:scroll-mt-40 font-mono text-2xl font-bold text-text sm:text-3xl">{t("overview.title")}</h2>
             <p className="mt-5 leading-relaxed text-muted">{t.rich("overview.body", { strong })}</p>
           </section>
 
           <section aria-labelledby="architecture">
-            <h2 id="architecture" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("architecture.title")}</h2>
+            <h2 id="architecture" className="scroll-mt-24 lg:scroll-mt-40 font-mono text-2xl font-bold text-text sm:text-3xl">{t("architecture.title")}</h2>
             <p className="mt-4 leading-relaxed text-muted">{t.rich("architecture.intro", { strong })}</p>
             <div className="mt-8">
               <CaseStudyGalleryFigure
@@ -137,7 +154,7 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
           </section>
 
           <section aria-labelledby="gallery">
-            <h2 id="gallery" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("gallery.title")}</h2>
+            <h2 id="gallery" className="scroll-mt-24 lg:scroll-mt-40 font-mono text-2xl font-bold text-text sm:text-3xl">{t("gallery.title")}</h2>
             <p className="mt-4 leading-relaxed text-muted">{t.rich("gallery.intro", { strong })}</p>
             <div className="mt-8 grid gap-6 md:grid-cols-2">
               {galleryItems.map(({ key, image }) => (
@@ -168,7 +185,7 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
           </section>
 
           <section aria-labelledby="capabilities">
-            <h2 id="capabilities" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("capabilities.title")}</h2>
+            <h2 id="capabilities" className="scroll-mt-24 lg:scroll-mt-40 font-mono text-2xl font-bold text-text sm:text-3xl">{t("capabilities.title")}</h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-muted">{t("capabilities.intro")}</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {capabilityItems.map((item) => (
@@ -181,7 +198,7 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
           </section>
 
           <section aria-labelledby="technical-highlights">
-            <h2 id="technical-highlights" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("technicalHighlights.title")}</h2>
+            <h2 id="technical-highlights" className="scroll-mt-24 lg:scroll-mt-40 font-mono text-2xl font-bold text-text sm:text-3xl">{t("technicalHighlights.title")}</h2>
             <p className="mt-4 leading-relaxed text-muted">{t.rich("technicalHighlights.intro", { strong })}</p>
             <div className="mt-6 grid overflow-hidden rounded-lg border border-border sm:grid-cols-3">
               {technicalHighlights.map(({ key, items }) => (
@@ -196,17 +213,17 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
           </section>
 
           <section aria-labelledby="problem">
-            <h2 id="problem" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("problem.title")}</h2>
+            <h2 id="problem" className="scroll-mt-24 lg:scroll-mt-40 font-mono text-2xl font-bold text-text sm:text-3xl">{t("problem.title")}</h2>
             <p className="mt-5 leading-relaxed text-muted">{t.rich("problem.body", { strong })}</p>
           </section>
 
           <section aria-labelledby="requirements">
-            <h2 id="requirements" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("requirements.title")}</h2>
+            <h2 id="requirements" className="scroll-mt-24 lg:scroll-mt-40 font-mono text-2xl font-bold text-text sm:text-3xl">{t("requirements.title")}</h2>
             <p className="mt-5 leading-relaxed text-muted">{t.rich("requirements.body", { strong })}</p>
           </section>
 
           <section aria-labelledby="role">
-            <h2 id="role" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("role.title")}</h2>
+            <h2 id="role" className="scroll-mt-24 lg:scroll-mt-40 font-mono text-2xl font-bold text-text sm:text-3xl">{t("role.title")}</h2>
             <p className="mt-5 leading-relaxed text-muted">{t.rich("role.intro", { strong })}</p>
             <ul className="mt-6 space-y-3">
               {roleItems.map((item) => (
@@ -220,7 +237,7 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
         </div>
 
         <section aria-labelledby="delivery" className="mt-16 rounded-lg border border-border bg-card p-6 sm:p-8">
-          <h2 id="delivery" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("delivery.title")}</h2>
+          <h2 id="delivery" className="scroll-mt-24 lg:scroll-mt-40 font-mono text-2xl font-bold text-text sm:text-3xl">{t("delivery.title")}</h2>
           <p className="mt-4 max-w-3xl leading-relaxed text-muted">{t.rich("delivery.intro", { strong })}</p>
           <ol className="mt-8 border-l border-border">
             {deliverySteps.map((step, index) => (
@@ -239,7 +256,7 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
         </section>
 
         <section aria-labelledby="engineering" className="mt-16">
-          <h2 id="engineering" className="font-mono text-2xl font-bold text-text sm:text-3xl">{t("engineering.title")}</h2>
+          <h2 id="engineering" className="scroll-mt-24 lg:scroll-mt-40 font-mono text-2xl font-bold text-text sm:text-3xl">{t("engineering.title")}</h2>
           <p className="mt-4 max-w-3xl leading-relaxed text-muted">{t.rich("engineering.intro", { strong })}</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {engineeringItems.map(({ key, icon: Icon }) => (
@@ -254,13 +271,13 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
 
         <div className="mt-16 grid gap-8 md:grid-cols-2">
           <section aria-labelledby="challenges" className="rounded-lg border border-border bg-card p-6">
-            <h2 id="challenges" className="font-mono text-2xl font-bold text-text">{t("challenges.title")}</h2>
+            <h2 id="challenges" className="scroll-mt-24 lg:scroll-mt-40 font-mono text-2xl font-bold text-text">{t("challenges.title")}</h2>
             <ul className="mt-5 list-disc space-y-3 pl-5 text-sm leading-relaxed text-muted marker:text-text">
               {challengeItems.map((item) => <li key={item}>{t.rich(`challenges.${item}`, { strong })}</li>)}
             </ul>
           </section>
           <section aria-labelledby="impact" className="rounded-lg border border-accent/60 bg-accent/10 p-6">
-            <h2 id="impact" className="flex items-center gap-2 font-mono text-2xl font-bold text-text">
+            <h2 id="impact" className="scroll-mt-24 lg:scroll-mt-40 flex items-center gap-2 font-mono text-2xl font-bold text-text">
               <CheckCircle2 className="text-accent" size={20} aria-hidden="true" />
               {t("impact.title")}
             </h2>
@@ -276,7 +293,7 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
         </div>
 
         <section aria-labelledby="takeaways" className="mt-16 rounded-lg border border-accent/60 bg-accent/10 p-5 sm:p-6">
-          <h2 id="takeaways" className="flex items-center gap-2 font-mono text-2xl font-bold text-text sm:text-3xl">
+          <h2 id="takeaways" className="scroll-mt-24 lg:scroll-mt-40 flex items-center gap-2 font-mono text-2xl font-bold text-text sm:text-3xl">
             <CheckCircle2 className="text-accent" size={22} aria-hidden="true" />
             {t("takeaways.title")}
           </h2>
@@ -284,7 +301,7 @@ export default async function DawsAssetCaseStudy({ params }: Props) {
         </section>
 
         <section aria-labelledby="case-study-cta" className="mt-16 border-t border-border pt-8">
-          <h2 id="case-study-cta" className="max-w-2xl font-mono text-xl font-bold text-text sm:text-2xl">{t("ctaTitle")}</h2>
+          <h2 id="case-study-cta" className="scroll-mt-24 lg:scroll-mt-40 max-w-2xl font-mono text-xl font-bold text-text sm:text-2xl">{t("ctaTitle")}</h2>
           <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a
               href={`${homeHref}#projects`}

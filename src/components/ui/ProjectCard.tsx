@@ -18,44 +18,35 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
 
       {project.image && (
-        <div className="relative w-full overflow-hidden sm:h-60">
+        <div className="relative h-48 w-full overflow-hidden sm:h-60">
           <Image
             src={`/projects/${project.image}`}
             alt={t("screenshotAlt", { title: project.title[locale] })}
             width={800}
             height={600}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="w-full h-auto sm:absolute sm:inset-0 sm:h-full sm:object-cover sm:object-top"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="absolute inset-0 h-full w-full object-cover object-top"
           />
         </div>
       )}
 
       <div className="flex flex-col flex-grow p-6">
-      <div className="mb-3 flex items-start justify-between">
-        <h3 className="mr-4 font-mono text-xl font-semibold text-accent">
-          {project.title[locale]}
-        </h3>
-        <div className="flex items-center gap-2">
-          {project.status === "in-progress" && (
-            <span className="rounded-full bg-accent/20 px-2 py-0.5 font-mono text-xs text-accent">
-              {t("inProgress")}
-            </span>
-          )}
-          {project.status === "ongoing" && (
-            <span className="rounded-full bg-accent/20 px-2 py-0.5 font-mono text-xs text-accent">
-              {t("ongoing")}
-            </span>
-          )}
-          <span className="rounded-full bg-background px-2 py-0.5 font-mono text-xs text-accent">
-            {project.type === "team" ? t("typeTeam") : t("typeSolo")}
-          </span>
-        </div>
-      </div>
+      <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.14em]">
+        <span className="text-accent">{t(`delivery.${project.delivery}`)}</span>
+        <span className="text-muted">
+          {" · "}
+          {project.type === "team" ? t("typeTeam") : t("typeSolo")}
+        </span>
+      </p>
+
+      <h3 className="mb-3 font-mono text-xl font-semibold text-accent">
+        {project.title[locale]}
+      </h3>
 
       <p className="mb-2 flex-grow text-muted leading-relaxed">{project.description[locale]}</p>
 
       {project.note && (
-        <p className="mb-4 font-mono text-xs text-accent/80">{project.note[locale]}</p>
+        <p className="mb-4 font-mono text-xs text-muted">{project.note[locale]}</p>
       )}
 
       <div className="mb-4 flex flex-wrap gap-2">

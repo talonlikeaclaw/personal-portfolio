@@ -197,7 +197,7 @@ Both faces are self-hosted through `next/font/google` with `display: swap`, and 
 
 One container primitive, used by ten components: `mx-auto max-w-5xl px-4 sm:px-6 lg:px-8` — a 1024px content column with 16/24/32px gutters. Projects alone widens to `max-w-6xl` (1152px) so cards can breathe in two columns. No other width is legitimate.
 
-Vertical structure is a fixed step. The home page is eight `<section>` elements at `py-20` (80px), opened by a `min-h-screen` hero with `pt-12`; anchor ids come from the sections themselves. Case studies use `<article className="py-28 sm:py-32">` (112/128px) with a local scaffold: back link → header with `mt-10 border-b pb-12` → content stack `mt-16 space-y-16` → closing CTA at `mt-16 border-t pt-8`. Measured page heights: home 7774px at 1440 wide, 11037px at 375 wide.
+Vertical structure is a fixed step. The home page is eight `<section>` elements at `py-20` (80px), opened by a `min-h-screen` hero with `pt-24 pb-8`; anchor ids come from the sections themselves. Case studies use `<article className="py-28 sm:py-32">` (112/128px) with a local scaffold: back link → header with `mt-10 border-b pb-12` → section rail → content stack `mt-16 space-y-16` → closing CTA at `mt-16 border-t pt-8`. Measured page heights: home 7,832px at 1440 wide, 11,686px at 375 wide (FR 12,274px).
 
 Grids are single-column below `sm` and use a consistent gap of 24px (`gap-6`). Two idioms cover almost every arrangement:
 
@@ -242,10 +242,14 @@ Portraits are circular with a Signal Green ring: 2px at 30% alpha on the hero po
 
 ## Components
 
+### Hero
+
+The first screen answers five questions in order, all centered in one 1024px column: portrait (80px, 128px at `sm`, 2px accent ring), name (Display), role (Signal Green, Subhead at `sm`), meta line (mono, Chalk Dim — location and availability), tagline (Inter, `max-w-xl`). Below them sits the **result panel** — the only tinted surface above the fold: the documented callout recipe (`border-accent/60`, `bg-accent/10`, 8px radius) holding a micro eyebrow (`PRODUCTION`), the flagship project's name, its one-sentence lede, and the single primary action ("Read case study"). Three secondary destinations follow as inline mono links, then the scroll cue. Everything is in flow: the cue no longer floats over the CTA block, which is what protects the 200%-zoom reflow. Reference heights with real copy: 812px (one screen) at 375 in EN, 900px at 1440; FR runs ~33px taller because its tagline and lede wrap further.
+
 ### Buttons and Actions
 
 - **Shape:** 8px radius, 1px hairline border, `font-mono text-sm` label, no icon-only primary. Rows stack column-first below `sm`.
-- **Primary:** Signal Green at 10% alpha on Console Black, Signal Green text, Signal Green border, `px-6 py-3` for hero CTAs and `px-4 py-2` for case-study CTAs. Compact variant in the Experience card: `rounded-md px-3 py-1.5`.
+- **Primary:** Signal Green at 10% alpha on Console Black, Signal Green text, Signal Green border, `px-4 py-2` for the hero's result-panel CTA and case-study CTAs. Compact variant in the Experience card: `rounded-md px-3 py-1.5`. The hero's three destinations are no longer buttons — they are inline mono links at `py-1`, because only one action there is primary.
 - **Primary Hover:** fills solid — `hover:bg-accent hover:text-black` — so the label flips to Console Black. This is the system's most tactile moment and its strongest signal of "this is the action."
 - **Secondary:** Console Black at 40% over a backdrop blur, Chalk text, Hairline Graphite border; hover shifts only the border and text to Signal Green.
 - **Focus:** `focus-visible:outline-2 focus-visible:outline-accent` with `outline-offset-2` as the default, `4` on the case-study back links and the hero scroll cue, and `[-2px]` on the gallery trigger, which sits flush inside its frame. 31 of 32 interactive elements carry the ring; the count is uniform enough that any element without one is a defect.
@@ -259,7 +263,7 @@ Portraits are circular with a Signal Green ring: 2px at 30% alpha on the hero po
 
 ### Cards, Panels, Callouts
 
-- **Card:** 8px radius, 1px Hairline Graphite border, Panel Graphite fill, 24px padding, optional 1% radial sheen. Project cards add an image stage (fixed `sm:h-60` with `object-cover object-top`) and a hover that shifts the border to `border-accent/50` — the card's only hover state.
+- **Card:** 8px radius, 1px Hairline Graphite border, Panel Graphite fill, 24px padding, optional 1% radial sheen. Project cards open with a delivery eyebrow (macro type, 12px/0.14em, uppercase: `DELIVERY · TYPE`, e.g. `PRODUCTION · TEAM`), then the mono title, description, note, tech chips, and links. The image stage is fixed at `h-48` and `sm:h-60` with `object-cover object-top`, so cards in a row start at the same height regardless of screenshot aspect. Hover shifts the border to `border-accent/50` — the card's only hover state.
 - **Panel:** the same recipe at `p-5` for grid children and `p-6 sm:p-8` for case-study set pieces (incident, delivery).
 - **Callout:** Signal Green border at 60% alpha on a 10% tint, `p-6`, Chalk text — reserved for impact, lessons, and retention notes. Diagram sub-surfaces use the lighter 5% tint.
 - **Sub-card:** 4px radius, Hairline Graphite border, `bg-background/50` — for inner timeline steps and incident details.
@@ -271,6 +275,10 @@ The delivery timeline is the one signature list: `<ol className="border-l border
 ### Navigation
 
 Fixed bar, `h-20`, `bg-background/80 backdrop-blur-sm`, 1px bottom hairline. Wordmark is the site handle `talonlikeaclaw` in `font-mono text-xl font-bold sm:text-3xl`. Desktop links (`hidden lg:flex`, `gap-6`) are mono at 18px, hover to Signal Green. The language toggle sits beside a square accent-tinted mail button. Below `lg`, links collapse into a menu button (`text-muted hover:text-text`, 24px icon) opening a full-width drawer on the bar's translucent surface. No scroll-driven state change, no shrinking bar, no active-link underline.
+
+### Case Study Section Rail
+
+Each case study opens with `CaseStudyNav`: a list of plain anchors to the page's `h2[id]` targets, labelled from the same translation keys as the headings themselves. It is in flow below `lg` (a two-column grid of 12px mono links, 24px target height), and becomes a sticky rail at `lg` (`top-[81px]`, `z-30`, `bg-background/80` + `backdrop-blur-sm`) so the reader keeps a map through 7,000–12,000px of argument. There is no scroll-spy and no active state — DESIGN.md allows no scroll-driven state changes. Every case-study `h2[id]` carries `scroll-mt-24 lg:scroll-mt-40` so an anchor lands clear of the fixed navbar (and the rail at `lg`); the global `scroll-padding-top: 1rem` still applies on top.
 
 ### Gallery Figures and Lightbox
 
