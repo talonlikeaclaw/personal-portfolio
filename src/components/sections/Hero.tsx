@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
@@ -9,9 +9,21 @@ import FaultyTerminal from "@/components/ui/FaultyTerminal";
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const sectionRef = useRef<HTMLElement | null>(null);
   const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth < 768 : false
+    typeof window !== "undefined" ? window.innerWidth < 768 : false,
   );
+  const [reduceMotion, setReduceMotion] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  );
+  const [heroInView, setHeroInView] = useState(true);
+  const [pageVisible, setPageVisible] = useState(
+    () =>
+      typeof document === "undefined" || document.visibilityState !== "hidden",
+  );
+  const paused = reduceMotion || !heroInView || !pageVisible;
 
   useEffect(() => {
     const checkMobile = () => {
@@ -22,13 +34,43 @@ export default function Hero() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  useEffect(() => {
+    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const onChange = (event: MediaQueryListEvent) => {
+      setReduceMotion(event.matches);
+    };
+    query.addEventListener("change", onChange);
+    return () => query.removeEventListener("change", onChange);
+  }, []);
+
+  useEffect(() => {
+    const node = sectionRef.current;
+    if (!node || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(([entry]) => {
+      setHeroInView(entry.isIntersecting);
+    });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const onVisibilityChange = () =>
+      setPageVisible(document.visibilityState !== "hidden");
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    return () =>
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+  }, []);
+
   const gridMul = useMemo<[number, number]>(
     () => (isMobile ? [1.5, 3] : [3, 1.5]),
-    [isMobile]
+    [isMobile],
   );
 
   return (
-    <section className="relative flex min-h-screen items-center pt-12">
+    <section
+      ref={sectionRef}
+      className="relative flex min-h-screen items-center pt-12"
+    >
       {/* Background - offset for navbar */}
       <div className="absolute inset-0 -top-20 -z-10">
         <FaultyTerminal
@@ -43,6 +85,7 @@ export default function Hero() {
           curvature={0.1}
           tint="#338953"
           mouseReact={false}
+          pause={paused}
           pageLoadAnimation={true}
           brightness={0.6}
           dpr={1}

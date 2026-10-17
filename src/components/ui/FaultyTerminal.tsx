@@ -276,8 +276,11 @@ export default function FaultyTerminal({
   const rendererRef = useRef<Renderer | null>(null);
   const mouseRef = useRef({ x: 0.5, y: 0.5 });
   const smoothMouseRef = useRef({ x: 0.5, y: 0.5 });
-  const frozenTimeRef = useRef(0);
+  const elapsedRef = useRef(0);
+  const lastFrameRef = useRef<number | null>(null);
+  const pausedRef = useRef(pause);
   const rafRef = useRef(0);
+  const updateRef = useRef<((t: number) => void) | null>(null);
   const loadAnimationStartRef = useRef(0);
   const timeOffsetRef = useRef(0);
 
@@ -285,7 +288,7 @@ export default function FaultyTerminal({
 
   const ditherValue = useMemo(
     () => (typeof dither === "boolean" ? (dither ? 1 : 0) : dither),
-    [dither]
+    [dither],
   );
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
@@ -319,7 +322,7 @@ export default function FaultyTerminal({
           value: new Color(
             gl.canvas.width,
             gl.canvas.height,
-            gl.canvas.width / gl.canvas.height
+            gl.canvas.width / gl.canvas.height,
           ),
         },
         uScale: { value: scale },
@@ -357,7 +360,7 @@ export default function FaultyTerminal({
       program.uniforms.iResolution.value = new Color(
         gl.canvas.width,
         gl.canvas.height,
-        gl.canvas.width / gl.canvas.height
+        gl.canvas.width / gl.canvas.height,
       );
     }
 
@@ -366,24 +369,26 @@ export default function FaultyTerminal({
     resize();
 
     const update = (t: number) => {
-      rafRef.current = requestAnimationFrame(update);
+      const lastFrame = lastFrameRef.current;
+      lastFrameRef.current = t;
+
+      if (!pausedRef.current && lastFrame !== null) {
+        elapsedRef.current += (t - lastFrame) * 0.001 * timeScale;
+      }
+      program.uniforms.iTime.value =
+        elapsedRef.current + timeOffsetRef.current * timeScale;
 
       if (pageLoadAnimation && loadAnimationStartRef.current === 0) {
         loadAnimationStartRef.current = t;
       }
 
-      if (!pause) {
-        const elapsed = (t * 0.001 + timeOffsetRef.current) * timeScale;
-        program.uniforms.iTime.value = elapsed;
-        frozenTimeRef.current = elapsed;
-      } else {
-        program.uniforms.iTime.value = frozenTimeRef.current;
-      }
-
-      if (pageLoadAnimation && loadAnimationStartRef.current > 0) {
-        const animationDuration = 2000;
-        const animationElapsed = t - loadAnimationStartRef.current;
-        const progress = Math.min(animationElapsed / animationDuration, 1);
+      if (pageLoadAnimation) {
+        const progress = pausedRef.current
+          ? 1
+          : Math.min(
+              Math.max((t - loadAnimationStartRef.current) / 2000, 0),
+              1,
+            );
         program.uniforms.uPageLoadProgress.value = progress;
       }
 
@@ -400,7 +405,9 @@ export default function FaultyTerminal({
       }
 
       renderer.render({ scene: mesh });
+      rafRef.current = pausedRef.current ? 0 : requestAnimationFrame(update);
     };
+    updateRef.current = update;
     rafRef.current = requestAnimationFrame(update);
     ctn.appendChild(gl.canvas);
 
@@ -408,7 +415,11 @@ export default function FaultyTerminal({
       ctn.addEventListener("mousemove", handleMouseMove as EventListener);
 
     return () => {
+      updateRef.current = null;
       cancelAnimationFrame(rafRef.current);
+      rafRef.current = 0;
+      lastFrameRef.current = null;
+      elapsedRef.current = 0;
       resizeObserver.disconnect();
       if (mouseReact)
         ctn.removeEventListener("mousemove", handleMouseMove as EventListener);
@@ -419,7 +430,6 @@ export default function FaultyTerminal({
     };
   }, [
     dpr,
-    pause,
     timeScale,
     scale,
     gridMul,
@@ -438,6 +448,15 @@ export default function FaultyTerminal({
     brightness,
     handleMouseMove,
   ]);
+
+  useEffect(() => {
+    pausedRef.current = pause;
+    if (pause) return;
+    lastFrameRef.current = null;
+    if (updateRef.current && !rafRef.current) {
+      rafRef.current = requestAnimationFrame(updateRef.current);
+    }
+  }, [pause]);
 
   return (
     <div
