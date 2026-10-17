@@ -10,6 +10,7 @@ target_fingerprint: "sha256:67c8a389466470c1000ffd32e3a27cbdbd239484cabe5f3f5a54
 target_path: /home/talon/Code/active/personal-portfolio/src/app/[locale]/page.tsx
 timestamp: 2026-10-17T01-25-23Z
 slug: src-app-locale-page-tsx
+closed: true
 ---
 # Critique — Talon Dunbar portfolio, home page
 

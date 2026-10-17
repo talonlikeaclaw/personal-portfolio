@@ -5,7 +5,7 @@ export interface Project {
   description: LocalizedText;
   technologies: string[];
   type: "team" | "solo";
-  delivery: "production" | "ongoing" | "live" | "live-demo" | "in-progress" | "local";
+  delivery: "production" | "ongoing" | "retired" | "live-demo" | "in-progress" | "local";
   image?: string;
   note?: LocalizedText;
   liveUrl?: string;
@@ -52,8 +52,8 @@ export const projects: Project[] = [
   {
     title: { en: "The Coral Reef", fr: "The Coral Reef" },
     description: {
-      en: "Team capstone social card-game platform with real-time multiplayer, social auth, profiles, friends, leaderboards, and admin tools. Staging and production deployments auto-deploy through GitLab CI/CD to Azure Web Apps, using Azure Blob Storage for images and MongoDB for data persistence.",
-      fr: "Plateforme de projet de fin d'études en équipe autour d'un jeu de cartes social, avec multijoueur en temps réel, authentification sociale, profils, amis, classements et outils d'administration. Les déploiements de préproduction et de production sont automatisés par GitLab CI/CD vers Azure Web Apps, avec Azure Blob Storage pour les images et MongoDB pour la persistance des données.",
+      en: "Team capstone social card-game platform with real-time multiplayer, social auth, profiles, friends, leaderboards, and admin tools. Staging and production deployments ran through GitLab CI/CD to Azure Web Apps, using Azure Blob Storage for images and MongoDB for data persistence. The Azure deployment has since been taken down.",
+      fr: "Plateforme de projet de fin d'études en équipe autour d'un jeu de cartes social, avec multijoueur en temps réel, authentification sociale, profils, amis, classements et outils d'administration. Les déploiements de préproduction et de production passaient par GitLab CI/CD vers Azure Web Apps, avec Azure Blob Storage pour les images et MongoDB pour la persistance des données. Le déploiement Azure a depuis été retiré.",
     },
     technologies: [
       "Azure",
@@ -63,13 +63,12 @@ export const projects: Project[] = [
       "MongoDB",
     ],
     type: "team",
-    delivery: "live",
-    image: "/coralreef.webp",
+    delivery: "retired",
+    image: "coralreef.webp",
     note: {
       en: "Team capstone project.",
       fr: "Projet de fin d'études en équipe.",
     },
-    liveUrl: "https://thecoralreef.club/",
     githubUrl: "https://github.com/talonlikeaclaw/the-coral-reef",
     caseStudyPath: "/projects/coral-reef/",
   },
@@ -83,7 +82,7 @@ export const projects: Project[] = [
     technologies: ["React", "Vite", "Express.js", "Mocha", "Chai"],
     type: "team",
     delivery: "live-demo",
-    image: "/immigrationviz.webp",
+    image: "immigrationviz.webp",
     note: {
       en: "Data sourced from Statistics Canada census records.",
       fr: "Données tirées des recensements de Statistique Canada.",
@@ -102,7 +101,7 @@ export const projects: Project[] = [
     technologies: ["Go", "Bubble Tea", "Proxmox API"],
     type: "solo",
     delivery: "in-progress",
-    image: "/godash.webp",
+    image: "godash.webp",
     note: {
       en: "Core monitoring features complete. Active development.",
       fr: "Fonctionnalités de surveillance de base complétées. Développement actif.",
@@ -119,7 +118,7 @@ export const projects: Project[] = [
     technologies: ["Flask", "PostgreSQL", "Docker", "Jinja"],
     type: "team",
     delivery: "local",
-    image: "/trimtracker.webp",
+    image: "trimtracker.webp",
     note: {
       en: "Built for a server-side programming course.",
       fr: "Réalisé pour un cours de programmation côté serveur.",
@@ -136,7 +135,7 @@ export const projects: Project[] = [
     technologies: ["Java", "PostgreSQL", "PL/pgSQL", "JDBC", "JUnit"],
     type: "team",
     delivery: "local",
-    image: "/dawscorp.webp",
+    image: "dawscorp.webp",
     githubUrl: "https://github.com/talonlikeaclaw/dawscorp-task-manager",
   },
 
@@ -149,7 +148,7 @@ export const projects: Project[] = [
     technologies: ["C#", "Avalonia", "EF Core", "LINQ", "MSTest", "Moq"],
     type: "team",
     delivery: "local",
-    image: "/dawsondial.webp",
+    image: "dawsondial.webp",
     githubUrl: "https://github.com/talonlikeaclaw/dawson-dial",
   },
 
@@ -162,7 +161,7 @@ export const projects: Project[] = [
     technologies: ["Java", "PostgreSQL", "Maven", "JUnit"],
     type: "team",
     delivery: "local",
-    image: "/dealership.webp",
+    image: "dealership.webp",
     githubUrl: "https://github.com/talonlikeaclaw/virtual-used-car-dealership",
   },
 
@@ -175,7 +174,7 @@ export const projects: Project[] = [
     technologies: ["Java", "ANSI", "CLI"],
     type: "solo",
     delivery: "local",
-    image: "/picnicgo.webp",
+    image: "picnicgo.webp",
     githubUrl: "https://github.com/talonlikeaclaw/picnic-go",
   },
 
@@ -188,7 +187,7 @@ export const projects: Project[] = [
     technologies: ["Python", "I2C", "Raspberry Pi", "ADS7830"],
     type: "solo",
     delivery: "local",
-    image: "/thermostat.webp",
+    image: "thermostat.webp",
     githubUrl: "https://github.com/talonlikeaclaw/thermostat-driver",
   },
 
@@ -201,7 +200,7 @@ export const projects: Project[] = [
     technologies: ["Zsh", "JSON", "Lua", "TOML"],
     type: "solo",
     delivery: "local",
-    image: "/dotfiles.webp",
+    image: "dotfiles.webp",
     githubUrl: "https://github.com/talonlikeaclaw/dotfiles",
   },
 ];

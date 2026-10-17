@@ -252,7 +252,7 @@ The first screen answers five questions in order, all centered in one 1024px col
 - **Primary:** Signal Green at 10% alpha on Console Black, Signal Green text, Signal Green border, `px-4 py-2` for the hero's result-panel CTA and case-study CTAs. Compact variant in the Experience card: `rounded-md px-3 py-1.5`. The hero's three destinations are no longer buttons — they are inline mono links at `py-1`, because only one action there is primary.
 - **Primary Hover:** fills solid — `hover:bg-accent hover:text-black` — so the label flips to Console Black. This is the system's most tactile moment and its strongest signal of "this is the action."
 - **Secondary:** Console Black at 40% over a backdrop blur, Chalk text, Hairline Graphite border; hover shifts only the border and text to Signal Green.
-- **Focus:** `focus-visible:outline-2 focus-visible:outline-accent` with `outline-offset-2` as the default, `4` on the case-study back links and the hero scroll cue, and `[-2px]` on the gallery trigger, which sits flush inside its frame. 31 of 32 interactive elements carry the ring; the count is uniform enough that any element without one is a defect.
+- **Focus:** `focus-visible:outline-2 focus-visible:outline-accent` with `outline-offset-2` as the default, `4` on the case-study back links and the hero scroll cue, and `[-2px]` on the gallery trigger, which sits flush inside its frame. Every interactive element in the page census carries the ring (36/36 at the last audit, including the skip link); any element without one is a defect.
 - **Navigation icon button:** circular-target square button, `border-accent bg-accent/10` with `p-2`, mail icon at 18px.
 
 ### Metadata Pills and Chips

@@ -118,7 +118,7 @@ export default function About() {
             </div>
 
             {/* ~/interests */}
-            <div className="relative mt-10 overflow-hidden rounded-lg border border-border bg-card/50 p-5 lg:mt-auto">
+            <div className="relative mt-10 overflow-hidden rounded-lg border border-border bg-card/50 p-6 backdrop-blur-sm lg:mt-auto">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_70%)] opacity-[0.01]" />
               <h3 className="mb-4 text-center font-mono text-base font-semibold text-accent">
                 ~/interests

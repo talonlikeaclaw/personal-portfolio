@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Container from "@/components/ui/Container";
 import LanguageToggle from "@/components/layout/LanguageToggle";
@@ -20,73 +20,95 @@ export default function Navbar() {
   const t = useTranslations("nav");
   const homeHref = `/${locale}/`;
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isOpen]);
+
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-sm">
-      <Container>
-        <div className="flex h-20 items-center justify-between">
-          <a href={homeHref} className="font-mono text-xl font-bold text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 sm:text-3xl">
-            talonlikeaclaw
-          </a>
+    <>
+      <nav className="fixed top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-sm">
+        <Container>
+          <div className="flex h-20 items-center justify-between">
+            <a href={homeHref} className="font-mono text-xl font-bold text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 sm:text-3xl">
+              talonlikeaclaw
+            </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:gap-6">
-            {navLinks.map((link) => (
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex lg:items-center lg:gap-6">
+              {navLinks.map((link) => (
+                <a
+                  key={link.id}
+                  href={`${homeHref}#${link.id}`}
+                  className="font-mono text-lg text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                >
+                  {t(link.key)}
+                </a>
+              ))}
+              <LanguageToggle />
               <a
-                key={link.id}
-                href={`${homeHref}#${link.id}`}
-                className="font-mono text-lg text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                href={`${homeHref}#contact`}
+                className="flex items-center justify-center rounded-lg border border-accent bg-accent/10 p-2 text-accent transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                aria-label={t("contactMeAria")}
               >
-                {t(link.key)}
+                <MailIcon size={18} />
               </a>
-            ))}
-            <LanguageToggle />
-            <a
-              href={`${homeHref}#contact`}
-              className="flex items-center justify-center rounded-lg border border-accent bg-accent/10 p-2 text-accent transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
-              aria-label={t("contactMeAria")}
-            >
-              <MailIcon size={18} />
-            </a>
-          </div>
+            </div>
 
-          {/* Mobile Buttons */}
-          <div className="flex items-center gap-3 lg:hidden">
-            <LanguageToggle />
-            <a
-              href={`${homeHref}#contact`}
-              className="flex items-center justify-center rounded-lg border border-accent bg-accent/10 p-2 text-accent transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
-              aria-label={t("contactMeAria")}
-            >
-              <MailIcon size={18} />
-            </a>
-            <button
-              className="text-muted hover:text-text focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label={t("toggleMenuAria")}
-              aria-expanded={isOpen}
-              aria-controls="mobile-navigation"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            {/* Mobile Buttons */}
+            <div className="flex items-center gap-3 lg:hidden">
+              <LanguageToggle />
+              <a
+                href={`${homeHref}#contact`}
+                className="flex items-center justify-center rounded-lg border border-accent bg-accent/10 p-2 text-accent transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                aria-label={t("contactMeAria")}
+              >
+                <MailIcon size={18} />
+              </a>
+              <button
+                className="-m-2.5 p-2.5 text-muted hover:text-text focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label={t("toggleMenuAria")}
+                aria-expanded={isOpen}
+                aria-controls="mobile-navigation"
+              >
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
-        </div>
+        </Container>
 
         {/* Mobile Navigation */}
         {isOpen && (
           <div id="mobile-navigation" className="border-t border-border py-4 lg:hidden">
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={`${homeHref}#${link.id}`}
-                className="block py-2 font-mono text-lg text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
-                onClick={() => setIsOpen(false)}
-              >
-                {t(link.key)}
-              </a>
-            ))}
+            <Container>
+              {navLinks.map((link) => (
+                <a
+                  key={link.id}
+                  href={`${homeHref}#${link.id}`}
+                  className="block py-2 font-mono text-lg text-text hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {t(link.key)}
+                </a>
+              ))}
+            </Container>
           </div>
         )}
-      </Container>
-    </nav>
+      </nav>
+
+      {isOpen && (
+        <button
+          type="button"
+          onClick={() => setIsOpen(false)}
+          aria-label={t("closeMenuAria")}
+          className="fixed inset-x-0 top-20 bottom-0 z-40 cursor-default bg-background/60 lg:hidden"
+        />
+      )}
+    </>
   );
 }

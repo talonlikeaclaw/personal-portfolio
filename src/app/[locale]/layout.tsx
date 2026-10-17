@@ -112,14 +112,21 @@ export default async function LocaleLayout({ children, params }: Props) {
   setRequestLocale(locale);
 
   const messages = await getMessages();
+  const nav = await getTranslations("nav");
 
   return (
     <html lang={locale} className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body className={`${inter.className} antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <AnimatedIconProvider>
+            <a
+              href="#main-content"
+              className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-lg focus:border focus:border-accent focus:bg-card focus:px-4 focus:py-2 focus:font-mono focus:text-sm focus:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+            >
+              {nav("skipToContent")}
+            </a>
             <Navbar />
-            <main>{children}</main>
+            <main id="main-content">{children}</main>
             <Footer />
           </AnimatedIconProvider>
         </NextIntlClientProvider>

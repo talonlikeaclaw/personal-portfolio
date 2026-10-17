@@ -54,7 +54,7 @@ export default function Contact() {
               }
             >
               <link.icon className="h-5 w-5 text-accent group-hover:text-black" />
-              <span className="break-all font-mono text-text group-hover:text-black">
+              <span className="break-all font-mono text-accent group-hover:text-black">
                 {t(`links.${link.labelKey ?? link.key}`)}
               </span>
             </a>

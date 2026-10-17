@@ -120,7 +120,7 @@ export default function CaseStudyGalleryFigure({
                 width={2000}
                 height={1200}
                 sizes="100vw"
-                className="mx-auto h-auto max-h-[calc(100vh-10rem)] w-auto max-w-full object-contain"
+                className="mx-auto h-auto max-h-[calc(100vh-10rem)] w-auto max-w-none object-contain"
               />
             </div>
           </div>

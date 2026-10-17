@@ -26,7 +26,7 @@ export default function Achievements() {
                 <TrophyIcon size={24} className="text-accent" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-semibold text-text">
+                <h3 className="font-mono text-xl font-semibold text-text">
                   {t("dawshacksTitle")}
                 </h3>
                 <p className="mt-2 text-muted">
@@ -78,7 +78,7 @@ export default function Achievements() {
                 <Award className="h-6 w-6 text-accent" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-semibold text-text">
+                <h3 className="font-mono text-xl font-semibold text-text">
                   {t("leadershipTitle")}
                 </h3>
                 <a
@@ -97,6 +97,7 @@ export default function Achievements() {
                 src="/leadership-award.webp"
                 alt={t("leadershipTitle")}
                 fill
+                sizes="(max-width: 768px) 100vw, 640px"
                 className="object-cover"
               />
             </div>

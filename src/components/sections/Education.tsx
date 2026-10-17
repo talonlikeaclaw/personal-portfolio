@@ -21,7 +21,7 @@ export default function Education() {
                 <BookIcon size={24} className="text-accent" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-text">
+                <h3 className="font-mono text-xl font-semibold text-text">
                   {t("school")}
                 </h3>
                 <p className="text-muted">{t("degree")}</p>

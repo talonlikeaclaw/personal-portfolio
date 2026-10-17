@@ -18,7 +18,7 @@ export default function Experience() {
               <BriefcaseBusiness className="h-6 w-6 text-accent" />
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-text">{t("role")}</h3>
+              <h3 className="font-mono text-xl font-semibold text-text">{t("role")}</h3>
               <p className="mt-1 font-mono text-sm text-accent">{t("period")}</p>
               <p className="mt-4 leading-relaxed text-muted">{t("description")}</p>
               <a
