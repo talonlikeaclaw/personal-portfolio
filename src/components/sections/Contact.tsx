@@ -40,7 +40,7 @@ export default function Contact() {
           title={t("title")}
           subtitle={t("subtitle")}
         />
-        <div className="mx-auto grid max-w-2xl grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:justify-center sm:gap-6">
+        <div className="mx-auto flex max-w-2xl flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-6">
           {contactLinks.map((link) => (
             <a
               key={link.key}
@@ -49,12 +49,14 @@ export default function Contact() {
               rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
               className={
                 link.key === "email"
-                  ? "group col-span-2 flex items-center justify-center gap-2 rounded-lg border border-accent bg-accent/10 px-4 py-3 transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 sm:gap-3 sm:px-6 sm:py-4"
+                  ? "group flex items-center justify-center gap-2 rounded-lg border border-accent bg-accent/10 px-4 py-3 transition-colors hover:bg-accent hover:text-black focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 sm:gap-3 sm:px-6 sm:py-4"
                   : "flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-4 py-3 transition-colors hover:border-accent/50 hover:bg-card/80 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 sm:gap-3 sm:px-6 sm:py-4"
               }
             >
               <link.icon className="h-5 w-5 text-accent group-hover:text-black" />
-              <span className="break-all font-mono text-accent group-hover:text-black">
+              <span
+                className={`break-all font-mono ${link.key === "email" ? "text-accent" : "text-text"} group-hover:text-black`}
+              >
                 {t(`links.${link.labelKey ?? link.key}`)}
               </span>
             </a>
