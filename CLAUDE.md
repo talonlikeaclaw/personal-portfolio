@@ -29,6 +29,7 @@ This is a static portfolio site built with Next.js 16, TypeScript, and Tailwind 
 src/
 ├── app/
 │   ├── layout.tsx          # Minimal pass-through root layout (no <html>)
+│   ├── global-not-found.tsx # Branded 404 document (needs experimental.globalNotFound)
 │   ├── page.tsx            # Root redirect → /en
 │   ├── globals.css         # Dark theme CSS variables, Tailwind config
 │   ├── icon.svg            # TD favicon
