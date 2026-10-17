@@ -70,7 +70,10 @@ export default function Hero() {
           <p className="mt-4 font-mono text-lg text-accent font-semibold sm:text-2xl">
             <span className="sm:inline block">{t("role")}</span>
           </p>
-          <p className="mt-3 max-w-xl mx-auto text-sm text-muted sm:text-base">
+          <p className="mt-2 font-mono text-sm text-muted sm:text-base">
+            {t("meta")}
+          </p>
+          <p className="mt-4 max-w-xl mx-auto text-sm text-muted sm:text-base">
             {t("tagline")}
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
